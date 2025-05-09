@@ -506,9 +506,6 @@ main {
   padding: 0;
   display: flex;
   flex-direction: column;
-}
-
-#main {
   background-color: #000000;
 }
 
@@ -1348,4 +1345,8 @@ footer {
   .bottom-frow-02 p {
     font-size: 12px;
   }
+}
+.product-row-cursoul {
+  height: 600px;
+  background-color: #eadcee;
 }/*# sourceMappingURL=webindex.css.map */
