@@ -106,9 +106,7 @@ a {
     box-shadow: $shadow-set;
   }
 }
-input[type="checkbox"] {
-  accent-color: $color-purple; /* 你想要的顏色（藍色示範） */
-}
+
 .content-area {
   max-width: 1280px;
   margin: 0 auto;
@@ -142,7 +140,7 @@ input[type="checkbox"] {
     box-shadow: $shadow-set;
   }
 
-  > * {
+  >* {
     position: relative;
     z-index: 2;
   }
@@ -380,7 +378,7 @@ header {
         box-shadow: $shadow-set;
       }
 
-      > * {
+      >* {
         position: relative;
         z-index: 2;
       }
@@ -458,6 +456,7 @@ header {
 //-----
 
 @media screen and (max-width: 920px) {
+
   h2,
   h3,
   h4,
@@ -612,6 +611,7 @@ header {
 }
 
 @media screen and (max-width: 670px) {
+
   h2,
   h3,
   h4,
@@ -1508,6 +1508,7 @@ main {
 
   .row-fiveth {
     .fiveth-row {
+
       .fiveth-row-01,
       .fiveth-row-02 {
         flex-direction: column;
@@ -1783,25 +1784,15 @@ footer {
     button {
       font-size: 18px;
       font-weight: 600;
-      padding: 6px 16px;
-      border-radius: 8px;
-      margin-left: 16px;
       letter-spacing: 2px;
       border: none;
       background-color: transparent;
+
       cursor: pointer;
-      &:hover {
-        background-color: #fff;
-        // color: $color-purple;
-      }
-      &:hover svg {
-        color: $color-purple;
-      }
-      svg {
-        transition: transform 0.3s ease;
-      }
-      svg.rotate {
-        transform: rotateX(180deg);
+
+      &::before {
+        position: relative;
+        content: "隱藏篩選條件";
       }
     }
   }
@@ -1825,9 +1816,17 @@ footer {
           font-weight: 800;
         }
 
-        &:hover + ul {
+        &:hover+ul {
           border-bottom: 1px solid lighten($color-darkgery, 20%);
         }
+      }
+
+      div::after {
+        content: "＋";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
       }
 
       ul {
@@ -1863,39 +1862,12 @@ footer {
 
       .side-title {
         padding: 0 6px;
-        display: flex;
-        justify-content: space-between;
-        h4,
-        span {
-          vertical-align: top;
-        }
-        span{
-          
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          aspect-ratio: 1/1;
-          // padding: 3px;
-          width: 30px;
-          height: 30px;
-          border-radius: 50%;
-          border: 0.5px solid transparent;
-        }
-        &:hover{
-          span{
-            color:$color-purple;
-          background-color: #fff;
-          //  border-color: lighten($color-darkgery, 20%);
-          }
-        }
       }
 
       .side-content {
-        max-height: 0px;
+        max-height: 400px;
         overflow: hidden;
-        transition: all 0.3s ease-out;
-
-
+        transition: all 0.5s ease-out;
       }
 
       .side-content.side-content-open {
@@ -1926,19 +1898,17 @@ footer {
     .listrow {
       display: grid;
       // grid-template-columns: repeat(3, 1fr); /* 建立三欄，每欄 1fr 寬 */
-      grid-template-columns: repeat(auto-fit, minmax(220px, max-content));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       // grid-template-rows: auto-fit;
       /* 自動高度 */
-
-      gap: 32px 24px;
-      justify-items: flex-start;
-      justify-content: start;
+      gap: 60px 24px;
+      justify-items: center;
+      justify-content: space-evenly;
     }
 
     .card {
       height: 100%;
       min-width: 200px;
-      max-width: 300px;
       width: 100%;
       padding-bottom: 0px;
       justify-content: space-between;
@@ -2051,6 +2021,8 @@ footer {
           font-weight: bolder;
         }
 
+
+
         .btn {
           max-height: 40px;
           // max-width: 90px;
@@ -2069,35 +2041,44 @@ footer {
     }
 
     .btn-openlist {
-      margin-bottom: 24px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 4px;
-      button {
-        color: $color-darkgery;
-        font-size: 16px;
-        padding: 6px 12px;
-        letter-spacing: 1px;
-        text-align: center;
-        line-height: 100%;
-        border: 2px solid lighten($color-darkgery,20%);
-        border-radius: 8px;
-        transition: all 0.3s ease;
-        font-weight: 400;
-        cursor: pointer;
-        svg{
-          transform: rotate(45deg);
-        }
-        &:hover{
-          background-color: #fff;
-          // color: $color-white;
-          border-color: $color-purple;
-          // background-color: $color-darkgery;
-        }
-        &:hover svg{
-          color: $color-purple;
-          // color: $color-white;
-        }
+      &::after {
+        position: relative;
+        margin-left: 8px;
+        content: "X";
+        background: none;
+      }
+
+      &::before {
+        position: relative;
+        content: "清除";
+        background: none;
+      }
+
+      // width: 70%;
+      display: inline-block;
+      font-size: 16px;
+      text-align: center;
+      line-height: 100%;
+      padding: 8px 12px;
+      margin-bottom: 16px;
+      letter-spacing: 2px;
+      // color: $color-purple;
+      border: 1px solid lighten($color-darkgery, 10%);
+      background-color: $color-lightgrey;
+      // color: $color-white;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      font-weight: bold;
+
+      &:hover {
+        border-color: lighten($color-darkgery, 10%);
+        background-color: $color-white;
+        // color: $color-darkgery;
+        color: $color-purple;
+      }
+
+      &:hover::after {
+        color: $color-purple;
       }
     }
   }
@@ -2298,7 +2279,7 @@ header.header-detailed {
           // background-color: $color-white;
         }
 
-        &:hover + .detailed-content {
+        &:hover+.detailed-content {
           border-color: $color-purple;
         }
       }
@@ -2718,7 +2699,7 @@ header.header-detailed {
       }
     }
 
-    .btn + .btn {
+    .btn+.btn {
       margin-top: 6px;
     }
 
@@ -2800,6 +2781,7 @@ header.header-detailed {
         text-decoration: underline;
         text-underline-offset: 4px;
         cursor: pointer;
+
       }
 
       .btn {
@@ -2844,10 +2826,11 @@ header.header-detailed {
       img {
         cursor: pointer;
         transition: all 0.4s ease;
-        filter: grayscale(20%) saturate(90%);
+        filter: grayscale(20%)saturate(90%);
 
         &:hover {
-          filter: grayscale(0%) saturate(120%);
+
+          filter: grayscale(0%)saturate(120%);
         }
       }
     }
@@ -2991,10 +2974,11 @@ header.header-detailed {
       img {
         cursor: pointer;
         transition: all 0.4s ease;
-        filter: grayscale(20%) saturate(90%);
+        filter: grayscale(20%)saturate(90%);
 
         &:hover {
-          filter: grayscale(0%) saturate(120%);
+
+          filter: grayscale(0%)saturate(120%);
         }
       }
     }

@@ -85,10 +85,6 @@ a {
   box-shadow: 0px 0px 6px 1px rgba(22, 22, 22, 0.4);
 }
 
-input[type=checkbox] {
-  accent-color: #a02fec; /* 你想要的顏色（藍色示範） */
-}
-
 .content-area {
   max-width: 1280px;
   margin: 0 auto;
@@ -1440,25 +1436,14 @@ footer {
 .product-content .openlist button {
   font-size: 18px;
   font-weight: 600;
-  padding: 6px 16px;
-  border-radius: 8px;
-  margin-left: 16px;
   letter-spacing: 2px;
   border: none;
   background-color: transparent;
   cursor: pointer;
 }
-.product-content .openlist button:hover {
-  background-color: #fff;
-}
-.product-content .openlist button:hover svg {
-  color: #a02fec;
-}
-.product-content .openlist button svg {
-  transition: transform 0.3s ease;
-}
-.product-content .openlist button svg.rotate {
-  transform: rotateX(180deg);
+.product-content .openlist button::before {
+  position: relative;
+  content: "隱藏篩選條件";
 }
 .product-content ul {
   padding: 0px;
@@ -1480,6 +1465,13 @@ footer {
 }
 .product-content ul li div:hover + ul {
   border-bottom: 1px solid #5f5f5f;
+}
+.product-content ul li div::after {
+  content: "＋";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .product-content ul li ul {
   border-bottom: 1px dashed #5f5f5f;
@@ -1506,31 +1498,11 @@ footer {
 }
 .product-content ul li .side-title {
   padding: 0 6px;
-  display: flex;
-  justify-content: space-between;
-}
-.product-content ul li .side-title h4,
-.product-content ul li .side-title span {
-  vertical-align: top;
-}
-.product-content ul li .side-title span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 1/1;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 0.5px solid transparent;
-}
-.product-content ul li .side-title:hover span {
-  color: #a02fec;
-  background-color: #fff;
 }
 .product-content ul li .side-content {
-  max-height: 0px;
+  max-height: 400px;
   overflow: hidden;
-  transition: all 0.3s ease-out;
+  transition: all 0.5s ease-out;
 }
 .product-content ul li .side-content.side-content-open {
   max-height: 400px;
@@ -1553,16 +1525,15 @@ footer {
 }
 .product-content .product-content-area .listrow {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, max-content));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   /* 自動高度 */
-  gap: 32px 24px;
-  justify-items: flex-start;
-  justify-content: start;
+  gap: 60px 24px;
+  justify-items: center;
+  justify-content: space-evenly;
 }
 .product-content .product-content-area .card {
   height: 100%;
   min-width: 200px;
-  max-width: 300px;
   width: 100%;
   padding-bottom: 0px;
   justify-content: space-between;
@@ -1666,32 +1637,36 @@ footer {
   color: #2c2c2c;
 }
 .product-content .product-content-area .btn-openlist {
-  margin-bottom: 24px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-}
-.product-content .product-content-area .btn-openlist button {
-  color: #2c2c2c;
+  display: inline-block;
   font-size: 16px;
-  padding: 6px 12px;
-  letter-spacing: 1px;
   text-align: center;
   line-height: 100%;
-  border: 2px solid #5f5f5f;
-  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+  border: 1px solid #464646;
+  background-color: #eeeeee;
+  border-radius: 12px;
   transition: all 0.3s ease;
-  font-weight: 400;
-  cursor: pointer;
+  font-weight: bold;
 }
-.product-content .product-content-area .btn-openlist button svg {
-  transform: rotate(45deg);
+.product-content .product-content-area .btn-openlist::after {
+  position: relative;
+  margin-left: 8px;
+  content: "X";
+  background: none;
 }
-.product-content .product-content-area .btn-openlist button:hover {
-  background-color: #fff;
-  border-color: #a02fec;
+.product-content .product-content-area .btn-openlist::before {
+  position: relative;
+  content: "清除";
+  background: none;
 }
-.product-content .product-content-area .btn-openlist button:hover svg {
+.product-content .product-content-area .btn-openlist:hover {
+  border-color: #464646;
+  background-color: #f5f5f5;
+  color: #a02fec;
+}
+.product-content .product-content-area .btn-openlist:hover::after {
   color: #a02fec;
 }
 .product-content .pagination {
