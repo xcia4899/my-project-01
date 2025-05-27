@@ -1554,6 +1554,7 @@ footer {
 .product-content .product-content-area .listrow {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, max-content));
+  grid-template-rows: auto-fit;
   /* 自動高度 */
   gap: 32px 24px;
   justify-items: flex-start;
@@ -1617,7 +1618,7 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   padding: 6px 8px 8px;
-  gap: 8px;
+  gap: 0px;
 }
 .product-content .product-content-area .card .item-text h4,
 .product-content .product-content-area .card .item-text h5,
@@ -1639,6 +1640,7 @@ footer {
   font-weight: 600;
 }
 .product-content .product-content-area .card .item-text .productprice {
+  margin-top: 8px;
   width: 100%;
   display: flex;
   align-items: flex-end;

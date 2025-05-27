@@ -239,7 +239,9 @@
               </div>
               <div class="item-text">
                 <h4>{{ product.name }}</h4>
-                <h5>{{ product.description }}</h5>
+                <h5>{{ product.description.length > 30 ? product.description.slice(0, 30) + '...' : product.description
+                  }}</h5>
+
                 <div class="productprice">
                   <p v-show="product.onsale" :class="{ redcharacter : product.onsale }">
                     特價 ${{ product.price.toLocaleString() }} TWD
@@ -371,10 +373,7 @@
               title: "麥克風",
               options: ["USB 麥克風", "3.5mm 麥克風", "電容式麥克風"],
             },
-            {
-              title: "螢幕",
-              options: ["24 吋以下", "27 吋以上", "曲面螢幕"],
-            },
+
             {
               title: "滑鼠墊",
               options: ["小型滑鼠墊", "大型滑鼠墊", "RGB 滑鼠墊"],
@@ -484,7 +483,7 @@
             return this.selectedproducts.some((tag) =>
               product.tags.includes(tag)
             );
-           
+
           });
         },
         // 依據目前頁碼與每頁顯示數量，取得要顯示的分頁商品
@@ -503,8 +502,8 @@
 
       watch: {
         selectedproducts() {
-    this.currentPage = 1;
-  }
+          this.currentPage = 1;
+        }
       },
     });
     app.mount("#vue-productlist");
