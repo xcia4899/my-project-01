@@ -1,7 +1,7 @@
 [
   {
     "id": "RAZER-1000",
-    "brand": "雷蛇",
+    "brand": "Razer",
     "name": "PRO X TACTILE 機械鍵盤",
     "color": "藍色",
     "price": 3200,
@@ -14,11 +14,19 @@
     "smallimage03": "./images/pic-detal/RAZER-1000/10003.jpg",
     "category": "機械鍵盤",
     "details": "",
-    "tags": ["雷蛇", "機械鍵盤","RGB 鍵盤", "$3,001+", "⭐⭐⭐⭐⭐","⭐⭐⭐⭐","⭐⭐⭐"]
+    "tags": [
+      "Razer",
+      "機械鍵盤",
+      "RGB 鍵盤",
+      "$3,001+",
+      "⭐⭐⭐⭐⭐",
+      "⭐⭐⭐⭐",
+      "⭐⭐⭐"
+    ]
   },
   {
     "id": "PRO-1001",
-    "brand": "羅技",
+    "brand": "Logitech",
     "name": "PRO 精密調整電競滑鼠",
     "color": "黑色",
     "price": 3490,
@@ -31,11 +39,18 @@
     "smallimage03": "./images/pic-detal/PRO-1001/10003.png",
     "category": "滑鼠",
     "details": "",
-     "tags": ["羅技", "無線滑鼠", "電競滑鼠", "$3,001+", "⭐⭐⭐","⭐⭐⭐⭐"]
+    "tags": [
+      "Logitech",
+      "無線滑鼠",
+      "電競滑鼠",
+      "$3,001+",
+      "⭐⭐⭐",
+      "⭐⭐⭐⭐"
+    ]
   },
   {
     "id": "PRO-1002",
-    "brand": "羅技",
+    "brand": "Logitech",
     "name": "PRO X TKL RAPID ",
     "color": "金屬灰",
     "price": 2999,
@@ -48,8 +63,15 @@
     "smallimage03": "./images/pic-detal/PRO-1002/10003.png",
     "category": "鍵盤",
     "details": "",
-    "tags": ["羅技", "機械鍵盤","薄式鍵盤", "RPG鍵盤", "$3,001+", "⭐⭐⭐","⭐⭐⭐⭐"]
-
+    "tags": [
+      "Logitech",
+      "機械鍵盤",
+      "薄式鍵盤",
+      "RPG鍵盤",
+      "$3,001+",
+      "⭐⭐⭐",
+      "⭐⭐⭐⭐"
+    ]
   },
   {
     "id": "MSI-1003",
@@ -66,13 +88,19 @@
     "smallimage03": "./images/pic-detal/MSI-1003/10003.png",
     "category": "滑鼠",
     "details": "",
-    "tags": ["微星", "藍芽耳機", "電競耳機", "$2,001–$3,000", "⭐⭐⭐","⭐⭐⭐⭐ 以上"]
-    
+    "tags": [
+      "微星",
+      "藍芽耳機",
+      "電競耳機",
+      "$2,001–$3,000",
+      "⭐⭐⭐",
+      "⭐⭐⭐⭐ 以上"
+    ]
   },
   {
     "id": "RAZER-1004",
-    "brand": "雷蛇",
-    "name": "Razer Gigantus V2",
+    "brand": "Razer",
+    "name": "Razer Gigantus V2 滑鼠墊",
     "color": "紅色",
     "price": 899,
     "originalPrice": 1099,
@@ -84,7 +112,16 @@
     "smallimage03": "./images/pic-detal/RAZER-1004/10003.png",
     "category": "滑鼠墊",
     "details": "",
-    "tags": ["雷蛇", "小型滑鼠墊","大型滑鼠墊", "$0–$1,000", "$1001–$2,000", "⭐⭐⭐ 以上","⭐⭐⭐⭐ 以上","⭐⭐⭐⭐⭐"]
+    "tags": [
+      "Razer",
+      "小型滑鼠墊",
+      "大型滑鼠墊",
+      "$0–$1,000",
+      "$1001–$2,000",
+      "⭐⭐⭐ 以上",
+      "⭐⭐⭐⭐ 以上",
+      "⭐⭐⭐⭐⭐"
+    ]
   },
   {
     "id": "ROG-1005",
@@ -95,104 +132,178 @@
     "originalPrice": 9888,
     "onsale": false,
     "description": "ROG Carnyx 是一款專業級的心形指向性 USB 麥克風，搭載 25mm 電容膠囊和 192 kHz / 24 位元取樣率，提供自然豐富的音效。Carnyx 透過高通濾波器減少低頻噪音、內建防噴網罩防止爆音，再加上金屬減震支架，確保純淨且無間斷的錄音品質。",
-   "image": "./images/pic-detal/ROG-1005/10001.png",
+    "image": "./images/pic-detal/ROG-1005/10001.png",
     "smallimage01": "./images/pic-detal/ROG-1005/10001.png",
     "smallimage02": "./images/pic-detal/ROG-1005/10002.png",
     "smallimage03": "./images/pic-detal/ROG-1005/10003.png",
     "category": "麥克風",
     "details": "",
-    "tags": ["ROG", "電容式麥克風","3.5mm 麥克風","$3,001+" ,"⭐⭐⭐ 以上","⭐⭐⭐⭐ 以上","⭐⭐⭐⭐⭐"]
+    "tags": [
+      "ROG",
+      "電容式麥克風",
+      "3.5mm 麥克風",
+      "$3,001+",
+      "⭐⭐⭐ 以上",
+      "⭐⭐⭐⭐ 以上",
+      "⭐⭐⭐⭐⭐"
+    ]
   },
   {
     "id": "ROG-1006",
     "brand": "ROG",
-    "name": "ROG PRO 鍵帽升級套件",
+    "name": "ROG Falchion RX Low Profile 矮軸無線鍵盤",
     "color": "金屬灰",
     "price": 3430,
     "originalPrice": 3730,
     "onsale": false,
-    "description": "搭配 RGB 背光系統，視覺效果升級。",
-    "image": "https://example.com/images/ROG-1006.jpg",
-    "category": "配件",
-    "details": ""
+    "description": "ROG Falchion RX 矮軸 65% 精巧無線電競鍵盤，配備 ROG RX 光學矮軸、三模連線、ROG SpeedNova 無線技術、ROG Omni 接收器、保護套、矽膠消音泡棉、互動式觸控面板，並支援 MacOS。",
+    "image": "./images/pic-detal/ROG-1006/10001.png",
+    "smallimage01": "./images/pic-detal/ROG-1006/10001.png",
+    "smallimage02": "./images/pic-detal/ROG-1006/10003.jpg",
+    "smallimage03": "./images/pic-detal/ROG-1006/10004.jpg",
+    "category": "鍵盤",
+    "details": "",
+    "tags": [
+      "ROG",
+      "薄式鍵盤",
+      "無線鍵盤",
+      "RGB 鍵盤",
+      "$3,001+",
+      "⭐⭐⭐ 以上",
+      "⭐⭐⭐⭐ 以上",
+      "⭐⭐⭐⭐⭐"
+    ]
   },
   {
     "id": "PRO-1007",
-    "brand": "羅技",
-    "name": "羅技 PRO 7.1 聲道遊戲耳機",
+    "brand": "Logitech",
+    "name": "G522 LIGHTSPEED 無線耳機",
     "color": "黑色",
     "price": 4482,
-    "originalPrice": 4682,
+    "originalPrice": 4980,
     "onsale": true,
-    "description": "人體工學設計，提升舒適與操作效率。",
-    "image": "https://example.com/images/PRO-1007.jpg",
+    "description": "光速無線遊戲耳機配備光同步 RGB",
+    "image": "./images/pic-detal/PRO-1007/10001.png",
+    "smallimage01": "./images/pic-detal/PRO-1007/10001.png",
+    "smallimage02": "./images/pic-detal/PRO-1007/10002.png",
+    "smallimage03": "./images/pic-detal/PRO-1007/10003.png",
     "category": "耳機",
-    "details": ""
+    "details": "用專為高效能 PC 遊戲設計的耳機（含麥克風），盡情展現傳奇般的遊戲實力。沉浸式 HQ 高音質音訊、遊戲最佳麥克風，以及時尚的側向 LIGHTSYNC RGB 燈效，讓 您在遊戲中的每一次操作、每一項成就和每一次突破都成就傳奇。",
+    "tags": [
+      "Logitech",
+      "藍芽耳機",
+      "電競耳機",
+      "$2,001–$3,000",
+      "⭐⭐⭐",
+      "⭐⭐⭐⭐ 以上"
+    ]
   },
   {
     "id": "MSI-1008",
     "brand": "微星",
-    "name": "微星 PRO 手托人體工學設計",
+    "name": "CLUTCH GM08 砝碼配重電競滑鼠",
     "color": "黑色",
-    "price": 4671,
-    "originalPrice": 4971,
+    "price": 699,
+    "originalPrice": 899,
     "onsale": true,
-    "description": "支援 LIGHTSPEED 技術，連線穩定零延遲。",
-    "image": "https://example.com/images/MSI-1008.jpg",
+    "description": "PixArt PAW 3519 光學傳感器。",
+    "image": "./images/pic-detal/MSI-1008/10001.png",
+    "smallimage01": "./images/pic-detal/MSI-1008/10001.png",
+    "smallimage02": "./images/pic-detal/MSI-1008/10002.png",
+    "smallimage03": "./images/pic-detal/MSI-1008/10003.png",
     "category": "滑鼠",
-    "details": ""
+    "details": "",
+    "tags": ["微星", "電競滑鼠", "有線滑鼠", "RGB 滑鼠", "$0–$1,000", "⭐⭐⭐"]
   },
   {
-    "id": "MSI-1009",
-    "brand": "微星",
-    "name": "微星 PRO X 模組化熱插拔鍵盤",
+    "id": "PRO-1009",
+    "brand": "Logitech",
+    "name": "G915 X LIGHTSPEED TKL",
     "color": "藍色",
-    "price": 5896,
-    "originalPrice": 6396,
+    "price": 2390,
+    "originalPrice": 2996,
     "onsale": false,
-    "description": "搭配 RGB 背光系統，視覺效果升級。",
-    "image": "https://example.com/images/MSI-1009.jpg",
+    "description": "無線低配置遊戲鍵盤。",
+    "image": "./images/pic-detal/PRO-1009/10001.png",
+    "smallimage01": "./images/pic-detal/PRO-1009/10001.png",
+    "smallimage02": "./images/pic-detal/PRO-1009/10002.png",
+    "smallimage03": "./images/pic-detal/PRO-1009/10003.png",
     "category": "鍵盤",
-    "details": ""
+    "details": "",
+    "tags": [
+      "Logitech",
+      "薄式鍵盤",
+      "RPG 鍵盤",
+      "$2,001–$3,000",
+      "⭐⭐⭐",
+      "⭐⭐⭐⭐ 以上"
+    ]
   },
   {
     "id": "ROG-1010",
     "brand": "ROG",
-    "name": "ROG PRO X 無線耳機 LIGHTSPEED",
+    "name": "ROG Cetra True Wireless 無線藍牙耳機",
     "color": "紅色",
-    "price": 5647,
-    "originalPrice": 6147,
+    "price": 4999,
+    "originalPrice": 6200,
     "onsale": false,
-    "description": "擁有極速觸發與精準控制，為專業玩家設計。",
-    "image": "https://example.com/images/ROG-1010.jpg",
+    "description": "ROG Cetra 真無線電競耳機具備低延遲無線連線、ANC、搭配無線充電盒可提供最長 27 小時電池續航力、IPX4 防水，以及可透過 Armoury Crate 支援 EQ/虛擬 7.1 聲道。",
+    "image": "./images/pic-detal/ROG-1010/10001.png",
+    "smallimage01": "./images/pic-detal/ROG-1010/10001.png",
+    "smallimage02": "./images/pic-detal/ROG-1010/10002.png",
+    "smallimage03": "./images/pic-detal/ROG-1010/10003.png",
     "category": "耳機",
-    "details": ""
+    "details": "",
+    "tags": [
+      "ROG",
+      "藍芽耳機",
+      "降噪耳機",
+      "$3,000+",
+      "⭐⭐⭐",
+      "⭐⭐⭐⭐ 以上",
+      "⭐⭐⭐⭐⭐ 以上"
+    ]
   },
   {
-    "id": "PRO-1011",
-    "brand": "羅技",
-    "name": "羅技 PRO X 高清直播用麥克風",
+    "id": "Razer-1011",
+    "brand": "Razer",
+    "name": "Razer Seiren V3 Mini",
     "color": "藍色",
-    "price": 4604,
-    "originalPrice": 4804,
+    "price": 1600,
+    "originalPrice": 1800,
     "onsale": false,
     "description": "多種自定義功能，滿足不同遊戲需求。",
-    "image": "https://example.com/images/PRO-1011.jpg",
+    "image": "./images/pic-detal/Razer-1011/10002.png",
+    "smallimage01": "./images/pic-detal/Razer-1011/10001.jpg",
+    "smallimage02": "./images/pic-detal/Razer-1011/10002.png",
+    "smallimage03": "./images/pic-detal/Razer-1011/10003.webp",
     "category": "麥克風",
-    "details": ""
+    "details": "",
+    "tags": ["Razer", "電容式麥克風", "USB 麥克風", "$1001–$2,000", "⭐⭐⭐"]
   },
   {
-    "id": "RAZER-1012",
-    "brand": "雷蛇",
-    "name": "雷蛇 PRO X 60% 機械鍵盤",
+    "id": "PRO-1012",
+    "brand": "Logitech",
+    "name": "Logitech PRO X SUPERLIGHT 無線遊戲滑鼠 ",
     "color": "粉紅",
     "price": 3383,
     "originalPrice": 3583,
     "onsale": true,
-    "description": "輕量化設計，長時間使用也不易疲勞。",
-    "image": "https://example.com/images/RAZER-1012.jpg",
-    "category": "鍵盤",
-    "details": ""
+    "description": "與世界上許多領先的電子競技專業人士合作精心設計。",
+    "image": "./images/pic-detal/PRO-1012/10001.png",
+    "smallimage01": "./images/pic-detal/PRO-1012/10001.png",
+    "smallimage02": "./images/pic-detal/PRO-1012/10002.png",
+    "smallimage03": "./images/pic-detal/PRO-1012/10003.png",
+    "category": "滑鼠",
+    "details": "",
+    "tags": [
+      "Logitech",
+      "無線滑鼠",
+      "電競滑鼠",
+      "$3,001+",
+      "⭐⭐⭐",
+      "⭐⭐⭐⭐"
+    ]
   },
   {
     "id": "MSI-1013",
@@ -208,72 +319,37 @@
     "details": ""
   },
   {
-    "id": "ROG-1014",
-    "brand": "ROG",
-    "name": "ROG PRO 7.1 聲道遊戲耳機",
+    "id": "PRO-1014",
+    "brand": "Logitech",
+    "name": "Logitech PRO 精密調整滑鼠",
+    "color": "粉色",
+    "price": 3791,
+    "originalPrice": 3991,
+    "onsale": true,
+    "description": "人體工學設計，提升舒適與操作效率。",
+    "image": "./images/pic-detal/PRO-1014/10003.png",
+    "smallimage01": "./images/pic-detal/PRO-1014/10001.png",
+    "smallimage02": "./images/pic-detal/PRO-1014/10002.png",
+    "smallimage03": "./images/pic-detal/PRO-1014/10003.png",
+    "category": "滑鼠",
+    "details": ""
+  },
+  {
+    "id": "PRO-1015",
+    "brand": "Logitech",
+    "name": "Logitech PRO 精密調整滑鼠",
     "color": "白色",
-    "price": 4385,
-    "originalPrice": 4385,
+    "price": 3791,
+    "originalPrice": 3991,
     "onsale": true,
-    "description": "搭配 RGB 背光系統，視覺效果升級。",
-    "image": "https://example.com/images/ROG-1014.jpg",
-    "category": "耳機",
+    "description": "人體工學設計，提升舒適與操作效率。",
+    "image": "./images/pic-detal/PRO-1015/10003.png",
+    "smallimage01": "./images/pic-detal/PRO-1015/10001.png",
+    "smallimage02": "./images/pic-detal/PRO-1015/10002.png",
+    "smallimage03": "./images/pic-detal/PRO-1015/10003.png",
+    "category": "滑鼠",
     "details": ""
-  },
-  {
-    "id": "RAZER-1015",
-    "brand": "雷蛇",
-    "name": "雷蛇 PRO 磁吸式 RGB 裝飾燈",
-    "color": "黑色",
-    "price": 3008,
-    "originalPrice": 3208,
-    "onsale": true,
-    "description": "多種自定義功能，滿足不同遊戲需求。",
-    "image": "https://example.com/images/RAZER-1015.jpg",
-    "category": "配件",
-    "details": ""
-  },
-  {
-    "id": "MSI-1016",
-    "brand": "微星",
-    "name": "微星 PRO X 高清直播用麥克風",
-    "color": "粉紅",
-    "price": 6521,
-    "originalPrice": 6721,
-    "onsale": false,
-    "description": "搭配 RGB 背光系統，視覺效果升級。",
-    "image": "https://example.com/images/MSI-1016.jpg",
-    "category": "麥克風",
-    "details": ""
-  },
-  {
-    "id": "MSI-1017",
-    "brand": "微星",
-    "name": "微星 PRO LIGHTSPEED 無線接收器",
-    "color": "金屬灰",
-    "price": 4498,
-    "originalPrice": 4798,
-    "onsale": true,
-    "description": "擁有極速觸發與精準控制，為專業玩家設計。",
-    "image": "https://example.com/images/MSI-1017.jpg",
-    "category": "配件",
-    "details": ""
-  },
-  {
-    "id": "ROG-1018",
-    "brand": "ROG",
-    "name": "ROG PRO X 高清直播用麥克風",
-    "color": "粉紅",
-    "price": 5154,
-    "originalPrice": 5654,
-    "onsale": true,
-    "description": "輕量化設計，長時間使用也不易疲勞。",
-    "image": "https://example.com/images/ROG-1018.jpg",
-    "category": "麥克風",
-    "details": "",
-    "tags": ["USB 麥克風", "$5,001+", "⭐⭐⭐⭐⭐"]
-  },
-  {
+  },{
     "id": "MSI-1019",
     "brand": "微星",
     "name": "微星 PRO 磁吸式 RGB 裝飾燈",
@@ -284,38 +360,6 @@
     "description": "擁有極速觸發與精準控制，為專業玩家設計。",
     "image": "https://example.com/images/MSI-1019.jpg",
     "category": "配件",
-    "details": ""
-  },
-  {
-    "id": "PRO-1020",
-    "brand": "羅技",
-    "name": "羅技 PRO 精密調整滑鼠",
-    "color": "粉色",
-    "price": 3791,
-    "originalPrice": 3991,
-    "onsale": true,
-    "description": "人體工學設計，提升舒適與操作效率。",
-    "image": "./images/pic-detal/PRO-1020/10003.png",
-    "smallimage01": "./images/pic-detal/PRO-1020/10001.png",
-    "smallimage02": "./images/pic-detal/PRO-1020/10002.png",
-    "smallimage03": "./images/pic-detal/PRO-1020/10003.png",
-    "category": "滑鼠",
-    "details": ""
-  },
-  {
-    "id": "PRO-1021",
-    "brand": "羅技",
-    "name": "羅技 PRO 精密調整滑鼠",
-    "color": "白色",
-    "price": 3791,
-    "originalPrice": 3991,
-    "onsale": true,
-    "description": "人體工學設計，提升舒適與操作效率。",
-    "image": "./images/pic-detal/PRO-1021/10003.png",
-    "smallimage01": "./images/pic-detal/PRO-1021/10001.png",
-    "smallimage02": "./images/pic-detal/PRO-1021/10002.png",
-    "smallimage03": "./images/pic-detal/PRO-1021/10003.png",
-    "category": "滑鼠",
     "details": ""
   }
 ]
