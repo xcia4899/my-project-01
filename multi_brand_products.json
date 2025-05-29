@@ -14,6 +14,7 @@
     "smallimage03": "./images/pic-detal/RAZER-1000/10003.jpg",
     "category": "機械鍵盤",
     "details": "",
+    "quantity":1,
     "tags": [
       "Razer",
       "機械鍵盤",
@@ -39,6 +40,7 @@
     "smallimage03": "./images/pic-detal/PRO-1001/10003.png",
     "category": "滑鼠",
     "details": "",
+     "quantity":1,
     "tags": [
       "Logitech",
       "無線滑鼠",
@@ -63,6 +65,7 @@
     "smallimage03": "./images/pic-detal/PRO-1002/10003.png",
     "category": "鍵盤",
     "details": "",
+     "quantity":1,
     "tags": [
       "Logitech",
       "機械鍵盤",
@@ -88,6 +91,7 @@
     "smallimage03": "./images/pic-detal/MSI-1003/10003.png",
     "category": "滑鼠",
     "details": "",
+     "quantity":1,
     "tags": [
       "微星",
       "藍芽耳機",
@@ -112,6 +116,7 @@
     "smallimage03": "./images/pic-detal/RAZER-1004/10003.png",
     "category": "滑鼠墊",
     "details": "",
+     "quantity":1,
     "tags": [
       "Razer",
       "小型滑鼠墊",
@@ -138,6 +143,7 @@
     "smallimage03": "./images/pic-detal/ROG-1005/10003.png",
     "category": "麥克風",
     "details": "",
+     "quantity":1,
     "tags": [
       "ROG",
       "電容式麥克風",
@@ -163,6 +169,7 @@
     "smallimage03": "./images/pic-detal/ROG-1006/10004.jpg",
     "category": "鍵盤",
     "details": "",
+     "quantity":1,
     "tags": [
       "ROG",
       "薄式鍵盤",
@@ -213,6 +220,7 @@
     "smallimage03": "./images/pic-detal/MSI-1008/10003.png",
     "category": "滑鼠",
     "details": "",
+     "quantity":1,
     "tags": ["微星", "電競滑鼠", "有線滑鼠", "RGB 滑鼠", "$0–$1,000", "⭐⭐⭐"]
   },
   {

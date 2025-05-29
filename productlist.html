@@ -175,6 +175,19 @@
             </svg>
           </a>
         </div>
+        <div class="cart-show" id="vur-minincart">
+          <div v-for="item in cartItems" :key="item.id" class="cartproductshow">
+            <div><img :src="item.image" alt=""></div>
+            <div>{{ item.name }}</div>
+            <!-- <div>單價：{{ item.price }}</div> -->
+            <div>數量：{{ item.quantity }}</div>
+            <div>小計：{{ item.subtotal }}</div>
+          </div>
+
+          <hr>
+          <div>總金額：{{ this.total }}</div>
+          <button class="btn">結帳</button>
+        </div>
 
       </aside>
     </div>
@@ -231,18 +244,17 @@
             </li>
           </ul>
 
-
         </section>
         <section class="col-product-list">
           <div v-show="showClearBtn" class="btn-openlist">
             <button @click="clearFilters" class="clear-btn">清除篩選條件
-              <svg v-else width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                 <!-- 加號（+） -->
                 <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
               </svg>
             </button>
             <button v-for="(item,index) in this.selectedproducts" :key="index" @click="removeTag(item)">{{item}}
-              <svg v-else width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                 <!-- 加號（+） -->
                 <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
               </svg>
@@ -457,7 +469,22 @@
 
         // 模擬加入購物車功能，點擊時彈出商品名稱提示
         addToCart(product) {
-          alert(`加入購物車: ${product.name}`);
+          // 取出購物車資料（如沒有就為空陣列）
+          const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+          const existingItem = cart.find(item => item.id === product.id);
+
+          if (existingItem) {
+            existingItem.quantity += 1;
+            alert(`商品已在購物車中，數量 +1: ${product.name}`);
+          } else {
+            cart.push({ id: product.id, quantity: 1 });
+            alert(`加入購物車: ${product.name}`);
+          }
+
+          localStorage.setItem('cart', JSON.stringify(cart));
+          window.dispatchEvent(new Event('cart-updated'));
+
         },
 
         // 切換到指定頁面並滾動到產品區塊
@@ -529,6 +556,57 @@
       },
     });
     app.mount("#vue-productlist");
+
+    const minincart = Vue.createApp({
+      data() {
+        return {
+          products: [],
+          cartItems: [],
+          total: 0 
+        };
+      },
+      mounted() {
+        fetch("./multi_brand_products.json")
+          .then((response) => response.json())
+          .then((data) => {
+            this.products = data;
+            this.updateCartItems();
+          })
+          .catch((err) => {
+            console.error("讀取 JSON 檔案錯誤:", err);
+          });
+        //監聽cart-updated是否發送
+        window.addEventListener('cart-updated', () => {
+          this.updateCartItems();
+        });
+      },
+
+      methods: {
+        updateCartItems() {
+          const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+          this.cartItems = cart.map(cartItem => {
+            const product = this.products.find(p => p.id === cartItem.id);
+            return {
+              ...product,
+              quantity: cartItem.quantity,
+              subtotal: product.price * cartItem.quantity
+            };
+          });
+
+          // 計算總價
+          this.total = this.cartItems.reduce((sum, item) => sum + item.subtotal, 0);
+        },
+        removeFromCart(id) {
+          let cart = JSON.parse(localStorage.getItem('cart')) || [];
+          cart = cart.filter(itemId => itemId !== id);
+          localStorage.setItem('cart', JSON.stringify(cart));
+          this.updateCartItems();
+        }
+      },
+
+    })
+    minincart.mount("#vur-minincart");
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

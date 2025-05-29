@@ -299,9 +299,6 @@ header {
         border-color: $color-purple;
       }
 
-      &:hover a {
-        // color: #a02fec;
-      }
     }
 
     .li-color {
@@ -346,6 +343,54 @@ header {
         color: #a02fec;
         // height: 100%;
       }
+    }
+   
+    .cart-show {
+    
+      // display: none;
+      color: #000;
+      position: absolute;
+      top: 70px;
+      right: 0px;
+      max-height: 0px ;
+      width: 400px;
+      border-radius: 4px;
+      background-color: $color-middlekgery;
+      // padding-bottom: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      color: $color-darkgery;
+      transition: all 0.3s ease;
+      overflow: hidden;
+
+      .cartproductshow {
+        width: 100%;
+        min-height: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 8px;
+        
+        img {
+          max-width: 60px;
+          // width: 100%;
+          // height: 100%;
+        }
+        .delete {
+          width: 20px;
+          &:hover {
+            background-color: $color-purple;
+            color: $color-white;
+          }
+        }
+      }
+      &:hover{
+          max-height:1000px ;
+      }
+    }
+    .cart-btn:hover+.cart-show {
+      max-height:1000px ;
+      // background-color: #cf7e7e;
     }
   }
 }
@@ -2030,9 +2075,7 @@ footer {
         padding: 6px 8px 8px;
         gap: 0px;
 
-        * {
-          // border: 1px solid;
-        }
+  
 
         h4,
         h5,
@@ -2244,18 +2287,13 @@ header.header-detailed {
           &:hover::after {
             color: darken($color-purple, 20%);
           }
-
-          
         }
       }
     }
   }
 
   .detailed {
-    * {
-      // border: 1px solid red;
-    }
-
+ 
     // height: 100vh;
     width: 100%;
     background-color: $color-lightgrey;
@@ -2481,9 +2519,7 @@ header.header-detailed {
 //--product-cart-----------------------------------------
 //--product-cart-----------------------------------------
 //--product-cart-----------------------------------------
-* {
-  // border: 1px solid red;
-}
+
 
 .product-cart {
   .cart-row1 {
@@ -2693,10 +2729,7 @@ header.header-detailed {
     // gap: 16px;
     text-align: center;
 
-    * {
-      // border: 1px solid;
-    }
-
+  
     div {
       margin-bottom: 32px;
       width: 100%;
