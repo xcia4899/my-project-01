@@ -422,9 +422,11 @@
               options: ["⭐⭐⭐⭐⭐", "⭐⭐⭐⭐ 以上", "⭐⭐⭐ 以上"],
             },
           ],
-          sidecontentopen: true,
+         
+          widthsize:960,
           sidebar: true,
-
+          hasAutoOpened: false,
+          hasAutoClosed: false,
           openSections: [], // 用來記錄打開的區塊索引
           currentPage: 1,
           itemsPerPage: 9,
@@ -439,6 +441,12 @@
           .catch((err) => {
             console.error("讀取 JSON 檔案錯誤:", err);
           });
+
+        window.addEventListener('resize', this.handleResize);
+        this.handleResize(); // 初始化時先判斷一次螢幕寬度
+      },
+      beforeUnmount() {
+        window.removeEventListener('resize', this.handleResize);
       },
       methods: {
         // 清除所有已選的篩選條件（清空 selectedproducts 陣列）
@@ -467,7 +475,19 @@
         toggleSidebar() {
           this.sidebar = !this.sidebar;
         },
-
+        handleResize() {
+          if (window.innerWidth < this.widthsize && !this.hasAutoClosed) {
+            this.sidebar = false;
+            this.hasAutoClosed = true; // 只關一次
+             this.hasAutoOpened = false;
+          }
+         
+          if (window.innerWidth > this.widthsize && !this.hasAutoOpened) {
+            this.sidebar = true;
+            this.hasAutoOpened = true;
+             this.hasAutoClosed = false;
+          }
+        },
         // 模擬加入購物車功能，點擊時彈出商品名稱提示
         addToCart(product) {
           // 取出購物車資料（如沒有就為空陣列）
@@ -520,7 +540,6 @@
         showClearBtn() {
           return this.selectedproducts.length > 0;
         },
-
         // 根據選取的篩選條件過濾商品，沒選任何條件則回傳全部商品
         filteredProducts() {
           if (this.selectedproducts.length === 0) {
@@ -563,7 +582,7 @@
         return {
           products: [],
           cartItems: [],
-          total: 0 
+          total: 0
         };
       },
       mounted() {
@@ -600,10 +619,10 @@
         },
         removeFromCart(id) {
           let cart = JSON.parse(localStorage.getItem('cart')) || [];
-           cart = cart.filter(item => item.id !== id);
+          cart = cart.filter(item => item.id !== id);
           // cart = cart.filter(itemId => itemId !== id);
           localStorage.setItem('cart', JSON.stringify(cart));
-          
+
           this.updateCartItems();
         }
       },
