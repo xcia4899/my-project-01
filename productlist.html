@@ -217,6 +217,7 @@
       </div>
       <div class="product-content-area content-area">
         <section v-show="sidebar" class="col-sidebar">
+          <h4 class="toggletitle togglemini">篩選</h4>
           <ul>
             <li v-for="(section, index) in filterSections" :key="index">
               <div class="side-title" @click="toggleSection(index)">
@@ -243,6 +244,16 @@
                 </li>
               </ul>
             </li>
+            <div class="togglemini toggleminibtn">
+              <div class="reset"  @click="clearFilters">
+                <h4>重置</h4>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <!-- 加號（+） -->
+                  <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <button class="btn" @click="toggleSidebar">確定</button>
+            </div>
           </ul>
 
         </section>
@@ -422,8 +433,8 @@
               options: ["⭐⭐⭐⭐⭐", "⭐⭐⭐⭐ 以上", "⭐⭐⭐ 以上"],
             },
           ],
-         
-          widthsize:960,
+
+          widthsize: 920,
           sidebar: true,
           hasAutoOpened: false,
           hasAutoClosed: false,
@@ -479,13 +490,13 @@
           if (window.innerWidth < this.widthsize && !this.hasAutoClosed) {
             this.sidebar = false;
             this.hasAutoClosed = true; // 只關一次
-             this.hasAutoOpened = false;
+            this.hasAutoOpened = false;
           }
-         
+
           if (window.innerWidth > this.widthsize && !this.hasAutoOpened) {
             this.sidebar = true;
             this.hasAutoOpened = true;
-             this.hasAutoClosed = false;
+            this.hasAutoClosed = false;
           }
         },
         // 模擬加入購物車功能，點擊時彈出商品名稱提示
