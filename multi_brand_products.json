@@ -79,7 +79,7 @@
   {
     "id": "MSI-1003",
     "brand": "微星",
-    "name": "IMMERSE GH50 WIRELESS 電競耳機",
+    "name": "GH50 電競耳機",
     "color": "粉紅",
     "price": 1899,
     "originalPrice": 2400,
@@ -104,7 +104,7 @@
   {
     "id": "RAZER-1004",
     "brand": "Razer",
-    "name": "Razer Gigantus V2 滑鼠墊",
+    "name": "Gigantus V2 滑鼠墊",
     "color": "紅色",
     "price": 899,
     "originalPrice": 1099,
@@ -131,7 +131,7 @@
   {
     "id": "ROG-1005",
     "brand": "ROG",
-    "name": "ROG Carnyx 電容式麥克風 ",
+    "name": "Carnyx 電容式麥克風 ",
     "color": "藍色",
     "price": 8600,
     "originalPrice": 9888,
@@ -157,7 +157,7 @@
   {
     "id": "ROG-1006",
     "brand": "ROG",
-    "name": "ROG Falchion RX Low Profile 矮軸無線鍵盤",
+    "name": "RX Profile 矮軸無線鍵盤",
     "color": "金屬灰",
     "price": 3430,
     "originalPrice": 3730,
@@ -184,7 +184,7 @@
   {
     "id": "PRO-1007",
     "brand": "Logitech",
-    "name": "G522 LIGHTSPEED 無線耳機",
+    "name": "G522 LIGHT 無線耳機",
     "color": "黑色",
     "price": 4482,
     "originalPrice": 4980,
@@ -208,7 +208,7 @@
   {
     "id": "MSI-1008",
     "brand": "微星",
-    "name": "CLUTCH GM08 砝碼配重電競滑鼠",
+    "name": "GM08 電競滑鼠",
     "color": "黑色",
     "price": 699,
     "originalPrice": 899,
@@ -226,7 +226,7 @@
   {
     "id": "PRO-1009",
     "brand": "Logitech",
-    "name": "G915 X LIGHTSPEED TKL",
+    "name": "G915 X LIGHTSPEED",
     "color": "藍色",
     "price": 2390,
     "originalPrice": 2996,
@@ -250,7 +250,7 @@
   {
     "id": "ROG-1010",
     "brand": "ROG",
-    "name": "ROG Cetra True Wireless 無線藍牙耳機",
+    "name": "Cetra True 藍牙耳機",
     "color": "紅色",
     "price": 4999,
     "originalPrice": 6200,
@@ -292,7 +292,7 @@
   {
     "id": "PRO-1012",
     "brand": "Logitech",
-    "name": "Logitech PRO X SUPERLIGHT 無線遊戲滑鼠 ",
+    "name": "PRO SUPER 無線滑鼠 ",
     "color": "粉紅",
     "price": 3383,
     "originalPrice": 3583,
@@ -316,7 +316,7 @@
   {
     "id": "MSI-1013",
     "brand": "微星",
-    "name": "微星 PRO X 高清直播用麥克風",
+    "name": "PRO X 直播用麥克風",
     "color": "粉紅",
     "price": 3179,
     "originalPrice": 3179,
@@ -329,7 +329,7 @@
   {
     "id": "PRO-1014",
     "brand": "Logitech",
-    "name": "Logitech PRO 精密調整滑鼠",
+    "name": "PRO 精密調整滑鼠",
     "color": "粉色",
     "price": 3791,
     "originalPrice": 3991,
@@ -345,7 +345,7 @@
   {
     "id": "PRO-1015",
     "brand": "Logitech",
-    "name": "Logitech PRO 精密調整滑鼠",
+    "name": "PRO 精密調整滑鼠",
     "color": "白色",
     "price": 3791,
     "originalPrice": 3991,
@@ -360,7 +360,7 @@
   },{
     "id": "MSI-1019",
     "brand": "微星",
-    "name": "微星 PRO 磁吸式 RGB 裝飾燈",
+    "name": "磁吸式 RGB 裝飾燈",
     "color": "藍色",
     "price": 5974,
     "originalPrice": 5974,

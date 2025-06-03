@@ -1,650 +1,827 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horizon-product</title>
+    <link rel="stylesheet" href="./webindex.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Horizon-product</title>
-  <link rel="stylesheet" href="./webindex.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-</head>
-
-<body>
-  <header class="debug-none">
-    <div id="header-inner">
-      <div class="menu-toggle">
-        <svg width="30" height="30" viewBox="0 0 100 80" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <rect width="100" height="12" rx="6"></rect>
-          <rect y="30" width="100" height="12" rx="6"></rect>
-          <rect y="60" width="100" height="12" rx="6"></rect>
-        </svg>
-      </div>
-      <div class="logo"><a href="./index.html">Horizon</a></div>
-      <nav class="navbar">
-        <ul>
-          <li id="trigger-shoplist" class="trigger"><a href="#">商品</a></li>
-          <div id="dropdown-shoplist" class="header-content dropdown-content">
-            <div class="hcontent-area ">
-              <div class="hcol">
-                <div class="card">
-                  <a href="./productlist.html">
-                    <div class="item-pic">
-
-                      <img src="./images/pictrue/three-row3-02.jpg" alt="" />
-                    </div>
-                    <div class="item-text">
-                      <h3>全部商品</h3>
-                    </div>
-                  </a>
-                </div>
-                <div class="card">
-                  <a href="./productlist.html">
-                    <div class="item-pic">
-                      <img src="./images/pictrue/fourth-row2-02.png" alt="" />
-                    </div>
-                    <div class="item-text">
-                      <h3>鍵盤/滑鼠</h3>
-                    </div>
-                  </a>
-                </div>
-                <div class="card">
-                  <a href="./productlist.html">
-                    <div class="item-pic">
-                      <img src="./images/pictrue/fourth-row2-02.png" alt="" />
-                    </div>
-                    <div class="item-text">
-                      <h3>耳機/喇叭</h3>
-                    </div>
-                  </a>
-                </div>
-                <div class="card">
-                  <a href="./productlist.html">
-                    <div class="item-pic">
-                      <img src="./images/pictrue/fourth-row2-02.png" alt="" />
-                    </div>
-                    <div class="item-text">
-                      <h3>螢幕</h3>
-                    </div>
-                  </a>
-                </div>
-                <div class="card"><a href="./productlist.html">
-                    <div class="item-pic">
-                      <img src="./images/pictrue/fourth-row2-02.png" alt="" />
-                    </div>
-                    <div class="item-text">
-                      <h3>遊戲機</h3>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div class="dropdown-close">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="24" height="24" fill="none">
-                  <path d="M2 6H10M6 2V10" stroke="#666" stroke-width="0" stroke-linecap="round" />
-                </svg>
-              </div>
-            </div>
-          </div>
-          <li id="trigger-account" class="trigger"><a href="#">品牌</a></li>
-          <div id="dropdown-account" class="header-content dropdown-content">
-            <div class="hcontent-area">
-              <div class="hcol hcol-left">
-                <div class="card">
-                  <div class="item-pic"><img src="" alt="" /></div>
-                  <div class="item-text">
-                    <h3>Horizon</h3>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="item-pic"><img src="" alt="" /></div>
-                  <div class="item-text">
-                    <h3>Logitech</h3>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="item-pic"><img src="" alt="" /></div>
-                  <div class="item-text">
-                    <h3>Razer</h3>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="item-pic"><img src="" alt="" /></div>
-                  <div class="item-text">
-                    <h3>ROG</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="dropdown-close">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="24" height="24" fill="none">
-                  <path d="M2 6H10M6 2V10" stroke="#666" stroke-width="0" stroke-linecap="round" />
-                </svg>
-              </div>
-            </div>
-          </div>
-          <li><a href="">活動</a></li>
-          <li><a href="">關於我們</a></li>
-        </ul>
-      </nav>
-      <aside class="nav-right">
-        <div class="btnitem search-btn">
-          <a href="./productlist.html">
-            <svg class="icon-color" width="26" height="26" viewBox="0 0 26 26" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_238_902)">
-                <path
-                  d="M13.0962 19.1648C16.9139 18.3533 19.351 14.6006 18.5395 10.7828C17.728 6.96502 13.9753 4.52795 10.1575 5.33944C6.33973 6.15093 3.90266 9.90369 4.71415 13.7215C5.52564 17.5392 9.2784 19.9763 13.0962 19.1648Z"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M22.1045 19.0557L17.5468 16.0959" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </g>
-              <defs>
-                <clipPath id="clip0_238_902">
-                  <rect width="21.2014" height="21.2014" fill="white"
-                    transform="translate(0.101562 4.76758) rotate(-12)" />
-                </clipPath>
-              </defs>
-            </svg>
-          </a>
+  <body>
+    <header class="debug-none">
+      <div id="header-inner">
+        <div class="menu-toggle">
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 100 80"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="100" height="12" rx="6"></rect>
+            <rect y="30" width="100" height="12" rx="6"></rect>
+            <rect y="60" width="100" height="12" rx="6"></rect>
+          </svg>
         </div>
-        <div class="btnitem login-btn">
-          <a href="./login.html">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              <path
-                d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </a>
-        </div>
-        <div class="btnitem cart-btn">
-          <a href="./cart.html">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              <path
-                d="M6.5 22C7.05228 22 7.5 21.5523 7.5 21C7.5 20.4477 7.05228 20 6.5 20C5.94772 20 5.5 20.4477 5.5 21C5.5 21.5523 5.94772 22 6.5 22Z"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              <path
-                d="M17.5 22C18.0523 22 18.5 21.5523 18.5 21C18.5 20.4477 18.0523 20 17.5 20C16.9477 20 16.5 20.4477 16.5 21C16.5 21.5523 16.9477 22 17.5 22Z"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </a>
-        </div>
-        <div class="cart-show" id="vur-minincart">
-          <div v-for="item in cartItems" :key="item.id" class="cartproductshow">
-            <div><img :src="item.image" alt=""></div>
-            <div>{{ item.name }}</div>
-            <!-- <div>單價：{{ item.price }}</div> -->
-            <div>數量：{{ item.quantity }}</div>
-            <div>小計：{{ item.subtotal }}</div>
-            <div @click="removeFromCart(item.id)">X</div>
-          </div>
-
-          <hr>
-          <div>總金額：{{ this.total }}</div>
-          <button class="btn">結帳</button>
-        </div>
-
-      </aside>
-    </div>
-
-
-  </header>
-
-  <main id="main " class="">
-    <section class="product-cursoul">
-      <div class="content-area">
-        <div class="search"></div>
-      </div>
-    </section>
-
-    <section class="product-content" id="vue-productlist">
-      <div class="openlist">
-        <div class="content-area">
-          <button @click="toggleSidebar">
-            {{ sidebar ? '關閉篩選條件' : '開啟篩選條件' }}
-            <svg :class="{rotate:sidebar}" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-              viewBox="0 0 24 24">
-              <path d="M3 5h18v2H3zM7 11h10v2H7zM10 17h4v2h-4z" />
-            </svg>
-          </button>
-        </div>
-      </div>
-      <div class="product-content-area content-area">
-        <section v-show="sidebar" class="col-sidebar">
-          <h4 class="toggletitle togglemini">篩選</h4>
+        <div class="logo"><a href="./index.html">Horizon</a></div>
+        <nav class="navbar">
           <ul>
-            <li v-for="(section, index) in filterSections" :key="index">
-              <div class="side-title" @click="toggleSection(index)">
-                <h4>{{ section.title }}</h4>
-                <span>
-                  <svg v-if="openSections.includes(index)" width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <!-- 減號（-） -->
-                    <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <li id="trigger-shoplist" class="trigger"><a href="#">商品</a></li>
+            <div id="dropdown-shoplist" class="header-content dropdown-content">
+              <div class="hcontent-area">
+                <div class="hcol">
+                  <div class="card">
+                    <a href="./productlist.html">
+                      <div class="item-pic">
+                        <img src="./images/pictrue/three-row3-02.jpg" alt="" />
+                      </div>
+                      <div class="item-text">
+                        <h3>全部商品</h3>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="card">
+                    <a href="./productlist.html">
+                      <div class="item-pic">
+                        <img src="./images/pictrue/fourth-row2-02.png" alt="" />
+                      </div>
+                      <div class="item-text">
+                        <h3>鍵盤/滑鼠</h3>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="card">
+                    <a href="./productlist.html">
+                      <div class="item-pic">
+                        <img src="./images/pictrue/fourth-row2-02.png" alt="" />
+                      </div>
+                      <div class="item-text">
+                        <h3>耳機/喇叭</h3>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="card">
+                    <a href="./productlist.html">
+                      <div class="item-pic">
+                        <img src="./images/pictrue/fourth-row2-02.png" alt="" />
+                      </div>
+                      <div class="item-text">
+                        <h3>螢幕</h3>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="card">
+                    <a href="./productlist.html">
+                      <div class="item-pic">
+                        <img src="./images/pictrue/fourth-row2-02.png" alt="" />
+                      </div>
+                      <div class="item-text">
+                        <h3>遊戲機</h3>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="dropdown-close">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 12 12"
+                    width="24"
+                    height="24"
+                    fill="none"
+                  >
+                    <path
+                      d="M2 6H10M6 2V10"
+                      stroke="#666"
+                      stroke-width="0"
+                      stroke-linecap="round"
+                    />
                   </svg>
-                  <svg v-else width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <!-- 加號（+） -->
-                    <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                  </svg>
-                </span>
-
+                </div>
               </div>
+            </div>
+            <li id="trigger-account" class="trigger"><a href="#">品牌</a></li>
+            <div id="dropdown-account" class="header-content dropdown-content">
+              <div class="hcontent-area">
+                <div class="hcol hcol-left">
+                  <div class="card">
+                    <div class="item-pic"><img src="" alt="" /></div>
+                    <div class="item-text">
+                      <h3>Horizon</h3>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="item-pic"><img src="" alt="" /></div>
+                    <div class="item-text">
+                      <h3>Logitech</h3>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="item-pic"><img src="" alt="" /></div>
+                    <div class="item-text">
+                      <h3>Razer</h3>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="item-pic"><img src="" alt="" /></div>
+                    <div class="item-text">
+                      <h3>ROG</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown-close">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 12 12"
+                    width="24"
+                    height="24"
+                    fill="none"
+                  >
+                    <path
+                      d="M2 6H10M6 2V10"
+                      stroke="#666"
+                      stroke-width="0"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <li><a href="">活動</a></li>
+            <li><a href="">關於我們</a></li>
+          </ul>
+        </nav>
+        <aside class="nav-right">
+          <div class="btnitem search-btn">
+            <a href="./productlist.html">
+              <svg
+                class="icon-color"
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_238_902)">
+                  <path
+                    d="M13.0962 19.1648C16.9139 18.3533 19.351 14.6006 18.5395 10.7828C17.728 6.96502 13.9753 4.52795 10.1575 5.33944C6.33973 6.15093 3.90266 9.90369 4.71415 13.7215C5.52564 17.5392 9.2784 19.9763 13.0962 19.1648Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M22.1045 19.0557L17.5468 16.0959"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_238_902">
+                    <rect
+                      width="21.2014"
+                      height="21.2014"
+                      fill="white"
+                      transform="translate(0.101562 4.76758) rotate(-12)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </div>
+          <div class="btnitem login-btn">
+            <a href="./login.html">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="btnitem cart-btn">
+            <a href="./cart.html">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M6.5 22C7.05228 22 7.5 21.5523 7.5 21C7.5 20.4477 7.05228 20 6.5 20C5.94772 20 5.5 20.4477 5.5 21C5.5 21.5523 5.94772 22 6.5 22Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M17.5 22C18.0523 22 18.5 21.5523 18.5 21C18.5 20.4477 18.0523 20 17.5 20C16.9477 20 16.5 20.4477 16.5 21C16.5 21.5523 16.9477 22 17.5 22Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="cart-show" id="vur-minincart">
+           <div class="cart-area">
+              <div
+                v-for="item in cartItems"
+                :key="item.id"
+                class="cartproductshow"
+              >
+                <div><img :src="item.image" alt="" /></div>
+                <div class="itemname">{{ item.name }}</div>
+                <!-- <div>單價：{{ item.price }}</div> -->
+                <div>數量：{{ item.quantity }}</div>
+                <div class="itemprice">小計：{{ item.subtotal }}</div>
+                <div class="delete" @click="removeFromCart(item.id)">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <!-- 加號（+） -->
+                    <path
+                      d="M12 5v14M5 12h14"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="bottom-area">
+                <h4>總金額：{{ this.total }}元</h4>
+                <a src="./cart.html"><button class="btn">結帳</button></a>
+              </div>
+           </div>
+          </div>
+        </aside>
+      </div>
+    </header>
 
-              <ul class="side-content" :class="{ 'side-content-open': openSections.includes(index) }">
-                <li v-for="item in section.options" :key="item">
-                  <label>
-                    <input type="checkbox" :value="item" v-model="selectedproducts" />
-                    {{ item }}
-                  </label>
-                </li>
-              </ul>
-            </li>
-            <div class="togglemini toggleminibtn">
-              <div class="reset"  @click="clearFilters">
-                <h4>重置</h4>
+    <main id="main " class="">
+      <section class="product-cursoul">
+        <div class="content-area">
+          <div class="search"></div>
+        </div>
+      </section>
+
+      <section class="product-content" id="vue-productlist">
+        <div class="openlist">
+          <div class="content-area">
+            <button @click="toggleSidebar">
+              {{ sidebar ? '關閉篩選條件' : '開啟篩選條件' }}
+              <svg
+                :class="{rotate:sidebar}"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M3 5h18v2H3zM7 11h10v2H7zM10 17h4v2h-4z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-content-area content-area">
+          <section v-show="sidebar" class="col-sidebar">
+            <h4 class="toggletitle togglemini">篩選</h4>
+            <ul>
+              <li v-for="(section, index) in filterSections" :key="index">
+                <div class="side-title" @click="toggleSection(index)">
+                  <h4>{{ section.title }}</h4>
+                  <span>
+                    <svg
+                      v-if="openSections.includes(index)"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <!-- 減號（-） -->
+                      <path
+                        d="M5 12h14"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                    <svg
+                      v-else
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <!-- 加號（+） -->
+                      <path
+                        d="M12 5v14M5 12h14"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </span>
+                </div>
+
+                <ul
+                  class="side-content"
+                  :class="{ 'side-content-open': openSections.includes(index) }"
+                >
+                  <li v-for="item in section.options" :key="item">
+                    <label>
+                      <input
+                        type="checkbox"
+                        :value="item"
+                        v-model="selectedproducts"
+                      />
+                      {{ item }}
+                    </label>
+                  </li>
+                </ul>
+              </li>
+              <div class="togglemini toggleminibtn">
+                <div class="reset" @click="clearFilters">
+                  <h4>重置</h4>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <!-- 加號（+） -->
+                    <path
+                      d="M12 5v14M5 12h14"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <button class="btn" @click="toggleSidebar">確定</button>
+              </div>
+            </ul>
+          </section>
+          <section class="col-product-list">
+            <div v-show="showClearBtn" class="btn-openlist">
+              <button @click="clearFilters" class="clear-btn">
+                清除篩選條件
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                   <!-- 加號（+） -->
-                  <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  <path
+                    d="M12 5v14M5 12h14"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
                 </svg>
-              </div>
-              <button class="btn" @click="toggleSidebar">確定</button>
+              </button>
+              <button
+                v-for="(item,index) in this.selectedproducts"
+                :key="index"
+                @click="removeTag(item)"
+              >
+                {{item}}
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <!-- 加號（+） -->
+                  <path
+                    d="M12 5v14M5 12h14"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
             </div>
-          </ul>
-
-        </section>
-        <section class="col-product-list">
-          <div v-show="showClearBtn" class="btn-openlist">
-            <button @click="clearFilters" class="clear-btn">清除篩選條件
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                <!-- 加號（+） -->
-                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-              </svg>
-            </button>
-            <button v-for="(item,index) in this.selectedproducts" :key="index" @click="removeTag(item)">{{item}}
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                <!-- 加號（+） -->
-                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-              </svg>
-            </button>
-
-          </div>
-          <div class="listrow">
-            <div class="card" v-for="product in paginatedProducts" :key="product.id">
-              <div class="item-pic">
-                <a href="./productdetailed.html">
-                  <div class="pic">
-                    <img :src="product.image" :alt="product.name" />
-                  </div>
-                  <div class="card-title">{{ product.brand }} 系列</div>
-                </a>
-              </div>
-              <div class="item-text">
-                <h4>{{ product.name }}</h4>
-                <h5>{{ product.description.length > 30 ? product.description.slice(0, 30) + '...' : product.description
-                  }}</h5>
-
-                <div class="productprice">
-                  <p v-show="product.onsale" :class="{ redcharacter : product.onsale }">
-                    特價 ${{ product.price.toLocaleString() }} TWD
-                  </p>
-                  <p :class="{ strike : product.onsale }">
-                    ${{ product.originalPrice.toLocaleString() }} TWD
-                  </p>
+            <div class="listrow">
+              <div
+                class="card"
+                v-for="product in paginatedProducts"
+                :key="product.id"
+              >
+                <div class="item-pic">
+                  <a href="./productdetailed.html">
+                    <div class="pic">
+                      <img :src="product.image" :alt="product.name" />
+                    </div>
+                    <div class="card-title">{{ product.brand }} 系列</div>
+                  </a>
                 </div>
-                <button class="btn" @click="addToCart(product)">
-                  加入購物車
-                </button>
+                <div class="item-text">
+                  <h4>{{ product.name }}</h4>
+                  <h5>
+                    {{ product.description.length > 12 ?
+                    product.description.slice(0, 12) + '...' :
+                    product.description }}
+                  </h5>
+
+                  <div class="productprice">
+                    <p
+                      v-show="product.onsale"
+                      :class="{ redcharacter : product.onsale }"
+                    >
+                      特價${{ product.price.toLocaleString() }}
+                    </p>
+                    <p :class="{ strike : product.onsale }">
+                      ${{ product.originalPrice.toLocaleString() }} TWD
+                    </p>
+                  </div>
+                  <button class="btn" @click="addToCart(product)">
+                    加入購物車
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-          <div v-show="true" class="pagination">
-            <button @click="prevPage()" :disabled="currentPage === 1">
-              上一頁
-            </button>
-            <button v-for="page in totalPages" :key="page" @click="goToPage(page)"
-              :class="{ active: page === currentPage }">
-              {{ page }}
-            </button>
-            <button @click="nextPage()" :disabled="currentPage === totalPages">
-              下一頁
-            </button>
-          </div>
-        </section>
-      </div>
-    </section>
-  </main>
-  <style scoped></style>
-  <footer id="footer" class="">
-    <section class="footer-top margin-topbottom">
-      <div class="content-area toprow-01">
-        <h4>訂閱最新消息</h4>
-        <div>
-          <input type="text" placeholder="請輸入Email" /><button class="btn btn-go">
-            GO!
-          </button>
+            <div v-show="true" class="pagination">
+              <button @click="prevPage()" :disabled="currentPage === 1">
+                上一頁
+              </button>
+              <button
+                v-for="page in totalPages"
+                :key="page"
+                @click="goToPage(page)"
+                :class="{ active: page === currentPage }"
+              >
+                {{ page }}
+              </button>
+              <button
+                @click="nextPage()"
+                :disabled="currentPage === totalPages"
+              >
+                下一頁
+              </button>
+            </div>
+          </section>
         </div>
-        <p>
-          點擊“<span>Go!</span>”即表示您同意接收 Horizon
-          的最新產品消息、優惠活動與專屬折扣。隨時取消訂閱，詳情請見使用條款。
-        </p>
-      </div>
-    </section>
-    <section class="footer-bottom margin-topbottom">
-      <div class="content-area bottom-row">
-        <section class="bottom-frow-01">
-          <div class="fcol-left">
-            <div class="left-col left-col-01">
-              <ul>
-                <li>關於我們</li>
-                <li>服務據點</li>
-                <li>環境永續</li>
-                <li>材料科技</li>
-                <li>人才招募</li>
-                <li>部落格</li>
-              </ul>
-            </div>
-            <div class="left-col left-col-02">
-              <ul>
-                <li>支援服務</li>
-                <li>常見問題</li>
-                <li>產品支援</li>
-                <li>退換貨須知</li>
-                <li>聯絡我們</li>
-                <li>追蹤我的訂單</li>
-              </ul>
-            </div>
-            <div class="left-col left-col-03">
-              <ul>
-                <li>法律聲明</li>
-                <li>網站使用條款</li>
-                <li>隱私與個人資料保護政策</li>
-                <li>智慧財產權</li>
-              </ul>
-            </div>
+      </section>
+    </main>
+    <style scoped></style>
+    <footer id="footer" class="">
+      <section class="footer-top margin-topbottom">
+        <div class="content-area toprow-01">
+          <h4>訂閱最新消息</h4>
+          <div>
+            <input type="text" placeholder="請輸入Email" /><button
+              class="btn btn-go"
+            >
+              GO!
+            </button>
           </div>
-          <div class="fcol-right">
-            <h4>支援付款方式</h4>
-            <h4>追蹤我們的社群</h4>
-            <p>客服上班時間 09:30～18:30（週一至週五，假日及國定假日除外</p>
-          </div>
-        </section>
-        <hr />
-        <section class="bottom-frow-02">
-          <p>支援 ID：77183a7ea63dc837</p>
-          <p>English 中文 (繁體)</p>
-        </section>
-      </div>
-    </section>
-  </footer>
+          <p>
+            點擊“<span>Go!</span>”即表示您同意接收 Horizon
+            的最新產品消息、優惠活動與專屬折扣。隨時取消訂閱，詳情請見使用條款。
+          </p>
+        </div>
+      </section>
+      <section class="footer-bottom margin-topbottom">
+        <div class="content-area bottom-row">
+          <section class="bottom-frow-01">
+            <div class="fcol-left">
+              <div class="left-col left-col-01">
+                <ul>
+                  <li>關於我們</li>
+                  <li>服務據點</li>
+                  <li>環境永續</li>
+                  <li>材料科技</li>
+                  <li>人才招募</li>
+                  <li>部落格</li>
+                </ul>
+              </div>
+              <div class="left-col left-col-02">
+                <ul>
+                  <li>支援服務</li>
+                  <li>常見問題</li>
+                  <li>產品支援</li>
+                  <li>退換貨須知</li>
+                  <li>聯絡我們</li>
+                  <li>追蹤我的訂單</li>
+                </ul>
+              </div>
+              <div class="left-col left-col-03">
+                <ul>
+                  <li>法律聲明</li>
+                  <li>網站使用條款</li>
+                  <li>隱私與個人資料保護政策</li>
+                  <li>智慧財產權</li>
+                </ul>
+              </div>
+            </div>
+            <div class="fcol-right">
+              <h4>支援付款方式</h4>
+              <h4>追蹤我們的社群</h4>
+              <p>客服上班時間 09:30～18:30（週一至週五，假日及國定假日除外</p>
+            </div>
+          </section>
+          <hr />
+          <section class="bottom-frow-02">
+            <p>支援 ID：77183a7ea63dc837</p>
+            <p>English 中文 (繁體)</p>
+          </section>
+        </div>
+      </section>
+    </footer>
 
-  <script>
-    const sidetitle = document.querySelectorAll(".side-title");
-    sidetitle.forEach((title) => {
-      title.addEventListener("click", () => {
-        const content = title.nextElementSibling;
-        content.classList.toggle("side-content-open");
-      });
-    });
-  </script>
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-  <script>
-    const app = Vue.createApp({
-      data() {
-        return {
-          products: [],
-          selectedproducts: [],
-          filterSections: [
-            {
-              title: "品牌",
-              options: ["Logitech", "Razer", "ROG", "微星"],
-            },
-            {
-              title: "鍵盤",
-              options: ["機械鍵盤", "薄式鍵盤", "無線鍵盤", "RGB 鍵盤"],
-            },
-            {
-              title: "滑鼠",
-              options: ["有線滑鼠", "無線滑鼠", "電競滑鼠", "RGB 滑鼠"],
-            },
-            {
-              title: "耳機",
-              options: ["藍芽耳機", "有線耳機", "降噪耳機", "電競耳機"],
-            },
-            {
-              title: "麥克風",
-              options: ["USB 麥克風", "3.5mm 麥克風", "電容式麥克風"],
-            },
-
-            {
-              title: "滑鼠墊",
-              options: ["小型滑鼠墊", "大型滑鼠墊", "RGB 滑鼠墊"],
-            },
-            {
-              title: "價格",
-              options: ["$0–$1,000", "$1001–$2,000", "$2,001–$3,000", "$3,001+"],
-            },
-            {
-              title: "評價",
-              options: ["⭐⭐⭐⭐⭐", "⭐⭐⭐⭐ 以上", "⭐⭐⭐ 以上"],
-            },
-          ],
-
-          widthsize: 920,
-          sidebar: true,
-          hasAutoOpened: false,
-          hasAutoClosed: false,
-          openSections: [], // 用來記錄打開的區塊索引
-          currentPage: 1,
-          itemsPerPage: 9,
-        };
-      },
-      mounted() {
-        fetch("./multi_brand_products.json")
-          .then((response) => response.json())
-          .then((data) => {
-            this.products = data;
-          })
-          .catch((err) => {
-            console.error("讀取 JSON 檔案錯誤:", err);
-          });
-
-        window.addEventListener('resize', this.handleResize);
-        this.handleResize(); // 初始化時先判斷一次螢幕寬度
-      },
-      beforeUnmount() {
-        window.removeEventListener('resize', this.handleResize);
-      },
-      methods: {
-        // 清除所有已選的篩選條件（清空 selectedproducts 陣列）
-        clearFilters() {
-          this.selectedproducts = [];
-        },
-
-        // 從已選的篩選條件中移除指定的 tag
-        removeTag(tag) {
-          this.selectedproducts = this.selectedproducts.filter(t => t !== tag);
-        },
-
-        // 切換展開或關閉篩選區塊 (index 是篩選區塊的編號)
-        toggleSection(index) {
-          const i = this.openSections.indexOf(index);
-          if (i > -1) {
-            // 如果該區塊已開啟，移除它（關閉）
-            this.openSections.splice(i, 1);
-          } else {
-            // 尚未展開，加入陣列表示開啟
-            this.openSections.push(index);
-          }
-        },
-
-        // 切換側邊欄開關狀態（布林切換）
-        toggleSidebar() {
-          this.sidebar = !this.sidebar;
-        },
-        handleResize() {
-          if (window.innerWidth < this.widthsize && !this.hasAutoClosed) {
-            this.sidebar = false;
-            this.hasAutoClosed = true; // 只關一次
-            this.hasAutoOpened = false;
-          }
-
-          if (window.innerWidth > this.widthsize && !this.hasAutoOpened) {
-            this.sidebar = true;
-            this.hasAutoOpened = true;
-            this.hasAutoClosed = false;
-          }
-        },
-        // 模擬加入購物車功能，點擊時彈出商品名稱提示
-        addToCart(product) {
-          // 取出購物車資料（如沒有就為空陣列）
-          const cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-          const existingItem = cart.find(item => item.id === product.id);
-
-          if (existingItem) {
-            existingItem.quantity += 1;
-            alert(`商品已在購物車中，數量 +1: ${product.name}`);
-          } else {
-            cart.push({ id: product.id, quantity: 1 });
-            alert(`加入購物車: ${product.name}`);
-          }
-
-          localStorage.setItem('cart', JSON.stringify(cart));
-          window.dispatchEvent(new Event('cart-updated'));
-
-        },
-
-        // 切換到指定頁面並滾動到產品區塊
-        goToPage(page) {
-          this.currentPage = page;
-          this.scrollToProductContent();
-        },
-
-        // 切換到上一頁（如果不是第一頁），並滾動到產品區塊
-        prevPage() {
-          if (this.currentPage > 1) this.currentPage--;
-          this.scrollToProductContent();
-        },
-
-        // 切換到下一頁（如果不是最後一頁），並滾動到產品區塊
-        nextPage() {
-          if (this.currentPage < this.totalPages) this.currentPage++;
-          this.scrollToProductContent();
-        },
-
-        // 滾動頁面到產品列表區塊，並帶有平滑動畫效果
-        scrollToProductContent() {
-          const target = document.querySelector(".product-content");
-          if (target) {
-            target.scrollIntoView({ behavior: "smooth" });
-          }
-        },
-      },
-
-      computed: {
-        // 判斷是否有任何篩選條件被選中，用來顯示或隱藏「清除篩選條件」按鈕
-        showClearBtn() {
-          return this.selectedproducts.length > 0;
-        },
-        // 根據選取的篩選條件過濾商品，沒選任何條件則回傳全部商品
-        filteredProducts() {
-          if (this.selectedproducts.length === 0) {
-            return this.products;
-          }
-
-          return this.products.filter((product) => {
-            if (!Array.isArray(product.tags)) return false;
-            // 只要 product.tags 裡有任一個 selectedproducts 的 tag 就符合條件
-            return this.selectedproducts.some((tag) =>
-              product.tags.includes(tag)
-            );
-
-          });
-        },
-        // 依據目前頁碼與每頁顯示數量，取得要顯示的分頁商品
-        paginatedProducts() {
-          const start = (this.currentPage - 1) * this.itemsPerPage;
-          const end = start + this.itemsPerPage;
-          // 使用 filteredProducts 的結果分頁
-          return this.filteredProducts.slice(start, end);
-        },
-
-        // 計算總頁數，用來製作分頁按鈕
-        totalPages() {
-          return Math.ceil(this.filteredProducts.length / this.itemsPerPage);
-        },
-      },
-
-      watch: {
-        selectedproducts() {
-          this.currentPage = 1;
-        }
-      },
-    });
-    app.mount("#vue-productlist");
-
-    const minincart = Vue.createApp({
-      data() {
-        return {
-          products: [],
-          cartItems: [],
-          total: 0
-        };
-      },
-      mounted() {
-        fetch("./multi_brand_products.json")
-          .then((response) => response.json())
-          .then((data) => {
-            this.products = data;
-            this.updateCartItems();
-          })
-          .catch((err) => {
-            console.error("讀取 JSON 檔案錯誤:", err);
-          });
-        //監聽cart-updated是否發送
-        window.addEventListener('cart-updated', () => {
-          this.updateCartItems();
+    <script>
+      const sidetitle = document.querySelectorAll(".side-title");
+      sidetitle.forEach((title) => {
+        title.addEventListener("click", () => {
+          const content = title.nextElementSibling;
+          content.classList.toggle("side-content-open");
         });
-      },
+      });
+    </script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            products: [],
+            selectedproducts: [],
+            filterSections: [
+              {
+                title: "品牌",
+                options: ["Logitech", "Razer", "ROG", "微星"],
+              },
+              {
+                title: "鍵盤",
+                options: ["機械鍵盤", "薄式鍵盤", "無線鍵盤", "RGB 鍵盤"],
+              },
+              {
+                title: "滑鼠",
+                options: ["有線滑鼠", "無線滑鼠", "電競滑鼠", "RGB 滑鼠"],
+              },
+              {
+                title: "耳機",
+                options: ["藍芽耳機", "有線耳機", "降噪耳機", "電競耳機"],
+              },
+              {
+                title: "麥克風",
+                options: ["USB 麥克風", "3.5mm 麥克風", "電容式麥克風"],
+              },
 
-      methods: {
-        updateCartItems() {
-          const cart = JSON.parse(localStorage.getItem('cart')) || [];
+              {
+                title: "滑鼠墊",
+                options: ["小型滑鼠墊", "大型滑鼠墊", "RGB 滑鼠墊"],
+              },
+              {
+                title: "價格",
+                options: [
+                  "$0–$1,000",
+                  "$1001–$2,000",
+                  "$2,001–$3,000",
+                  "$3,001+",
+                ],
+              },
+              {
+                title: "評價",
+                options: ["⭐⭐⭐⭐⭐", "⭐⭐⭐⭐ 以上", "⭐⭐⭐ 以上"],
+              },
+            ],
 
-          this.cartItems = cart.map(cartItem => {
-            const product = this.products.find(p => p.id === cartItem.id);
-            return {
-              ...product,
-              quantity: cartItem.quantity,
-              subtotal: product.price * cartItem.quantity
-            };
-          });
-
-          // 計算總價
-          this.total = this.cartItems.reduce((sum, item) => sum + item.subtotal, 0);
+            widthsize: 920,
+            sidebar: true,
+            hasAutoOpened: false,
+            hasAutoClosed: false,
+            openSections: [], // 用來記錄打開的區塊索引
+            currentPage: 1,
+            itemsPerPage: window.innerWidth < 600 ? 4 : 9,
+          };
         },
-        removeFromCart(id) {
-          let cart = JSON.parse(localStorage.getItem('cart')) || [];
-          cart = cart.filter(item => item.id !== id);
-          // cart = cart.filter(itemId => itemId !== id);
-          localStorage.setItem('cart', JSON.stringify(cart));
+        mounted() {
+          fetch("./multi_brand_products.json")
+            .then((response) => response.json())
+            .then((data) => {
+              this.products = data;
+            })
+            .catch((err) => {
+              console.error("讀取 JSON 檔案錯誤:", err);
+            });
 
-          this.updateCartItems();
-        }
-      },
+          window.addEventListener("resize", this.handleResize);
+          this.handleResize(); // 初始化時先判斷一次螢幕寬度
+        },
+        beforeUnmount() {
+          window.removeEventListener("resize", this.handleResize);
+        },
+        methods: {
+          // 清除所有已選的篩選條件（清空 selectedproducts 陣列）
+          clearFilters() {
+            this.selectedproducts = [];
+          },
 
-    })
-    minincart.mount("#vur-minincart");
-  </script>
+          // 從已選的篩選條件中移除指定的 tag
+          removeTag(tag) {
+            this.selectedproducts = this.selectedproducts.filter(
+              (t) => t !== tag
+            );
+          },
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="header-js.js"></script>
-  <script src="content-js.js"></script>
-</body>
+          // 切換展開或關閉篩選區塊 (index 是篩選區塊的編號)
+          toggleSection(index) {
+            const i = this.openSections.indexOf(index);
+            if (i > -1) {
+              // 如果該區塊已開啟，移除它（關閉）
+              this.openSections.splice(i, 1);
+            } else {
+              // 尚未展開，加入陣列表示開啟
+              this.openSections.push(index);
+            }
+          },
 
+          // 切換側邊欄開關狀態（布林切換）
+          toggleSidebar() {
+            this.sidebar = !this.sidebar;
+          },
+          handleResize() {
+            if (window.innerWidth < this.widthsize && !this.hasAutoClosed) {
+              this.sidebar = false;
+              this.hasAutoClosed = true; // 只關一次
+              this.hasAutoOpened = false;
+            }
+
+            if (window.innerWidth > this.widthsize && !this.hasAutoOpened) {
+              this.sidebar = true;
+              this.hasAutoOpened = true;
+              this.hasAutoClosed = false;
+            }
+            // 更新 itemsPerPage
+            this.itemsPerPage = window.innerWidth < 670 ? 4 : 9;
+          },
+          // 模擬加入購物車功能，點擊時彈出商品名稱提示
+          addToCart(product) {
+            // 取出購物車資料（如沒有就為空陣列）
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            const existingItem = cart.find((item) => item.id === product.id);
+
+            if (existingItem) {
+              existingItem.quantity += 1;
+              alert(`商品已在購物車中，數量 +1: ${product.name}`);
+            } else {
+              cart.push({ id: product.id, quantity: 1 });
+              alert(`加入購物車: ${product.name}`);
+            }
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+            window.dispatchEvent(new Event("cart-updated"));
+          },
+
+          // 切換到指定頁面並滾動到產品區塊
+          goToPage(page) {
+            this.currentPage = page;
+            this.scrollToProductContent();
+          },
+
+          // 切換到上一頁（如果不是第一頁），並滾動到產品區塊
+          prevPage() {
+            if (this.currentPage > 1) this.currentPage--;
+            this.scrollToProductContent();
+          },
+
+          // 切換到下一頁（如果不是最後一頁），並滾動到產品區塊
+          nextPage() {
+            if (this.currentPage < this.totalPages) this.currentPage++;
+            this.scrollToProductContent();
+          },
+
+          // 滾動頁面到產品列表區塊，並帶有平滑動畫效果
+          scrollToProductContent() {
+            const target = document.querySelector(".product-content");
+            if (target) {
+              target.scrollIntoView({ behavior: "smooth" });
+            }
+          },
+        },
+
+        computed: {
+          // 判斷是否有任何篩選條件被選中，用來顯示或隱藏「清除篩選條件」按鈕
+          showClearBtn() {
+            return this.selectedproducts.length > 0;
+          },
+          // 根據選取的篩選條件過濾商品，沒選任何條件則回傳全部商品
+          filteredProducts() {
+            if (this.selectedproducts.length === 0) {
+              return this.products;
+            }
+
+            return this.products.filter((product) => {
+              if (!Array.isArray(product.tags)) return false;
+              // 只要 product.tags 裡有任一個 selectedproducts 的 tag 就符合條件
+              return this.selectedproducts.some((tag) =>
+                product.tags.includes(tag)
+              );
+            });
+          },
+          // 依據目前頁碼與每頁顯示數量，取得要顯示的分頁商品
+          paginatedProducts() {
+            const start = (this.currentPage - 1) * this.itemsPerPage;
+            const end = start + this.itemsPerPage;
+            // 使用 filteredProducts 的結果分頁
+            return this.filteredProducts.slice(start, end);
+          },
+
+          // 計算總頁數，用來製作分頁按鈕
+          totalPages() {
+            return Math.ceil(this.filteredProducts.length / this.itemsPerPage);
+          },
+        },
+
+        watch: {
+          selectedproducts() {
+            this.currentPage = 1;
+          },
+        },
+      });
+      app.mount("#vue-productlist");
+
+      const minincart = Vue.createApp({
+        data() {
+          return {
+            products: [],
+            cartItems: [],
+            total: 0,
+          };
+        },
+        mounted() {
+          fetch("./multi_brand_products.json")
+            .then((response) => response.json())
+            .then((data) => {
+              this.products = data;
+              this.updateCartItems();
+            })
+            .catch((err) => {
+              console.error("讀取 JSON 檔案錯誤:", err);
+            });
+          //監聽cart-updated是否發送
+          window.addEventListener("cart-updated", () => {
+            this.updateCartItems();
+          });
+        },
+
+        methods: {
+          updateCartItems() {
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            this.cartItems = cart.map((cartItem) => {
+              const product = this.products.find((p) => p.id === cartItem.id);
+              return {
+                ...product,
+                quantity: cartItem.quantity,
+                subtotal: product.price * cartItem.quantity,
+              };
+            });
+
+            // 計算總價
+            this.total = this.cartItems.reduce(
+              (sum, item) => sum + item.subtotal,
+              0
+            );
+          },
+          removeFromCart(id) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart = cart.filter((item) => item.id !== id);
+            // cart = cart.filter(itemId => itemId !== id);
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            this.updateCartItems();
+          },
+        },
+      });
+      minincart.mount("#vur-minincart");
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="header-js.js"></script>
+    <script src="content-js.js"></script>
+  </body>
 </html>
