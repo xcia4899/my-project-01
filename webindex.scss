@@ -2385,11 +2385,11 @@ footer {
       top: 0;
       left: 0;
       width: 100%;
-      height: calc(100% - 140px);
+      height: 100% ;
       z-index: 11111;
       background-color: $color-lightgrey;
       overflow-x: hidden;
-      padding: 32px 48px;
+      padding: 32px 48px 160px;
     }
 
     .togglemini {
@@ -2432,36 +2432,7 @@ footer {
     }
   }
 
-  .content-area.product-content-area {
-    flex-direction: column;
-    padding: 0 16px;
-
-    .col-sidebar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: calc(100% - 140px);
-      z-index: 11111;
-      background-color: $color-lightgrey;
-      overflow-x: hidden;
-      padding: 32px 48px;
-    }
-
-    .togglemini {
-      display: block;
-    }
-
-
-    .toggleminibtn {
-
-      display: flex;
-    }
-
-    .col-product-list {
-      padding: 16px 0px;
-    }
-  }
+ 
 }
 
 @media screen and (max-width: 430px) {
@@ -2482,38 +2453,6 @@ footer {
     }
   }
 
-  .content-area.product-content-area {
-    flex-direction: column;
-    padding: 0 16px;
-
-    .col-sidebar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: calc(100% - 140px);
-      z-index: 11111;
-      background-color: $color-lightgrey;
-      overflow-x: hidden;
-      padding: 32px 48px;
-    }
-
-    .togglemini {
-      display: block;
-    }
-
-
-    .toggleminibtn {
-
-      display: flex;
-    }
-
-    .col-product-list {
-      padding: 16px 0px;
-
-     
-    }
-  }
 }
 
 // product detailed------------------------------------------------------------
