@@ -1,413 +1,464 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cart</title>
+    <link rel="stylesheet" href="./main-css/webindex.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>cart</title>
-  <link rel="stylesheet" href="./webindex.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-</head>
-
-<body>
-  <header class="debug-none header-detailed">
-    <div id="header-inner">
-      <div class="menu-toggle">
-        <svg width="30" height="30" viewBox="0 0 100 80" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <rect width="100" height="12" rx="6"></rect>
-          <rect y="30" width="100" height="12" rx="6"></rect>
-          <rect y="60" width="100" height="12" rx="6"></rect>
-        </svg>
-      </div>
-      <div class="logo"><a href="./index.html">Horizon</a></div>
-      <nav class="navbar">
-        <ul>
-          <li id="trigger-shoplist" class="trigger"><a href="#">商品</a></li>
-          <div id="dropdown-shoplist" class="header-content dropdown-content">
-            <div class="hcontent-area ">
-              <div class="hcol">
-                <div class="card">
-                  <a href="./productlist.html">
-                    <div class="item-pic">
-
-                      <img src="./images/pictrue/three-row3-02.jpg" alt="" />
-                    </div>
-                    <div class="item-text">
-                      <h3>全部商品</h3>
-                    </div>
-                  </a>
-                </div>
-                <div class="card">
-                  <a href="./productlist.html">
-                    <div class="item-pic">
-                      <img src="./images/pictrue/fourth-row2-02.png" alt="" />
-                    </div>
-                    <div class="item-text">
-                      <h3>鍵盤/滑鼠</h3>
-                    </div>
-                  </a>
-                </div>
-                <div class="card">
-                  <a href="./productlist.html">
-                    <div class="item-pic">
-                      <img src="./images/pictrue/fourth-row2-02.png" alt="" />
-                    </div>
-                    <div class="item-text">
-                      <h3>耳機/喇叭</h3>
-                    </div>
-                  </a>
-                </div>
-                <div class="card">
-                  <a href="./productlist.html">
-                    <div class="item-pic">
-                      <img src="./images/pictrue/fourth-row2-02.png" alt="" />
-                    </div>
-                    <div class="item-text">
-                      <h3>螢幕</h3>
-                    </div>
-                  </a>
-                </div>
-                <div class="card"><a href="./productlist.html">
-                    <div class="item-pic">
-                      <img src="./images/pictrue/fourth-row2-02.png" alt="" />
-                    </div>
-                    <div class="item-text">
-                      <h3>遊戲機</h3>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div class="dropdown-close">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="24" height="24" fill="none">
-                  <path d="M2 6H10M6 2V10" stroke="#666" stroke-width="0" stroke-linecap="round" />
-                </svg>
-              </div>
-            </div>
-          </div>
-          <li id="trigger-account" class="trigger"><a href="#">品牌</a></li>
-          <div id="dropdown-account" class="header-content dropdown-content">
-            <div class="hcontent-area">
-              <div class="hcol hcol-left">
-                <div class="card">
-                  <div class="item-pic"><img src="" alt="" /></div>
-                  <div class="item-text">
-                    <h3>Horizon</h3>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="item-pic"><img src="" alt="" /></div>
-                  <div class="item-text">
-                    <h3>羅技</h3>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="item-pic"><img src="" alt="" /></div>
-                  <div class="item-text">
-                    <h3>雷蛇</h3>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="item-pic"><img src="" alt="" /></div>
-                  <div class="item-text">
-                    <h3>ROG</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="dropdown-close">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="24" height="24" fill="none">
-                  <path d="M2 6H10M6 2V10" stroke="#666" stroke-width="0" stroke-linecap="round" />
-                </svg>
-              </div>
-            </div>
-          </div>
-          <li><a href="">活動</a></li>
-          <li><a href="">關於我們</a></li>
-        </ul>
-      </nav>
-      <aside class="nav-right">
-        <div class="btnitem search-btn">
-          <a href="./productlist.html">
-            <svg class="icon-color" width="26" height="26" viewBox="0 0 26 26" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_238_902)">
-                <path
-                  d="M13.0962 19.1648C16.9139 18.3533 19.351 14.6006 18.5395 10.7828C17.728 6.96502 13.9753 4.52795 10.1575 5.33944C6.33973 6.15093 3.90266 9.90369 4.71415 13.7215C5.52564 17.5392 9.2784 19.9763 13.0962 19.1648Z"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M22.1045 19.0557L17.5468 16.0959" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </g>
-              <defs>
-                <clipPath id="clip0_238_902">
-                  <rect width="21.2014" height="21.2014" fill="white"
-                    transform="translate(0.101562 4.76758) rotate(-12)" />
-                </clipPath>
-              </defs>
-            </svg>
-          </a>
+  <body>
+    <header class="debug-none header-detailed">
+      <div id="header-inner">
+        <div class="menu-toggle">
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 100 80"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="100" height="12" rx="6"></rect>
+            <rect y="30" width="100" height="12" rx="6"></rect>
+            <rect y="60" width="100" height="12" rx="6"></rect>
+          </svg>
         </div>
-        <div class="btnitem login-btn">
-          <a href="./login.html">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              <path
-                d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </a>
-        </div>
-        <div class="btnitem cart-btn">
-          <a href="./cart.html">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              <path
-                d="M6.5 22C7.05228 22 7.5 21.5523 7.5 21C7.5 20.4477 7.05228 20 6.5 20C5.94772 20 5.5 20.4477 5.5 21C5.5 21.5523 5.94772 22 6.5 22Z"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              <path
-                d="M17.5 22C18.0523 22 18.5 21.5523 18.5 21C18.5 20.4477 18.0523 20 17.5 20C16.9477 20 16.5 20.4477 16.5 21C16.5 21.5523 16.9477 22 17.5 22Z"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </a>
-        </div>
-
-      </aside>
-    </div>
-
-
-  </header>
-
-  <main id="main " class="product-cart">
-    <section class="cart-row1 ">
-      <div class="row1-area content-area">
-        <div class="cart-area">
-          <div id="cart-title" class="cart-item ">
-            <div class="cart-col-01">
-              <h2>您的購物車</h2>
-              <h4 class="item-title"></h4>
+        <div class="logo"><a href="./index.html">Horizon</a></div>
+        <nav class="navbar">
+          <ul>
+            <li id="trigger-shoplist" class="trigger"><a href="#">商品</a></li>
+            <div id="dropdown-shoplist" class="header-content dropdown-content">
+              <div class="hcontent-area">
+                <div class="hcol">
+                  <div class="card">
+                    <a href="./productlist.html">
+                      <div class="item-pic">
+                        <img src="./images/pictrue/three-row3-02.jpg" alt="" />
+                      </div>
+                      <div class="item-text">
+                        <h3>全部商品</h3>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="card">
+                    <a href="./productlist.html">
+                      <div class="item-pic">
+                        <img src="./images/pictrue/fourth-row2-02.png" alt="" />
+                      </div>
+                      <div class="item-text">
+                        <h3>鍵盤/滑鼠</h3>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="card">
+                    <a href="./productlist.html">
+                      <div class="item-pic">
+                        <img src="./images/pictrue/fourth-row2-02.png" alt="" />
+                      </div>
+                      <div class="item-text">
+                        <h3>耳機/喇叭</h3>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="card">
+                    <a href="./productlist.html">
+                      <div class="item-pic">
+                        <img src="./images/pictrue/fourth-row2-02.png" alt="" />
+                      </div>
+                      <div class="item-text">
+                        <h3>螢幕</h3>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="card">
+                    <a href="./productlist.html">
+                      <div class="item-pic">
+                        <img src="./images/pictrue/fourth-row2-02.png" alt="" />
+                      </div>
+                      <div class="item-text">
+                        <h3>遊戲機</h3>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="dropdown-close">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 12 12"
+                    width="24"
+                    height="24"
+                    fill="none"
+                  >
+                    <path
+                      d="M2 6H10M6 2V10"
+                      stroke="#666"
+                      stroke-width="0"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
             </div>
-            <div class="cart-col-02">
-              <h4 class="c2-01">單價</h4>
-              <h4 class="c2-01">數量</h4>
-              <h4 class="c2-01">合計</h4>
+            <li id="trigger-account" class="trigger"><a href="#">品牌</a></li>
+            <div id="dropdown-account" class="header-content dropdown-content">
+              <div class="hcontent-area">
+                <div class="hcol hcol-left">
+                  <div class="card">
+                    <div class="item-pic"><img src="" alt="" /></div>
+                    <div class="item-text">
+                      <h3>Horizon</h3>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="item-pic"><img src="" alt="" /></div>
+                    <div class="item-text">
+                      <h3>Logitech</h3>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="item-pic"><img src="" alt="" /></div>
+                    <div class="item-text">
+                      <h3>Razer</h3>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="item-pic"><img src="" alt="" /></div>
+                    <div class="item-text">
+                      <h3>ROG</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown-close">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 12 12"
+                    width="24"
+                    height="24"
+                    fill="none"
+                  >
+                    <path
+                      d="M2 6H10M6 2V10"
+                      stroke="#666"
+                      stroke-width="0"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
             </div>
-            <div class="cart-col-03"></div>
-          </div>
-          <ul class="cart-items">
-
-            <li class="cart-item">
-              <div class="item-image cart-col-01">
-                <img src="./images/pictrue/PRO 2 LIGHTSPEED/pro2-lightspeed-black-new-gallery1.png" alt="商品圖片" />
-                <h4 class="item-title">PRO 2 LIGHTSPEED <br>
-                  羅技
-                </h4>
-              </div>
-
-              <div class="item-details cart-col-02">
-                <h4 class="item-price c2-01">NT$1,000</h4>
-                <div class="item-quantity c2-02">
-                  <button class="btn-decrease ">－</button>
-                  <input type="number" value="1" min="1" class="quantity-input" />
-                  <button class="btn-increase">＋</button>
-                </div>
-                <h4 class="item-total c2-03">NT$1,000</h4>
-              </div>
-              <div class="cart-col-03"> <button class="btn-remove ">X</button></div>
-            </li>
-            <li class="cart-item">
-              <div class="item-image cart-col-01">
-                <img src="./images/pictrue/PRO 2 LIGHTSPEED/pro2-lightspeed-white-gallery3.png" alt="商品圖片" />
-                <h4 class="item-title">PRO 2 LIGHTSPEED <br>
-                  羅技
-                </h4>
-              </div>
-
-              <div class="item-details cart-col-02">
-                <h4 class="item-price c2-01">NT$1,000</h4>
-                <div class="item-quantity c2-02">
-                  <button class="btn-decrease ">－</button>
-                  <input type="number" value="1" min="1" class="quantity-input" />
-                  <button class="btn-increase">＋</button>
-                </div>
-                <h4 class="item-total c2-03">NT$1,000</h4>
-              </div>
-              <div class="cart-col-03"> <button class="btn-remove ">X</button></div>
-            </li>
-            <li class="cart-item">
-              <div class="item-image cart-col-01">
-                <img src="./images/pictrue/PRO 2 LIGHTSPEED/pro2-lightspeed-pink-gallery2.png" alt="商品圖片" />
-                <h4 class="item-title">PRO 2 LIGHTSPEED <br>
-                  羅技
-                </h4>
-              </div>
-
-              <div class="item-details cart-col-02">
-                <h4 class="item-price c2-01">NT$1,000</h4>
-                <div class="item-quantity c2-02">
-                  <button class="btn-decrease ">－</button>
-                  <input type="number" value="1" min="1" class="quantity-input" />
-                  <button class="btn-increase">＋</button>
-                </div>
-                <h4 class="item-total c2-03">NT$1,000</h4>
-              </div>
-              <div class="cart-col-03"> <button class="btn-remove ">X</button></div>
-            </li>
-            <li class="cart-item">
-              <div class="item-image cart-col-01">
-                <img src="./images/pictrue/PRO 2 LIGHTSPEED/pro2-lightspeed-pink-gallery2.png" alt="商品圖片" />
-                <h4 class="item-title">PRO 2 LIGHTSPEED <br>
-                  羅技
-                </h4>
-              </div>
-
-              <div class="item-details cart-col-02">
-                <h4 class="item-price c2-01">NT$1,000</h4>
-                <div class="item-quantity c2-02">
-                  <button class="btn-decrease ">－</button>
-                  <input type="number" value="1" min="1" class="quantity-input" />
-                  <button class="btn-increase">＋</button>
-                </div>
-                <h4 class="item-total c2-03">NT$1,000</h4>
-              </div>
-              <div class="cart-col-03"> <button class="btn-remove ">X</button></div>
-            </li>
-            <li class="cart-item">
-              <div class="item-image cart-col-01">
-                <img src="./images/pictrue/PRO 2 LIGHTSPEED/pro2-lightspeed-pink-gallery2.png" alt="商品圖片" />
-                <h4 class="item-title">PRO 2 LIGHTSPEED <br>
-                  羅技
-                </h4>
-              </div>
-
-              <div class="item-details cart-col-02">
-                <h4 class="item-price c2-01">NT$1,000</h4>
-                <div class="item-quantity c2-02">
-                  <button class="btn-decrease ">－</button>
-                  <input type="number" value="1" min="1" class="quantity-input" />
-                  <button class="btn-increase">＋</button>
-                </div>
-                <h4 class="item-total c2-03">NT$1,000</h4>
-              </div>
-              <div class="cart-col-03"> <button class="btn-remove ">X</button></div>
-            </li>
+            <li><a href="">活動</a></li>
+            <li><a href="">關於我們</a></li>
           </ul>
-        </div>
+        </nav>
+        <aside class="nav-right">
+          <div class="btnitem search-btn">
+            <a href="./productlist.html">
+              <svg
+                class="icon-color"
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_238_902)">
+                  <path
+                    d="M13.0962 19.1648C16.9139 18.3533 19.351 14.6006 18.5395 10.7828C17.728 6.96502 13.9753 4.52795 10.1575 5.33944C6.33973 6.15093 3.90266 9.90369 4.71415 13.7215C5.52564 17.5392 9.2784 19.9763 13.0962 19.1648Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M22.1045 19.0557L17.5468 16.0959"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_238_902">
+                    <rect
+                      width="21.2014"
+                      height="21.2014"
+                      fill="white"
+                      transform="translate(0.101562 4.76758) rotate(-12)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </div>
+          <div class="btnitem login-btn">
+            <a href="./login.html">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="btnitem cart-btn">
+            <a href="./cart.html">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M6.5 22C7.05228 22 7.5 21.5523 7.5 21C7.5 20.4477 7.05228 20 6.5 20C5.94772 20 5.5 20.4477 5.5 21C5.5 21.5523 5.94772 22 6.5 22Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M17.5 22C18.0523 22 18.5 21.5523 18.5 21C18.5 20.4477 18.0523 20 17.5 20C16.9477 20 16.5 20.4477 16.5 21C16.5 21.5523 16.9477 22 17.5 22Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="cart-show" id="vur-minincart">
+            <div class="cart-area">
+              <div
+                v-for="item in cartItems"
+                :key="item.id"
+                class="cartproductshow"
+              >
+                <div><img :src="item.image" alt="" /></div>
+                <div class="itemname">{{ item.name }}</div>
+                <!-- <div>單價：{{ item.price }}</div> -->
+                <div>數量：{{ item.quantity }}</div>
+                <div class="itemprice">小計：${{ item.subtotal }}</div>
+                <div class="delete" @click="removeFromCart(item.id)">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <!-- 加號（+） -->
+                    <path
+                      d="M12 5v14M5 12h14"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              
+            </div>
+            <div class="bottom-area">
+                <h4>總金額：{{ this.total }}元</h4>
+                <a src="./cart.html"><button class="btn">結帳</button></a>
+              </div>
+          </div>
+        </aside>
+      </div>
+    </header>
 
-        <div class="cart-summary ">
-          <div class="Remark">
-            <h4>備註</h4>
-            <textarea rows="4" cols="" placeholder="請輸入備註..."></textarea>
+    <main id="main" class="product-cart">
+      <section class="cart-row1" id="vue-cart">
+        <div class="row1-area content-area">
+          <div class="cart-area">
+            <div id="cart-title" class="cart-item">
+              <div class="cart-col-01">
+                <h2>您的購物車</h2>
+                <h4 class="item-title"></h4>
+              </div>
+              <div class="cart-col-02">
+                <h4 class="c2-01">單價</h4>
+                <h4 class="c2-01">數量</h4>
+                <h4 class="c2-01">合計</h4>
+              </div>
+              <div class="cart-col-03"></div>
+            </div>
+            <ul class="cart-items">
+              <li v-for="item in cartItems" :key="item.id" class="cart-item">
+                <div class="item-image cart-col-01">
+                  <img :src="item.image" alt="item.name" />
+                  <h4 class="item-title">
+                    {{item.brand}}<br />
+                    {{item.name}} 
+                  </h4>
+                </div>
+                <div class="item-details cart-col-02">
+                  <h4 class="item-price c2-01">NT${{item.price}}</h4>
+                  <div class="item-quantity c2-02">
+                    <button class="btn-decrease">－</button>
+                    <input
+                      type="number"
+                      :value="item.quantity"
+                      min="1"
+                      class="quantity-input"
+                    />
+                    <button class="btn-increase">＋</button>
+                  </div>
+                  <h4 class="item-total c2-03">${{ item.subtotal }}</h4>
+                </div>
+                <div class="cart-col-03">
+                  <button class="btn-remove">X</button>
+                </div>
+              </li>
+            </ul>
           </div>
-          <div class="arrangement">
-            <h4>發票類型</h4>
-            <span>
-              <select name="example">
-                <option value="option1">電子發票</option>
-                <option value="option2">條碼載具</option>
-                <option value="option3">統一發票</option>
-                <option value="option4">捐贈</option>
-              </select>
-            </span>
+
+          <div class="cart-summary">
+            <div class="Remark">
+              <h4>備註</h4>
+              <textarea rows="4" cols="" placeholder="請輸入備註..."></textarea>
+            </div>
+            <div class="arrangement">
+              <h4>發票類型</h4>
+              <span>
+                <select name="example">
+                  <option value="option1">電子發票</option>
+                  <option value="option2">條碼載具</option>
+                  <option value="option3">統一發票</option>
+                  <option value="option4">捐贈</option>
+                </select>
+              </span>
+            </div>
+            <div class="arrangement">
+              <h4>運費</h4>
+              <span>$400</span>
+            </div>
+            <div class="arrangement">
+              <h4>總計</h4>
+              <span>${{ this.total + 400}}</span>
+            </div>
+            <div class="Remark">
+              <label>
+                <input type="checkbox" />
+                <span
+                  >我同意辦理退/換貨時，由賣方代為處理銷售憑證(發票處理/銷售折讓)以加速作業流程</span
+                >
+              </label>
+            </div>
+            <div>
+              <button class="btn btn-checkout">前往結帳</button>
+              <button class="btn btn-checkout">繼續購物</button>
+            </div>
+            <p>運費、稅金和折扣碼在結帳時計算</p>
           </div>
-          <div class="arrangement">
-            <h4>運費</h4><span>100$</span>
-          </div>
-          <div class="arrangement">
-            <h4>總計</h4><span>NT$3,000</span>
-          </div>
-          <div class="Remark">
-           <label>
-              <input type="checkbox">
-              <span>我同意辦理退/換貨時，由賣方代為處理銷售憑證(發票處理/銷售折讓)以加速作業流程</span>
-           </label>
-          </div>
+        </div>
+      </section>
+      <section class="cart-row2"></section>
+    </main>
+    <footer id="footer" class="">
+      <section class="footer-top margin-topbottom">
+        <div class="content-area toprow-01">
+          <h4>訂閱最新消息</h4>
           <div>
-            <button class="btn btn-checkout">前往結帳</button>
-            <button class="btn btn-checkout">繼續購物</button>
+            <input type="text" placeholder="請輸入Email" /><button
+              class="btn btn-go"
+            >
+              GO!
+            </button>
           </div>
-          <p>運費、稅金和折扣碼在結帳時計算</p>
+          <p>
+            點擊“<span>Go!</span>”即表示您同意接收 Horizon
+            的最新產品消息、優惠活動與專屬折扣。隨時取消訂閱，詳情請見使用條款。
+          </p>
         </div>
-      </div>
-
-
-    </section>
-    <section class="cart-row2 "> </section>
-
-
-
-  </main>
-  <footer id="footer" class="">
-    <section class="footer-top margin-topbottom">
-      <div class="content-area toprow-01">
-        <h4>訂閱最新消息</h4>
-        <div>
-          <input type="text" placeholder="請輸入Email" /><button class="btn btn-go">
-            GO!
-          </button>
+      </section>
+      <section class="footer-bottom margin-topbottom">
+        <div class="content-area bottom-row">
+          <section class="bottom-frow-01">
+            <div class="fcol-left">
+              <div class="left-col left-col-01">
+                <ul>
+                  <li>關於我們</li>
+                  <li>服務據點</li>
+                  <li>環境永續</li>
+                  <li>材料科技</li>
+                  <li>人才招募</li>
+                  <li>部落格</li>
+                </ul>
+              </div>
+              <div class="left-col left-col-02">
+                <ul>
+                  <li>支援服務</li>
+                  <li>常見問題</li>
+                  <li>產品支援</li>
+                  <li>退換貨須知</li>
+                  <li>聯絡我們</li>
+                  <li>追蹤我的訂單</li>
+                </ul>
+              </div>
+              <div class="left-col left-col-03">
+                <ul>
+                  <li>法律聲明</li>
+                  <li>網站使用條款</li>
+                  <li>隱私與個人資料保護政策</li>
+                  <li>智慧財產權</li>
+                </ul>
+              </div>
+            </div>
+            <div class="fcol-right">
+              <h4>支援付款方式</h4>
+              <h4>追蹤我們的社群</h4>
+              <p>客服上班時間 09:30～18:30（週一至週五，假日及國定假日除外</p>
+            </div>
+          </section>
+          <hr />
+          <section class="bottom-frow-02">
+            <p>支援 ID：77183a7ea63dc837</p>
+            <p>English 中文 (繁體)</p>
+          </section>
         </div>
-        <p>
-          點擊“<span>Go!</span>”即表示您同意接收 Horizon
-          的最新產品消息、優惠活動與專屬折扣。隨時取消訂閱，詳情請見使用條款。
-        </p>
-      </div>
-    </section>
-    <section class="footer-bottom margin-topbottom">
-      <div class="content-area bottom-row">
-        <section class="bottom-frow-01">
-          <div class="fcol-left">
-            <div class="left-col left-col-01">
-              <ul>
-                <li>關於我們</li>
-                <li>服務據點</li>
-                <li>環境永續</li>
-                <li>材料科技</li>
-                <li>人才招募</li>
-                <li>部落格</li>
-              </ul>
-            </div>
-            <div class="left-col left-col-02">
-              <ul>
-                <li>支援服務</li>
-                <li>常見問題</li>
-                <li>產品支援</li>
-                <li>退換貨須知</li>
-                <li>聯絡我們</li>
-                <li>追蹤我的訂單</li>
-              </ul>
-            </div>
-            <div class="left-col left-col-03">
-              <ul>
-                <li>法律聲明</li>
-                <li>網站使用條款</li>
-                <li>隱私與個人資料保護政策</li>
-                <li>智慧財產權</li>
-              </ul>
-            </div>
-          </div>
-          <div class="fcol-right">
-            <h4>支援付款方式</h4>
-            <h4>追蹤我們的社群</h4>
-            <p>客服上班時間 09:30～18:30（週一至週五，假日及國定假日除外</p>
-          </div>
-        </section>
-        <hr />
-        <section class="bottom-frow-02">
-          <p>支援 ID：77183a7ea63dc837</p>
-          <p>English 中文 (繁體)</p>
-        </section>
-      </div>
-    </section>
-  </footer>
+      </section>
+    </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./main-js/header-js.js"></script>
+    <script src="./main-js/content-js.js"></script>
+    <script type="module">
+    import { MiniCart } from "./main-js/cart-vue.js";
 
+    const app1 = Vue.createApp(MiniCart);
+    app1.mount("#vur-minincart");
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="header-js.js"></script>
-  <script src="content-js.js"></script>
-</body>
-
+    const app2 = Vue.createApp(MiniCart);
+    app2.mount("#vue-cart");
+  </script>
+  </body>
 </html>

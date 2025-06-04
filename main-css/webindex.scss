@@ -354,8 +354,6 @@ header {
     }
 
     .cart-show {
-
-
       // display: none;
       color: $color-darkgery;
       position: absolute;
@@ -378,9 +376,12 @@ header {
       flex-direction: column;
       gap: 8px;
       box-shadow: 0px 2px 2px 0px rgba(22, 22, 22, 0.4);
+       
 
       .cart-area {
         padding: 16px;
+       overflow-y: auto;
+        // padding-bottom: 60px;
       }
 
       .cartproductshow {
@@ -421,13 +422,17 @@ header {
       }
 
       &:hover {
-        max-height: 1000px;
+        max-height: 600px;
       }
 
       .bottom-area {
+        width: 100%;
+        // position: absolute;
+        // bottom: -50px;
         display: flex;
         justify-content: space-between;
-        padding: 16px 0 0px;
+        padding: 16px 16px;
+        background-color: $color-white;
 
         a {
           display: block;
@@ -452,7 +457,7 @@ header {
     }
 
     .cart-btn:hover+.cart-show {
-      max-height: 1000px;
+      max-height: 600px;
       // background-color: #cf7e7e;
     }
   }
@@ -693,13 +698,14 @@ header {
           color: $color-darkgery;
         }
       }
-      .cart-show{
+
+      .cart-show {
         display: none;
       }
-      
+
     }
 
-   
+
 
     .header-content {
       // top: 160px;
@@ -1283,11 +1289,11 @@ main {
   }
 
   .r5-pic-01 {
-    background-image: url(./images/pictrue/row-5-pic-01.jpg);
+    background-image: url(../images/pictrue/row-5-pic-01.jpg);
   }
 
   .r5-pic-02 {
-    background-image: url(./images/pictrue/row-5-pic-02.webp);
+    background-image: url(../images/pictrue/row-5-pic-02.webp);
   }
 
   .r5-col-02 {
@@ -1331,7 +1337,7 @@ main {
 
 //---------------------------
 .row-seventh {
-  background-image: url(./images/bg/index-seventh-bg-01.jpg);
+  background-image: url(../images/bg/index-seventh-bg-01.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1906,12 +1912,12 @@ footer {
   max-height: 400px;
   transition: all 0.3s ease;
   color: $color-darkgery;
-  background-image: url(./images/bg/index-seventh-bg-01.jpg);
+  background-image: url(../images/bg/index-seventh-bg-01.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   // width: 90vw;
-  // padding-top: 32%;
+  padding-top: 32%;
 }
 
 .product-content {
@@ -1982,10 +1988,10 @@ footer {
       gap: 16px;
       left: 0;
       bottom: 0;
-      
+
       width: 100%;
       // height: 140px;
-      padding: 16px 0px 80px;
+      padding: 16px 0px 48px;
       font-size: 16px;
       background-color: $color-lightgrey;
 
@@ -2363,7 +2369,7 @@ footer {
 @media screen and (max-width: 1200px) {
   .product-cursoul {
     min-height: 340px;
-    // padding-top: 36%;
+    padding-top: 40%;
   }
 }
 
@@ -2375,7 +2381,7 @@ footer {
     min-height: 320px;
     max-height: 400px;
 
-    // padding-top: 32%;
+
   }
 
   .content-area.product-content-area {
@@ -2386,7 +2392,7 @@ footer {
       top: 0;
       left: 0;
       width: 100%;
-      height: 100vh ;
+      height: 100vh;
       z-index: 11111;
       background-color: $color-lightgrey;
       overflow-x: hidden;
@@ -2401,17 +2407,18 @@ footer {
     .toggleminibtn {
 
       display: flex;
-      
+
     }
 
     .col-product-list {
       padding: 16px 0px;
-      .listrow{
-        .card{
-        max-width:  500px;
+
+      .listrow {
+        .card {
+          max-width: 500px;
+        }
       }
-      }
-      
+
     }
   }
 }
@@ -2434,7 +2441,7 @@ footer {
     }
   }
 
- 
+
 }
 
 @media screen and (max-width: 430px) {

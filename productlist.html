@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Horizon-product</title>
-    <link rel="stylesheet" href="./webindex.css" />
+    <link rel="stylesheet" href="./main-css/webindex.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="viewport"
@@ -260,7 +260,7 @@
             </a>
           </div>
           <div class="cart-show" id="vur-minincart">
-           <div class="cart-area">
+            <div class="cart-area">
               <div
                 v-for="item in cartItems"
                 :key="item.id"
@@ -270,7 +270,7 @@
                 <div class="itemname">{{ item.name }}</div>
                 <!-- <div>單價：{{ item.price }}</div> -->
                 <div>數量：{{ item.quantity }}</div>
-                <div class="itemprice">小計：{{ item.subtotal }}</div>
+                <div class="itemprice">小計：${{ item.subtotal }}</div>
                 <div class="delete" @click="removeFromCart(item.id)">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                     <!-- 加號（+） -->
@@ -283,11 +283,12 @@
                   </svg>
                 </div>
               </div>
-              <div class="bottom-area">
+              
+            </div>
+            <div class="bottom-area">
                 <h4>總金額：{{ this.total }}元</h4>
                 <a src="./cart.html"><button class="btn">結帳</button></a>
               </div>
-           </div>
           </div>
         </aside>
       </div>
@@ -453,7 +454,7 @@
                       特價${{ product.price.toLocaleString() }}
                     </p>
                     <p :class="{ strike : product.onsale }">
-                      ${{ product.originalPrice.toLocaleString() }} TWD
+                      NT${{ product.originalPrice.toLocaleString() }} 
                     </p>
                   </div>
                   <button class="btn" @click="addToCart(product)">
@@ -566,47 +567,8 @@
         data() {
           return {
             products: [],
-            selectedproducts: [],
-            filterSections: [
-              {
-                title: "品牌",
-                options: ["Logitech", "Razer", "ROG", "微星"],
-              },
-              {
-                title: "鍵盤",
-                options: ["機械鍵盤", "薄式鍵盤", "無線鍵盤", "RGB 鍵盤"],
-              },
-              {
-                title: "滑鼠",
-                options: ["有線滑鼠", "無線滑鼠", "電競滑鼠", "RGB 滑鼠"],
-              },
-              {
-                title: "耳機",
-                options: ["藍芽耳機", "有線耳機", "降噪耳機", "電競耳機"],
-              },
-              {
-                title: "麥克風",
-                options: ["USB 麥克風", "3.5mm 麥克風", "電容式麥克風"],
-              },
-
-              {
-                title: "滑鼠墊",
-                options: ["小型滑鼠墊", "大型滑鼠墊", "RGB 滑鼠墊"],
-              },
-              {
-                title: "價格",
-                options: [
-                  "$0–$1,000",
-                  "$1001–$2,000",
-                  "$2,001–$3,000",
-                  "$3,001+",
-                ],
-              },
-              {
-                title: "評價",
-                options: ["⭐⭐⭐⭐⭐", "⭐⭐⭐⭐ 以上", "⭐⭐⭐ 以上"],
-              },
-            ],
+            selectedproducts: [], //商品資料
+            filterSections: [], //sidebar資料
 
             widthsize: 920,
             sidebar: true,
@@ -618,13 +580,22 @@
           };
         },
         mounted() {
-          fetch("./multi_brand_products.json")
+          fetch("./json/multi_brand_products.json")
             .then((response) => response.json())
             .then((data) => {
               this.products = data;
             })
             .catch((err) => {
               console.error("讀取 JSON 檔案錯誤:", err);
+            });
+
+          fetch("./json/filters.json")
+            .then((response) => response.json())
+            .then((data) => {
+              this.filterSections = data;
+            })
+            .catch((err) => {
+              console.error("讀取篩選條件 JSON 檔案錯誤:", err);
             });
 
           window.addEventListener("resize", this.handleResize);
@@ -763,65 +734,16 @@
         },
       });
       app.mount("#vue-productlist");
-
-      const minincart = Vue.createApp({
-        data() {
-          return {
-            products: [],
-            cartItems: [],
-            total: 0,
-          };
-        },
-        mounted() {
-          fetch("./multi_brand_products.json")
-            .then((response) => response.json())
-            .then((data) => {
-              this.products = data;
-              this.updateCartItems();
-            })
-            .catch((err) => {
-              console.error("讀取 JSON 檔案錯誤:", err);
-            });
-          //監聽cart-updated是否發送
-          window.addEventListener("cart-updated", () => {
-            this.updateCartItems();
-          });
-        },
-
-        methods: {
-          updateCartItems() {
-            const cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-            this.cartItems = cart.map((cartItem) => {
-              const product = this.products.find((p) => p.id === cartItem.id);
-              return {
-                ...product,
-                quantity: cartItem.quantity,
-                subtotal: product.price * cartItem.quantity,
-              };
-            });
-
-            // 計算總價
-            this.total = this.cartItems.reduce(
-              (sum, item) => sum + item.subtotal,
-              0
-            );
-          },
-          removeFromCart(id) {
-            let cart = JSON.parse(localStorage.getItem("cart")) || [];
-            cart = cart.filter((item) => item.id !== id);
-            // cart = cart.filter(itemId => itemId !== id);
-            localStorage.setItem("cart", JSON.stringify(cart));
-
-            this.updateCartItems();
-          },
-        },
-      });
-      minincart.mount("#vur-minincart");
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="header-js.js"></script>
-    <script src="content-js.js"></script>
+    <script src="./main-js/header-js.js"></script>
+    <script src="./main-js/content-js.js"></script>
+    <script type="module">
+      import { MiniCart } from "./main-js/cart-vue.js";
+
+      const app1 = Vue.createApp(MiniCart);
+      app1.mount("#vur-minincart");
+    </script>
   </body>
 </html>
