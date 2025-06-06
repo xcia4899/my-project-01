@@ -5,6 +5,8 @@ export const MiniCart = {
       products: [],
       cartItems: [],
       total: 0,
+      billType: "", 
+      Remarkopen:false,
     };
   },
   mounted() {
@@ -25,7 +27,6 @@ export const MiniCart = {
   methods: {
     updateCartItems() {
       const cart = JSON.parse(localStorage.getItem("cart")) || [];
-
       this.cartItems = cart.map((cartItem) => {
         const product = this.products.find((p) => p.id === cartItem.id);
         return {
@@ -37,13 +38,44 @@ export const MiniCart = {
 
       this.total = this.cartItems.reduce((sum, item) => sum + item.subtotal, 0);
     },
+    saveCart(cart) {
+      if (!Array.isArray(cart)) {
+        console.error("嘗試儲存非陣列型 cart：", cart);
+        return;
+      }
+      localStorage.setItem("cart", JSON.stringify(cart));
+      window.dispatchEvent(new Event("cart-updated"));
+    },
     removeFromCart(id) {
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
       cart = cart.filter((item) => item.id !== id);
-      localStorage.setItem("cart", JSON.stringify(cart));
 
+      this.saveCart(cart);
       this.updateCartItems();
-      window.dispatchEvent(new Event("cart-updated"));
     },
+    addQuantity(id) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      // 找到要增加數量的項目
+      const item = cart.find((item) => item.id === id);
+      if (item) {
+        item.quantity++;
+      }
+
+      this.saveCart(cart);
+      this.updateCartItems();
+    },
+    subtractQuantity(id) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const item = cart.find((item) => item.id === id);
+      if (item && item.quantity > 1) {
+        item.quantity--;
+      }
+
+      this.saveCart(cart);
+      this.updateCartItems();
+    },
+    Remarkcontront(){
+      this.Remarkopen =!this.Remarkopen;
+    }
   },
 };

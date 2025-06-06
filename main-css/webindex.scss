@@ -113,6 +113,17 @@ input[type="checkbox"] {
   /* 你想要的顏色（藍色示範） */
 }
 
+input {
+  caret-color: $color-purple;
+  outline: none;
+  border-width: 1px;
+
+  &::placeholder {
+    color: $color-darkgery;
+    opacity: 0.7;
+  }
+}
+
 .content-area {
   max-width: 1280px;
   margin: 0 auto;
@@ -376,11 +387,11 @@ header {
       flex-direction: column;
       gap: 8px;
       box-shadow: 0px 2px 2px 0px rgba(22, 22, 22, 0.4);
-       
+
 
       .cart-area {
         padding: 16px;
-       overflow-y: auto;
+        overflow-y: auto;
         // padding-bottom: 60px;
       }
 
@@ -2948,27 +2959,35 @@ header.header-detailed {
       }
 
       .btn-remove {
+        // border: 1px solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
         aspect-ratio: 1/1;
-        width: 100%;
-        max-width: 30px;
-        border-radius: 4px;
-        border: 1px solid $color-darkgery;
-        background-color: $color-white;
-        transition: all 0.2s ease;
-        // color: $color-purple
+        border-radius: 50%;
         cursor: pointer;
 
+        svg {
+          color: $color-darkgery;
+          transform: scale(1.2) rotate(45deg);
+
+        }
+
         &:hover {
-          border-color: $color-purple;
-          background-color: $color-white;
-          color: $color-purple;
+          background-color: $color-purple;
+        }
+
+        &:hover svg {
+          color: $color-white;
         }
       }
     }
   }
 
   .cart-summary {
-    margin-top: 32px;
+    // margin-top: 32px;
     padding: 16px;
     border-radius: 12px;
     // height: 600px;
@@ -2980,23 +2999,48 @@ header.header-detailed {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // gap: 16px;
+    gap: 32px;
     text-align: center;
 
+    h4 {
+      font-weight: 600;
+    }
+
     div {
-      margin-bottom: 32px;
+      // margin-bottom: 32px;
       width: 100%;
     }
 
     .Remark {
       text-align: left;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
 
-      textarea {
-        width: 100%;
+      &:hover svg {
+        color: $color-purple;
+      }
+
+     
+
+      svg {
+        transition: all 0.3s ease;
+        vertical-align: bottom;
+
+      }
+
+      svg.rotate {
+        transform: rotateX(180deg);
       }
 
       label {
         cursor: pointer;
+      }
+       textarea {
+        min-width: 268px;
+        height: 100px;
+        resize: vertical;
+        margin-top: 8px;
       }
     }
 
@@ -3005,10 +3049,11 @@ header.header-detailed {
       display: flex;
       align-items: center;
 
-      // justify-content: center;
+
       h4 {
         width: 40%;
         text-align: left;
+
       }
 
       span {
@@ -3017,23 +3062,58 @@ header.header-detailed {
       }
 
       select {
+        width: 60%;
+      }
+    }
+
+    .bill_area {
+      h4 {
+        font-weight: 500;
+      }
+
+      p {
+        margin: 0;
+        text-align: left;
+      }
+
+
+      // div {
+      //   margin-top: 8px;
+
+      // }
+
+      label {
         width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 8px;
+
+        input {
+          padding: 4px 4px;
+          width: 70%;
+          // margin-top: 8px;
+        }
       }
+
     }
 
-    .btn {
-      width: 100%;
+    .btn-area {
 
-      // margin: 8px 0px;
-      // color: $color-black;
-      &:hover {
-        color: $color-darkgery;
+      .btn {
+        width: 100%;
+
+        &:hover {
+          color: $color-darkgery;
+        }
       }
+
+      .btn-keep {
+        margin-top: 8px;
+      }
+
     }
 
-    .btn+.btn {
-      margin-top: 6px;
-    }
 
     p {
       font-size: 14px;
