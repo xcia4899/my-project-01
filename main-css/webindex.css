@@ -16,6 +16,7 @@ body {
 h2,
 h3,
 h4,
+h5,
 p {
   margin: 0;
   padding: 0;
@@ -35,6 +36,11 @@ h3 {
 h4 {
   font-size: 20px;
   font-weight: 500;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 600;
 }
 
 p {
@@ -320,7 +326,7 @@ header {
   font-size: 14px;
   font-weight: 600;
   color: #2c2c2c;
-  transition: all 0.6s ease-out;
+  transition: all 0.4s ease-out;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -514,6 +520,9 @@ header {
   h4 {
     font-size: 18px;
   }
+  h5 {
+    font-size: 14px;
+  }
   p {
     font-size: 16px;
   }
@@ -642,6 +651,9 @@ header {
   }
   h4 {
     font-size: 16px;
+  }
+  h5 {
+    font-size: 14px;
   }
   p {
     font-size: 16px;
@@ -2221,6 +2233,7 @@ header.header-detailed .nav-right div svg {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  flex: 1;
 }
 .product-cart .cart-area #cart-title {
   height: 80px;
@@ -2238,16 +2251,20 @@ header.header-detailed .nav-right div svg {
   gap: 16px;
 }
 .product-cart .cart-area .cart-item {
-  padding: 12px 8px;
+  padding: 16px 8px;
+  height: 20vh;
   display: flex;
   justify-content: space-evenly;
-  gap: 16px;
+  gap: 4px;
   transition: all 0.2s ease;
 }
 .product-cart .cart-area .cart-item:hover {
   border-radius: 12px;
   background-color: #f5f5f5;
   color: #a02fec;
+}
+.product-cart .cart-area .cart-item:hover .item-quantity {
+  border-color: #2c2c2c !important;
 }
 .product-cart .cart-area .cart-item::after {
   content: "";
@@ -2267,13 +2284,17 @@ header.header-detailed .nav-right div svg {
 }
 .product-cart .cart-area .cart-item .cart-col-01 {
   width: 36%;
+  min-width: 200px;
   justify-content: flex-start;
+}
+.product-cart .cart-area .cart-item .cart-col-01 h2 {
+  white-space: nowrap;
 }
 .product-cart .cart-area .cart-item .cart-col-02 {
   width: 60%;
   display: flex;
   justify-content: space-evenly;
-  gap: 16px;
+  gap: 4px;
   padding: 8px 0;
 }
 .product-cart .cart-area .cart-item .cart-col-02 .c2-01,
@@ -2282,8 +2303,8 @@ header.header-detailed .nav-right div svg {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 33%;
-  max-width: 160px;
+  width: 30%;
+  max-width: 100px;
   min-width: 100px;
   height: 100%;
 }
@@ -2292,21 +2313,44 @@ header.header-detailed .nav-right div svg {
 }
 .product-cart .cart-area .cart-item .item-image {
   min-width: 200px;
-  gap: 8px;
+  gap: 12px;
 }
 .product-cart .cart-area .cart-item .item-image img {
-  width: 40%;
+  width: 30%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .product-cart .cart-area .cart-item .item-image .item-title {
-  width: 80%;
+  width: 70%;
   text-align: center;
+}
+.product-cart .cart-area .cart-item .item-image .item-title h4 {
+  font-weight: 600;
+}
+.product-cart .cart-area .cart-item .item-image .item-title h5 {
+  margin-top: 8px;
+}
+.product-cart .cart-area .cart-item .item-details .item-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.product-cart .cart-area .cart-item .item-details .item-price .strike {
+  text-decoration: line-through;
+  color: #999;
+  opacity: 0.8;
+  font-size: 14px;
+}
+.product-cart .cart-area .cart-item .item-details .item-price .redcharacter {
+  color: #e71818;
+  font-weight: bolder;
 }
 .product-cart .cart-area .cart-item .item-details .item-quantity {
   display: flex;
   max-height: 36px;
-  border: 1px solid #2c2c2c;
+  border: 1px solid #797979;
   border-radius: 4px;
   transition: all 0.3s ease;
   overflow: hidden;
@@ -2315,7 +2359,7 @@ header.header-detailed .nav-right div svg {
   height: 100%;
   width: 50%;
   text-align: center;
-  border-color: #b2afaf;
+  border-color: #acacac;
   border-style: solid;
   border-width: 0px 1px;
   background-color: transparent;
@@ -2326,22 +2370,33 @@ header.header-detailed .nav-right div svg {
 .product-cart .cart-area .cart-item .item-details .item-quantity .btn-decrease {
   height: 100%;
   width: 25%;
-  font-size: 20px;
-  font-weight: 900;
   outline: none;
-  border: 0px solid;
-  border-radius: 0;
-  background-color: #eeeeee;
+  border: none;
   transition: all 0.3s ease;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
+.product-cart .cart-area .cart-item .item-details .item-quantity .btn-increase svg,
+.product-cart .cart-area .cart-item .item-details .item-quantity .btn-decrease svg {
+  color: #0a0a0a;
+  height: 100%;
+  width: 100%;
+  transform: scale(1.4);
+}
 .product-cart .cart-area .cart-item .item-details .item-quantity .btn-increase:hover,
 .product-cart .cart-area .cart-item .item-details .item-quantity .btn-decrease:hover {
-  background-color: #c5c5c5;
-  color: #a02fec;
+  background-color: #a02fec;
+}
+.product-cart .cart-area .cart-item .item-details .item-quantity .btn-increase:hover svg,
+.product-cart .cart-area .cart-item .item-details .item-quantity .btn-decrease:hover svg {
+  color: #f5f5f5;
+}
+.product-cart .cart-area .cart-item .item-details .item-quantity .btn-increase:disabled,
+.product-cart .cart-area .cart-item .item-details .item-quantity .btn-decrease:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 .product-cart .cart-area .cart-item .item-details .item-quantity input[type=number]::-webkit-outer-spin-button,
 .product-cart .cart-area .cart-item .item-details .item-quantity input[type=number]::-webkit-inner-spin-button {
@@ -2373,7 +2428,8 @@ header.header-detailed .nav-right div svg {
   border-radius: 12px;
   background-color: #fff;
   height: 100%;
-  min-width: 300px;
+  min-width: 200px;
+  max-width: 360px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2441,10 +2497,21 @@ header.header-detailed .nav-right div svg {
   align-items: center;
   justify-content: space-between;
   margin-top: 8px;
+  font-size: 16px;
 }
 .product-cart .cart-summary .bill_area label input {
   padding: 4px 4px;
-  width: 70%;
+  width: 60%;
+}
+.product-cart .cart-summary .agreeCheckbox label,
+.product-cart .cart-summary .agreeCheckbox span {
+  vertical-align: top;
+}
+.product-cart .cart-summary .agreeCheckbox label {
+  cursor: pointer;
+}
+.product-cart .cart-summary .agreeCheckbox label span {
+  font-size: 14px;
 }
 .product-cart .cart-summary .btn-area .btn {
   width: 100%;
@@ -2460,6 +2527,11 @@ header.header-detailed .nav-right div svg {
   color: #505050;
 }
 
+@media screen and (max-width: 920px) {
+  .row1-area {
+    flex-direction: column;
+  }
+}
 .login {
   background-color: #eeeeee;
   color: #2c2c2c;

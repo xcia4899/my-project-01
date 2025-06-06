@@ -5,8 +5,8 @@ export const MiniCart = {
       products: [],
       cartItems: [],
       total: 0,
-      billType: "", 
-      Remarkopen:false,
+      billType: "",
+      Remarkopen: false,
     };
   },
   mounted() {
@@ -29,10 +29,11 @@ export const MiniCart = {
       const cart = JSON.parse(localStorage.getItem("cart")) || [];
       this.cartItems = cart.map((cartItem) => {
         const product = this.products.find((p) => p.id === cartItem.id);
+        let realprice = product.onsale==true ? product.price:product.originalPrice;
         return {
           ...product,
           quantity: cartItem.quantity,
-          subtotal: product.price * cartItem.quantity,
+          subtotal: realprice * cartItem.quantity,
         };
       });
 
@@ -52,6 +53,18 @@ export const MiniCart = {
 
       this.saveCart(cart);
       this.updateCartItems();
+    },
+    updateQuantity(item) {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const target = cart.find(c => c.id === item.id);
+      if (target) {
+
+        const newQty = parseInt(String(item.quantity).trim(), 10);
+
+        target.quantity = isNaN(newQty) || newQty < 1 ? 1 : newQty;
+        this.saveCart(cart);
+        this.updateCartItems();
+      }
     },
     addQuantity(id) {
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -74,8 +87,8 @@ export const MiniCart = {
       this.saveCart(cart);
       this.updateCartItems();
     },
-    Remarkcontront(){
-      this.Remarkopen =!this.Remarkopen;
+    Remarkcontront() {
+      this.Remarkopen = !this.Remarkopen;
     }
   },
 };

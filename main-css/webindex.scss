@@ -33,6 +33,7 @@ body {
 h2,
 h3,
 h4,
+h5,
 p {
   margin: 0;
   padding: 0;
@@ -53,6 +54,11 @@ h3 {
 h4 {
   font-size: 20px;
   font-weight: 500;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 600;
 }
 
 p {
@@ -381,7 +387,7 @@ header {
       font-weight: 600;
       color: $color-darkgery;
 
-      transition: all 0.6s ease-out;
+      transition: all 0.4s ease-out;
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -619,6 +625,10 @@ header {
     font-size: 18px;
   }
 
+  h5 {
+    font-size: 14px;
+  }
+
   p {
     font-size: 16px;
   }
@@ -787,6 +797,10 @@ header {
 
   h4 {
     font-size: 16px;
+  }
+
+  h5 {
+    font-size: 14px;
   }
 
   p {
@@ -2794,6 +2808,7 @@ header.header-detailed {
 
   .row1-area {
     display: flex;
+    // flex-wrap: wrap;
     gap: 32px;
     padding-top: 64px;
   }
@@ -2802,6 +2817,7 @@ header.header-detailed {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    flex: 1;
 
     #cart-title {
       height: 80px;
@@ -2823,18 +2839,25 @@ header.header-detailed {
     }
 
     .cart-item {
-      padding: 12px 8px;
-
+      padding: 16px 8px;
+      height: 20vh;
       display: flex;
       justify-content: space-evenly;
-      gap: 16px;
+      gap: 4px;
       // border-bottom: 1px solid darken($color-middlekgery, 30%);
       transition: all 0.2s ease;
+
+
 
       &:hover {
         border-radius: 12px;
         background-color: $color-white;
         color: $color-purple;
+
+      }
+
+      &:hover .item-quantity {
+        border-color: $color-darkgery !important;
       }
 
       &::after {
@@ -2857,15 +2880,21 @@ header.header-detailed {
       }
 
       .cart-col-01 {
+
         width: 36%;
+        min-width: 200px;
         justify-content: flex-start;
+
+        h2 {
+          white-space: nowrap;
+        }
       }
 
       .cart-col-02 {
         width: 60%;
         display: flex;
         justify-content: space-evenly;
-        gap: 16px;
+        gap: 4px;
         padding: 8px 0;
 
         .c2-01,
@@ -2875,11 +2904,12 @@ header.header-detailed {
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 33%;
-          max-width: 160px;
+          width: 30%;
+          max-width: 100px;
           min-width: 100px;
           height: 100%;
         }
+
       }
 
       .cart-col-03 {
@@ -2887,29 +2917,52 @@ header.header-detailed {
       }
 
       .item-image {
-        // width: 100%;
         min-width: 200px;
-
-        gap: 8px;
+        gap: 12px;
 
         img {
-          width: 40%;
-          // height: 100%;
+          width: 30%;
           object-fit: cover;
-          // min-width: 80px;
+
         }
 
         .item-title {
-          width: 80%;
+          width: 70%;
           text-align: center;
+          h4{
+            font-weight: 600;
+          }
+          h5{
+            margin-top: 8px;
+          }
         }
       }
 
       .item-details {
+        .item-price {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 4px;
+
+          .strike {
+            text-decoration: line-through;
+            color: #999;
+            opacity: 0.8;
+            font-size: 14px;
+          }
+
+          .redcharacter {
+            color: $color-red;
+            font-weight: bolder;
+          }
+        }
+
         .item-quantity {
           display: flex;
           max-height: 36px;
-          border: 1px solid $color-darkgery;
+          border: 1px solid lighten($color-darkgery, 30%);
           border-radius: 4px;
           transition: all 0.3s ease;
           overflow: hidden;
@@ -2919,7 +2972,7 @@ header.header-detailed {
             width: 50%;
             text-align: center;
             // border: 1px solid;
-            border-color: darken($color-middlekgery, 20%);
+            border-color: lighten($color-darkgery, 50%);
             border-style: solid;
             border-width: 0px 1px;
             background-color: transparent;
@@ -2931,22 +2984,36 @@ header.header-detailed {
           .btn-decrease {
             height: 100%;
             width: calc(50% / 2);
-            font-size: 20px;
-            font-weight: 900;
 
             outline: none;
-            border: 0px solid;
-            border-radius: 0;
-            background-color: $color-lightgrey;
+            border: none;
+
             transition: all 0.3s ease;
+
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
 
+            svg {
+              color: $color-black;
+              height: 100%;
+              width: 100%;
+              transform: scale(1.4);
+            }
+
             &:hover {
-              background-color: #c5c5c5;
-              color: $color-purple;
+              background-color: $color-purple;
+            }
+
+            &:hover svg {
+              color: $color-white;
+            }
+
+            &:disabled {
+              opacity: 0.5;
+
+              cursor: not-allowed;
             }
           }
 
@@ -2957,6 +3024,8 @@ header.header-detailed {
           }
         }
       }
+
+
 
       .btn-remove {
         // border: 1px solid;
@@ -2982,6 +3051,8 @@ header.header-detailed {
         &:hover svg {
           color: $color-white;
         }
+
+
       }
     }
   }
@@ -2993,7 +3064,8 @@ header.header-detailed {
     // height: 600px;
     background-color: #fff;
     height: 100%;
-    min-width: 300px;
+    min-width: 200px;
+    max-width: 360px;
 
     display: flex;
     flex-direction: column;
@@ -3021,7 +3093,7 @@ header.header-detailed {
         color: $color-purple;
       }
 
-     
+
 
       svg {
         transition: all 0.3s ease;
@@ -3036,7 +3108,8 @@ header.header-detailed {
       label {
         cursor: pointer;
       }
-       textarea {
+
+      textarea {
         min-width: 268px;
         height: 100px;
         resize: vertical;
@@ -3059,6 +3132,7 @@ header.header-detailed {
       span {
         width: 60%;
         text-align: right;
+
       }
 
       select {
@@ -3076,23 +3150,35 @@ header.header-detailed {
         text-align: left;
       }
 
-
-      // div {
-      //   margin-top: 8px;
-
-      // }
-
       label {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-top: 8px;
-
+        font-size: 16px;
         input {
           padding: 4px 4px;
-          width: 70%;
+          width: 60%;
           // margin-top: 8px;
+        }
+      }
+
+    }
+
+    .agreeCheckbox {
+
+      label,
+      span {
+        vertical-align: top;
+      }
+
+      label {
+        cursor: pointer;
+
+        span {
+          font-size: 14px;
+
         }
       }
 
@@ -3122,6 +3208,11 @@ header.header-detailed {
   }
 }
 
+@media screen and (max-width: 920px){
+  .row1-area{
+    flex-direction: column;
+  }
+}
 //login---------------------------------------
 //login---------------------------------------
 //login---------------------------------------

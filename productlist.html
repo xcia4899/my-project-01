@@ -270,7 +270,7 @@
                 <div class="itemname">{{ item.name }}</div>
                 <!-- <div>單價：{{ item.price }}</div> -->
                 <div>數量：{{ item.quantity }}</div>
-                <div class="itemprice">小計：${{ item.subtotal }}</div>
+                <div class="itemprice">小計：${{ item.subtotal.toLocaleString() }}</div>
                 <div class="delete" @click="removeFromCart(item.id)">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                     <!-- 加號（+） -->
@@ -286,7 +286,7 @@
               
             </div>
             <div class="bottom-area">
-                <h4>總金額：{{ this.total }}元</h4>
+                <h4>總金額：{{ this.total.toLocaleString() }}元</h4>
                 <a src="./cart.html"><button class="btn">結帳</button></a>
               </div>
           </div>

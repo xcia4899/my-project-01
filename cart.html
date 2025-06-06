@@ -270,7 +270,7 @@
                 <div class="itemname">{{ item.name }}</div>
                 <!-- <div>單價：{{ item.price }}</div> -->
                 <div>數量：{{ item.quantity }}</div>
-                <div class="itemprice">小計：${{ item.subtotal }}</div>
+                <div class="itemprice">小計：${{ item.subtotal.toLocaleString() }}</div>
                 <div class="delete" @click="removeFromCart(item.id)">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                     <!-- 加號（+） -->
@@ -285,7 +285,7 @@
               </div>
             </div>
             <div class="bottom-area">
-              <h4>總金額：{{ this.total }}元</h4>
+              <h4>總金額：{{ this.total.toLocaleString() }}元</h4>
               <a src="./cart.html"><button class="btn">結帳</button></a>
             </div>
           </div>
@@ -304,40 +304,82 @@
               </div>
               <div class="cart-col-02">
                 <h4 class="c2-01">單價</h4>
-                <h4 class="c2-01">數量</h4>
-                <h4 class="c2-01">合計</h4>
+                <h4 class="c2-02">數量</h4>
+                <h4 class="c2-03">合計</h4>
               </div>
               <div class="cart-col-03"></div>
             </div>
             <ul class="cart-items">
               <li v-for="item in cartItems" :key="item.id" class="cart-item">
                 <div class="item-image cart-col-01">
-                  <img :src="item.image" alt="item.name" />
-                  <h4 class="item-title">
-                    {{item.brand}}<br />
-                    {{item.name}}
-                  </h4>
+                  <img :src="item.image" :alt="item.name" />
+                  <div class="item-title">
+                    <h4>{{item.brand}}</h4>
+                    <h5>{{item.name}}</h5>
+                  </div>
                 </div>
                 <div class="item-details cart-col-02">
-                  <h4 class="item-price c2-01">NT${{item.price}}</h4>
+
+                  <div class="item-price c2-01">
+                    <h5
+                      v-show="item.onsale"
+                      :class="{ redcharacter : item.onsale }"
+                    >
+                      NT${{ item.price.toLocaleString() }}
+                    </ㄘ>
+                    <h5 
+                    :class="{ strike : item.onsale }"
+                    >
+                      NT${{ item.originalPrice.toLocaleString() }} 
+                    </h5>
+                  </div>
+ 
                   <div class="item-quantity c2-02">
                     <button
                       class="btn-decrease"
                       @click="subtractQuantity(item.id)"
+                      :disabled="item.quantity==1"
                     >
-                      －
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <!-- 減號（-）置中 -->
+                        <path
+                          d="M5 10h10"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                      </svg>
                     </button>
                     <input
                       type="number"
-                      :value="item.quantity"
+                      v-model.number="item.quantity"
                       min="1"
                       class="quantity-input"
+                      @change="updateQuantity(item)"
                     />
                     <button class="btn-increase" @click="addQuantity(item.id)">
-                      ＋
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <!-- 加號（+）置中 -->
+                        <path
+                          d="M10 5v10M5 10h10"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                      </svg>
                     </button>
                   </div>
-                  <h4 class="item-total c2-03">${{ item.subtotal }}</h4>
+                  <h5 class="item-total c2-03">${{ item.subtotal.toLocaleString() }}</h5>
                 </div>
                 <div class="cart-col-03">
                   <div class="btn-remove" @click="removeFromCart(item.id)">
@@ -359,7 +401,7 @@
           <div class="cart-summary">
             <div class="Remark">
               <h4 @click="Remarkcontront()">
-                 備註
+                備註
                 <svg
                   :class="{rotate:Remarkopen}"
                   xmlns="http://www.w3.org/2000/svg"
@@ -418,9 +460,9 @@
             </div>
             <div class="arrangement">
               <h4>總計</h4>
-              <span>${{ this.total + 400}}</span>
+              <span>${{ (this.total+ 400).toLocaleString()}}</span>
             </div>
-            <div>
+            <div class="agreeCheckbox">
               <label>
                 <input type="checkbox" />
                 <span
