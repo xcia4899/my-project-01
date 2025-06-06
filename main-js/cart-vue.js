@@ -10,7 +10,7 @@ export const MiniCart = {
     };
   },
   mounted() {
-    fetch("/json/multi_brand_products.json")
+    fetch("./json/multi_brand_products.json")
       .then((response) => response.json())
       .then((data) => {
         this.products = data;
