@@ -322,7 +322,10 @@
     "originalPrice": 3179,
     "onsale": false,
     "description": "多種自定義功能，滿足不同遊戲需求。",
-    "image": "https://example.com/images/MSI-1013.jpg",
+    "image": "./images/pic-detal/PRO-1015/10003.png",
+    "smallimage01": "./images/pic-detal/PRO-1015/10001.png",
+    "smallimage02": "./images/pic-detal/PRO-1015/10002.png",
+    "smallimage03": "./images/pic-detal/PRO-1015/10003.png",
     "category": "麥克風",
     "details": ""
   },
