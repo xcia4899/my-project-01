@@ -2802,7 +2802,7 @@ header.header-detailed {
 
 .product-cart {
   .cart-row1 {
-    padding: 108px 0px 108px;
+    padding: 64px 0px 64px;
     background-color: $color-lightgrey;
   }
 
@@ -2821,6 +2821,12 @@ header.header-detailed {
 
     #cart-title {
       height: 80px;
+      min-height: auto;
+      &::after {
+        height: 2px;
+        background-color: darken($color-middlekgery, 40%);
+        border-radius: 1px;
+      }
     }
 
     #cart-title.cart-item:hover {
@@ -2836,11 +2842,14 @@ header.header-detailed {
       display: flex;
       flex-direction: column;
       gap: 16px;
+      max-height: 540px;
+      overflow-y: auto;
+      scrollbar-width: none; //隱藏滾輪
     }
 
     .cart-item {
       padding: 16px 8px;
-      height: 20vh;
+      min-height: 140px;
       display: flex;
       justify-content: space-evenly;
       gap: 4px;
@@ -2908,6 +2917,7 @@ header.header-detailed {
           max-width: 100px;
           min-width: 100px;
           height: 100%;
+          white-space: nowrap;
         }
 
       }
@@ -2929,10 +2939,12 @@ header.header-detailed {
         .item-title {
           width: 70%;
           text-align: center;
-          h4{
+
+          h4 {
             font-weight: 600;
           }
-          h5{
+
+          h5 {
             margin-top: 8px;
           }
         }
@@ -3157,6 +3169,7 @@ header.header-detailed {
         justify-content: space-between;
         margin-top: 8px;
         font-size: 16px;
+
         input {
           padding: 4px 4px;
           width: 60%;
@@ -3208,11 +3221,76 @@ header.header-detailed {
   }
 }
 
-@media screen and (max-width: 920px){
-  .row1-area{
+@media screen and (max-width: 920px) {
+  .row1-area {
     flex-direction: column;
+
+    .cart-summary {
+      max-width: 920px;
+
+    }
   }
 }
+
+@media screen and (max-width: 670px) {
+  .product-cart {
+    .cart-row1 {
+      padding: 32px 0px;
+
+      .row1-area.mobile {
+        padding: 64px 16px 0px;
+
+    
+
+        .cart-area {
+          #cart-title.cart-item {
+            min-height: auto;
+
+            .cart-col-02 {
+              // width: auto;
+              flex-direction: row;
+              gap: 0px;
+
+              .c2-01,
+              .c2-02,
+              .c2-03 {
+                min-width: 20px;
+              }
+            }
+
+          }
+
+          .cart-items {
+            // background-color: $color-white;
+            border-radius: 12px;
+            // overflow-y: hidden;
+            
+          }
+
+          .cart-item {
+            flex-wrap: wrap;
+            height: 100%;
+            min-height: 140px;
+
+
+            .cart-col-02 {
+              width: 30%;
+              flex-direction: column;
+              gap: 8px;
+            }
+
+          
+          }
+        }
+
+       
+      }
+    }
+  }
+
+
+}
+
 //login---------------------------------------
 //login---------------------------------------
 //login---------------------------------------

@@ -7,6 +7,7 @@ export const MiniCart = {
       total: 0,
       billType: "",
       Remarkopen: false,
+    
     };
   },
   mounted() {

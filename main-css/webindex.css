@@ -2221,7 +2221,7 @@ header.header-detailed .nav-right div svg {
 }
 
 .product-cart .cart-row1 {
-  padding: 108px 0px 108px;
+  padding: 64px 0px 64px;
   background-color: #eeeeee;
 }
 .product-cart .row1-area {
@@ -2237,6 +2237,12 @@ header.header-detailed .nav-right div svg {
 }
 .product-cart .cart-area #cart-title {
   height: 80px;
+  min-height: auto;
+}
+.product-cart .cart-area #cart-title::after {
+  height: 2px;
+  background-color: #807b7b;
+  border-radius: 1px;
 }
 .product-cart .cart-area #cart-title.cart-item:hover {
   background-color: transparent;
@@ -2249,10 +2255,13 @@ header.header-detailed .nav-right div svg {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  max-height: 540px;
+  overflow-y: auto;
+  scrollbar-width: none;
 }
 .product-cart .cart-area .cart-item {
   padding: 16px 8px;
-  height: 20vh;
+  min-height: 140px;
   display: flex;
   justify-content: space-evenly;
   gap: 4px;
@@ -2307,6 +2316,7 @@ header.header-detailed .nav-right div svg {
   max-width: 100px;
   min-width: 100px;
   height: 100%;
+  white-space: nowrap;
 }
 .product-cart .cart-area .cart-item .cart-col-03 {
   width: 4%;
@@ -2530,6 +2540,42 @@ header.header-detailed .nav-right div svg {
 @media screen and (max-width: 920px) {
   .row1-area {
     flex-direction: column;
+  }
+  .row1-area .cart-summary {
+    max-width: 920px;
+  }
+}
+@media screen and (max-width: 670px) {
+  .product-cart .cart-row1 {
+    padding: 32px 0px;
+  }
+  .product-cart .cart-row1 .row1-area.mobile {
+    padding: 64px 16px 0px;
+  }
+  .product-cart .cart-row1 .row1-area.mobile .cart-area #cart-title.cart-item {
+    min-height: auto;
+  }
+  .product-cart .cart-row1 .row1-area.mobile .cart-area #cart-title.cart-item .cart-col-02 {
+    flex-direction: row;
+    gap: 0px;
+  }
+  .product-cart .cart-row1 .row1-area.mobile .cart-area #cart-title.cart-item .cart-col-02 .c2-01,
+  .product-cart .cart-row1 .row1-area.mobile .cart-area #cart-title.cart-item .cart-col-02 .c2-02,
+  .product-cart .cart-row1 .row1-area.mobile .cart-area #cart-title.cart-item .cart-col-02 .c2-03 {
+    min-width: 20px;
+  }
+  .product-cart .cart-row1 .row1-area.mobile .cart-area .cart-items {
+    border-radius: 12px;
+  }
+  .product-cart .cart-row1 .row1-area.mobile .cart-area .cart-item {
+    flex-wrap: wrap;
+    height: 100%;
+    min-height: 140px;
+  }
+  .product-cart .cart-row1 .row1-area.mobile .cart-area .cart-item .cart-col-02 {
+    width: 30%;
+    flex-direction: column;
+    gap: 8px;
   }
 }
 .login {
