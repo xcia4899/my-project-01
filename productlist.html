@@ -270,7 +270,9 @@
                 <div class="itemname">{{ item.name }}</div>
                 <!-- <div>單價：{{ item.price }}</div> -->
                 <div>數量：{{ item.quantity }}</div>
-                <div class="itemprice">小計：${{ item.subtotal.toLocaleString() }}</div>
+                <div class="itemprice">
+                  小計：${{ item.subtotal.toLocaleString() }}
+                </div>
                 <div class="delete" @click="removeFromCart(item.id)">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                     <!-- 加號（+） -->
@@ -283,12 +285,11 @@
                   </svg>
                 </div>
               </div>
-              
             </div>
             <div class="bottom-area">
-                <h4>總金額：{{ this.total.toLocaleString() }}元</h4>
-                <a src="./cart.html"><button class="btn">結帳</button></a>
-              </div>
+              <h4>總金額：{{ this.total.toLocaleString() }}元</h4>
+              <a src="./cart.html"><button class="btn">結帳</button></a>
+            </div>
           </div>
         </aside>
       </div>
@@ -429,14 +430,13 @@
                 class="card"
                 v-for="product in paginatedProducts"
                 :key="product.id"
+                @click="goDetail(product.id)"
               >
                 <div class="item-pic">
-                  <a href="./productdetailed.html">
-                    <div class="pic">
-                      <img :src="product.image" :alt="product.name" />
-                    </div>
-                    <div class="card-title">{{ product.brand }} 系列</div>
-                  </a>
+                  <div class="pic">
+                    <img :src="product.image" :alt="product.name" />
+                  </div>
+                  <div class="card-title">{{ product.brand }} 系列</div>
                 </div>
                 <div class="item-text">
                   <h4>{{ product.name }}</h4>
@@ -454,10 +454,10 @@
                       特價${{ product.price.toLocaleString() }}
                     </p>
                     <p :class="{ strike : product.onsale }">
-                      NT${{ product.originalPrice.toLocaleString() }} 
+                      NT${{ product.originalPrice.toLocaleString() }}
                     </p>
                   </div>
-                  <button class="btn" @click="addToCart(product)">
+                  <button class="btn" @click.stop="addToCart(product)">
                     加入購物車
                   </button>
                 </div>
@@ -562,185 +562,16 @@
       });
     </script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script>
-      const app = Vue.createApp({
-        data() {
-          return {
-            products: [],
-            selectedproducts: [], //商品資料
-            filterSections: [], //sidebar資料
-
-            widthsize: 920,
-            sidebar: true,
-            hasAutoOpened: false,
-            hasAutoClosed: false,
-            openSections: [], // 用來記錄打開的區塊索引
-            currentPage: 1,
-            itemsPerPage: window.innerWidth < 600 ? 4 : 9,
-          };
-        },
-        mounted() {
-          fetch("./json/multi_brand_products.json")
-            .then((response) => response.json())
-            .then((data) => {
-              this.products = data;
-            })
-            .catch((err) => {
-              console.error("讀取 JSON 檔案錯誤:", err);
-            });
-
-          fetch("./json/filters.json")
-            .then((response) => response.json())
-            .then((data) => {
-              this.filterSections = data;
-            })
-            .catch((err) => {
-              console.error("讀取篩選條件 JSON 檔案錯誤:", err);
-            });
-
-          window.addEventListener("resize", this.handleResize);
-          this.handleResize(); // 初始化時先判斷一次螢幕寬度
-        },
-        beforeUnmount() {
-          window.removeEventListener("resize", this.handleResize);
-        },
-        methods: {
-          // 清除所有已選的篩選條件（清空 selectedproducts 陣列）
-          clearFilters() {
-            this.selectedproducts = [];
-          },
-
-          // 從已選的篩選條件中移除指定的 tag
-          removeTag(tag) {
-            this.selectedproducts = this.selectedproducts.filter(
-              (t) => t !== tag
-            );
-          },
-
-          // 切換展開或關閉篩選區塊 (index 是篩選區塊的編號)
-          toggleSection(index) {
-            const i = this.openSections.indexOf(index);
-            if (i > -1) {
-              // 如果該區塊已開啟，移除它（關閉）
-              this.openSections.splice(i, 1);
-            } else {
-              // 尚未展開，加入陣列表示開啟
-              this.openSections.push(index);
-            }
-          },
-
-          // 切換側邊欄開關狀態（布林切換）
-          toggleSidebar() {
-            this.sidebar = !this.sidebar;
-          },
-          handleResize() {
-            if (window.innerWidth < this.widthsize && !this.hasAutoClosed) {
-              this.sidebar = false;
-              this.hasAutoClosed = true; // 只關一次
-              this.hasAutoOpened = false;
-            }
-
-            if (window.innerWidth > this.widthsize && !this.hasAutoOpened) {
-              this.sidebar = true;
-              this.hasAutoOpened = true;
-              this.hasAutoClosed = false;
-            }
-            // 更新 itemsPerPage
-            this.itemsPerPage = window.innerWidth < 670 ? 4 : 9;
-          },
-          // 模擬加入購物車功能，點擊時彈出商品名稱提示
-          addToCart(product) {
-            // 取出購物車資料（如沒有就為空陣列）
-            const cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-            const existingItem = cart.find((item) => item.id === product.id);
-
-            if (existingItem) {
-              existingItem.quantity += 1;
-              alert(`商品已在購物車中，數量 +1: ${product.name}`);
-            } else {
-              cart.push({ id: product.id, quantity: 1 });
-              alert(`加入購物車: ${product.name}`);
-            }
-
-            localStorage.setItem("cart", JSON.stringify(cart));
-            window.dispatchEvent(new Event("cart-updated"));
-          },
-
-          // 切換到指定頁面並滾動到產品區塊
-          goToPage(page) {
-            this.currentPage = page;
-            this.scrollToProductContent();
-          },
-
-          // 切換到上一頁（如果不是第一頁），並滾動到產品區塊
-          prevPage() {
-            if (this.currentPage > 1) this.currentPage--;
-            this.scrollToProductContent();
-          },
-
-          // 切換到下一頁（如果不是最後一頁），並滾動到產品區塊
-          nextPage() {
-            if (this.currentPage < this.totalPages) this.currentPage++;
-            this.scrollToProductContent();
-          },
-
-          // 滾動頁面到產品列表區塊，並帶有平滑動畫效果
-          scrollToProductContent() {
-            const target = document.querySelector(".product-content");
-            if (target) {
-              target.scrollIntoView({ behavior: "smooth" });
-            }
-          },
-        },
-
-        computed: {
-          // 判斷是否有任何篩選條件被選中，用來顯示或隱藏「清除篩選條件」按鈕
-          showClearBtn() {
-            return this.selectedproducts.length > 0;
-          },
-          // 根據選取的篩選條件過濾商品，沒選任何條件則回傳全部商品
-          filteredProducts() {
-            if (this.selectedproducts.length === 0) {
-              return this.products;
-            }
-
-            return this.products.filter((product) => {
-              if (!Array.isArray(product.tags)) return false;
-              // 只要 product.tags 裡有任一個 selectedproducts 的 tag 就符合條件
-              return this.selectedproducts.some((tag) =>
-                product.tags.includes(tag)
-              );
-            });
-          },
-          // 依據目前頁碼與每頁顯示數量，取得要顯示的分頁商品
-          paginatedProducts() {
-            const start = (this.currentPage - 1) * this.itemsPerPage;
-            const end = start + this.itemsPerPage;
-            // 使用 filteredProducts 的結果分頁
-            return this.filteredProducts.slice(start, end);
-          },
-
-          // 計算總頁數，用來製作分頁按鈕
-          totalPages() {
-            return Math.ceil(this.filteredProducts.length / this.itemsPerPage);
-          },
-        },
-
-        watch: {
-          selectedproducts() {
-            this.currentPage = 1;
-          },
-        },
-      });
-      app.mount("#vue-productlist");
-    </script>
-
+    
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./main-js/header-js.js"></script>
     <script src="./main-js/content-js.js"></script>
     <script type="module">
-      import { MiniCart } from "./main-js/cart-vue.js";
+      import { productlist } from "./main-js/productlist.js";
+      import { MiniCart } from "./main-js/MiniCart.js";
+
+      const app = Vue.createApp(productlist);
+      app.mount("#vue-productlist");
 
       const app1 = Vue.createApp(MiniCart);
       app1.mount("#vur-minincart");

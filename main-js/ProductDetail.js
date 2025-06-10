@@ -1,0 +1,34 @@
+import cartLogic from './cartLogic.js';
+import { fetchProducts } from "./productService.js";
+
+export const ProductDetail = {
+  data() {
+    return {
+      product: null,  // 存放當前商品詳細資料
+    };
+  },
+  mounted() {
+    // 從 URL 查詢參數取得商品 id
+    const id = new URLSearchParams(location.search).get('id');
+
+    // 載入所有商品，並找出符合 id 的商品賦值給 product
+    fetchProducts()
+      .then(data => {
+        this.product = data.find(p => p.id == id);
+      })
+      .catch(err => {
+        console.error("讀取商品資料錯誤:", err);
+      });
+  },
+  methods: {
+    addToCart(product) {
+      // 使用 cartLogic 加入購物車，並根據回傳結果提示訊息
+      const result = cartLogic.addToCart(product);
+      if (result === "existing") {
+        alert(`商品已在購物車中，數量 +1: ${product.name}`);
+      } else {
+        alert(`加入購物車: ${product.name}`);
+      }
+    }
+  }
+};
