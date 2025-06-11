@@ -434,16 +434,14 @@
               >
                 <div class="item-pic">
                   <div class="pic">
-                    <img :src="product.image" :alt="product.name" />
+                    <img :src="product.images.main" :alt="product.name" />
                   </div>
-                  <div class="card-title">{{ product.brand }} 系列</div>
+                  <div class="card-title">{{ product.brand }} </div>
                 </div>
                 <div class="item-text">
                   <h4>{{ product.name }}</h4>
                   <h5>
-                    {{ product.description.length > 12 ?
-                    product.description.slice(0, 12) + '...' :
-                    product.description }}
+                    {{ product.description }}
                   </h5>
 
                   <div class="productprice">

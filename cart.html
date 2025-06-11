@@ -266,7 +266,7 @@
                 :key="item.id"
                 class="cartproductshow"
               >
-                <div><img :src="item.image" alt="" /></div>
+                <div><img :src="item.images.main" :alt="item.name" /></div>
                 <div class="itemname">{{ item.name }}</div>
                 <!-- <div>單價：{{ item.price }}</div> -->
                 <div>數量：{{ item.quantity }}</div>
@@ -312,7 +312,7 @@
             <ul class="cart-items">
               <li v-for="item in cartItems" :key="item.id" class="cart-item">
                 <div class="item-image cart-col-01">
-                  <img :src="item.image" :alt="item.name" />
+                  <img :src="item.images.main" :alt="item.name" />
                   <div class="item-title">
                     <h4>{{item.brand}}</h4>
                     <h5>{{item.name}}</h5>
