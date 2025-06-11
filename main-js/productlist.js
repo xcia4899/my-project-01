@@ -77,6 +77,16 @@ export const productlist = {
       if (!this.openSections.includes(sectionIndex)) {
         this.openSections.push(sectionIndex);
       }
+      if (titleTag === "品牌") {
+        const brandTag = new URLSearchParams(window.location.search).get("brand");
+
+        // 如果 URL 有指定特定品牌，則只選中該品牌；否則選中所有品牌
+        if (brandTag && matchedSection.options.includes(brandTag)) {
+          this.selectedproducts = [brandTag];
+        } else {
+          this.selectedproducts = [...matchedSection.options];
+        }
+      }
     },
     toggleSidebar() {
       // 切換側邊欄顯示狀態

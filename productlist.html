@@ -51,42 +51,42 @@
                     </a>
                   </div>
                   <div class="card">
-                    <a href="./productlist.html">
+                    <a href="./productlist.html?title=滑鼠">
                       <div class="item-pic">
                         <img src="./images/pictrue/fourth-row2-02.png" alt="" />
                       </div>
                       <div class="item-text">
-                        <h3>鍵盤/滑鼠</h3>
+                        <h3>滑鼠</h3>
                       </div>
                     </a>
                   </div>
                   <div class="card">
-                    <a href="./productlist.html">
+                    <a href="./productlist.html?title=鍵盤">
                       <div class="item-pic">
                         <img src="./images/pictrue/fourth-row2-02.png" alt="" />
                       </div>
                       <div class="item-text">
-                        <h3>耳機/喇叭</h3>
+                        <h3>鍵盤</h3>
                       </div>
                     </a>
                   </div>
                   <div class="card">
-                    <a href="./productlist.html">
+                    <a href="./productlist.html?title=耳機">
                       <div class="item-pic">
                         <img src="./images/pictrue/fourth-row2-02.png" alt="" />
                       </div>
                       <div class="item-text">
-                        <h3>螢幕</h3>
+                        <h3>耳機</h3>
                       </div>
                     </a>
                   </div>
                   <div class="card">
-                    <a href="./productlist.html">
+                    <a href="./productlist.html?title=麥克風">
                       <div class="item-pic">
                         <img src="./images/pictrue/fourth-row2-02.png" alt="" />
                       </div>
                       <div class="item-text">
-                        <h3>遊戲機</h3>
+                        <h3>麥克風</h3>
                       </div>
                     </a>
                   </div>
@@ -114,28 +114,42 @@
               <div class="hcontent-area">
                 <div class="hcol hcol-left">
                   <div class="card">
-                    <div class="item-pic"><img src="" alt="" /></div>
-                    <div class="item-text">
-                      <h3>Horizon</h3>
-                    </div>
+                   <a href="./productlist.html?title=品牌&brand=MSI">
+                      <div class="item-pic">
+                        <img src="./images/logo/MSI.png" alt="MSI" />
+                      </div>
+                      <div class="item-text">
+                        <h3>MSI</h3>
+                      </div>
+                   </a>
                   </div>
                   <div class="card">
-                    <div class="item-pic"><img src="" alt="" /></div>
+                    <a href="./productlist.html?title=品牌&brand=Logitech">
+                    <div class="item-pic">
+                      <img src="./images/logo/LOGI.png" alt="Logitech" />
+                    </div>
                     <div class="item-text">
                       <h3>Logitech</h3>
-                    </div>
+                    </div></a>
                   </div>
                   <div class="card">
-                    <div class="item-pic"><img src="" alt="" /></div>
+                    <a href="./productlist.html?title=品牌&brand=Razer">
+                    <div class="item-pic">
+                      <img src="./images/logo/RAZER.png" alt="Razer" />
+                    </div>
                     <div class="item-text">
                       <h3>Razer</h3>
-                    </div>
+                    </div></a>
                   </div>
                   <div class="card">
-                    <div class="item-pic"><img src="" alt="" /></div>
+                    <a href="./productlist.html?title=品牌&brand=ROG">
+                    <div class="item-pic">
+                      <img src="./images/logo/ROG.png" alt="ROG" />
+                    </div>
                     <div class="item-text">
                       <h3>ROG</h3>
                     </div>
+                    </a>
                   </div>
                 </div>
                 <div class="dropdown-close">
@@ -266,7 +280,7 @@
                 :key="item.id"
                 class="cartproductshow"
               >
-                <div><img :src="item.image" alt="" /></div>
+                <div><img :src="item.images.main" :alt="item.name" /></div>
                 <div class="itemname">{{ item.name }}</div>
                 <!-- <div>單價：{{ item.price }}</div> -->
                 <div>數量：{{ item.quantity }}</div>
