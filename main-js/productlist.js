@@ -42,7 +42,7 @@ export const productlist = {
   methods: {
     goDetail(id) {
       // 跳轉商品詳細頁
-      window.location.href = `product-detail.html?id=${id}`;
+      window.location.href = `productdetailed.html?id=${id}`;
     },
     clearFilters() {
       // 清除所有篩選標籤

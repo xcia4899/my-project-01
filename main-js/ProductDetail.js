@@ -15,7 +15,8 @@ export const ProductDetail = {
         },
         subtitle: ''
         // 其他你有用到的欄位預設空值也補上
-      }
+      },
+       currentImage: '',
     }
   }
   ,
@@ -32,6 +33,7 @@ export const ProductDetail = {
 
         this.product = data.find(p => p.id == id);
         console.log("找到的商品：", this.product);
+        this.currentImage = this.product.images.main; // ✅ 預設主圖
       })
       .catch(err => {
         console.error("讀取商品資料錯誤:", err);
