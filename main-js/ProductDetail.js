@@ -4,17 +4,34 @@ import { fetchProducts } from "./productService.js";
 export const ProductDetail = {
   data() {
     return {
-      product: null,  // 存放當前商品詳細資料
-    };
-  },
+      product: {
+        brand: '',
+        name: '',
+        price: 0,
+        originalPrice: 0,
+        images: {
+          main: '',
+          thumbnails: []
+        },
+        subtitle: ''
+        // 其他你有用到的欄位預設空值也補上
+      }
+    }
+  }
+  ,
   mounted() {
     // 從 URL 查詢參數取得商品 id
     const id = new URLSearchParams(location.search).get('id');
-
+    if (!id) {
+      alert("錯誤：網址沒有指定商品 id");
+      return;
+    }
     // 載入所有商品，並找出符合 id 的商品賦值給 product
     fetchProducts()
       .then(data => {
+
         this.product = data.find(p => p.id == id);
+        console.log("找到的商品：", this.product);
       })
       .catch(err => {
         console.error("讀取商品資料錯誤:", err);
@@ -30,5 +47,6 @@ export const ProductDetail = {
         alert(`加入購物車: ${product.name}`);
       }
     }
-  }
+  },
+
 };
