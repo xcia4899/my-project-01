@@ -313,12 +313,10 @@
 
     <main id="main " class="product-detailed">
       <section id="vue-detailed" v-if="product">
-        <section class="add-cart-area">
+        <section class="add-cart-area content-area">
           <div class="add-content">
             <div class="nav-left">
               <h3>{{ product.brand }} 系列</h3>
-            </div>
-            <div class="nav-right">
               <div class="price">
                 <!-- 特價顯示（僅限有特價時） -->
                 <div v-if="product.onsale" class="redcharacter">
@@ -329,6 +327,8 @@
                   NT${{ product.originalPrice.toLocaleString() }}
                 </div>
               </div>
+            </div>
+            <div class="nav-right">
               <button class="btn btn-cart"></button>
             </div>
           </div>
@@ -350,25 +350,48 @@
               <div>
                 <p>{{product.description}}</p>
               </div>
-
-              <div
-                v-for="(section, index) in product.details"
-                :key="index"
-                class="detail-section"
-              >
-                <h4 class="detailed-title">{{ section.section }}</h4>
-                <div class="detailed-content">
-                  <div
-                    v-for="(block, idx) in section.content"
-                    :key="idx"
-                    class="block"
-                  >
-                    <h4 class="block-title">{{ block.title }}</h4>
-                    <ul class="block-list">
-                      <li v-for="(item, i) in block.items" :key="i">
-                        {{ item }}
-                      </li>
-                    </ul>
+              <div>
+                <div
+                  v-for="(section, index) in product.details"
+                  :key="index"
+                  class="detail-section"
+                >
+                  <h4 class="detailed-title" @click="toggleSection(index)">
+                    {{ section.section }}
+                    {{detailedcontentopen}}
+                    <svg v-if="!openStates[index]" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                      <!-- 加號（+） -->
+                      <path
+                        d="M12 5v14M5 12h14"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                    
+                    <svg v-else width="20" height="20" viewBox="0 0 24 24" fill="none">
+                      <!-- 減號（-） -->
+                      <path
+                        d="M5 12h14"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </h4>
+                  <div class="detailed-content" :class="{ 'content-open': openStates[index] }">
+                    <div
+                      v-for="(block, idx) in section.content"
+                      :key="idx"
+                      class="block"
+                    >
+                      <div class="block-title">{{ block.title }}</div>
+                      <ul class="block-list">
+                        <li v-for="(item, i) in block.items" :key="i">
+                          {{ item }}
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -379,9 +402,9 @@
               </div>
               <div class="thumbnails">
                 <button
-                v-for="(img, index) in product.images.thumbnails"
-                :key="index"
-                @click="currentImage = img"
+                  v-for="(img, index) in product.images.thumbnails"
+                  :key="index"
+                  @click="currentImage = img"
                 >
                   <img :src="img" alt="商品縮圖" />
                 </button>

@@ -128,6 +128,12 @@ input::placeholder {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0px 32px;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 670px) {
+  .content-area {
+    padding: 0px 16px;
+  }
 }
 
 .margin-topbottom {
@@ -234,6 +240,11 @@ header {
   z-index: 222;
   letter-spacing: 1px;
   transition: all 0.6s ease;
+}
+@media screen and (max-width: 670px) {
+  #header-inner {
+    padding: 0 16px;
+  }
 }
 #header-inner a {
   color: #fafafa;
@@ -407,7 +418,7 @@ header {
   height: 30px;
 }
 #header-inner .nav-right .cart-show .bottom-area .btn:hover {
-  color: #2c2c2c;
+  color: #690fa6;
 }
 #header-inner .nav-right .cart-btn:hover + .cart-show {
   max-height: 600px;
@@ -690,6 +701,7 @@ header {
   }
   #header-inner .menu-toggle {
     transform: scale(0.8);
+    left: 16px;
   }
   #header-inner .navbar {
     padding: 16px 0;
@@ -1872,7 +1884,7 @@ footer {
   margin-top: 4px;
 }
 .product-content .product-content-area .card .item-text .btn:hover {
-  color: #2c2c2c;
+  color: #690fa6;
 }
 .product-content .product-content-area .btn-openlist {
   margin-bottom: 24px;
@@ -1972,6 +1984,9 @@ footer {
   .content-area.product-content-area .col-product-list .listrow .card {
     max-width: 500px;
   }
+  .content-area.product-content-area .col-product-list .listrow {
+    gap: 32px 16px;
+  }
 }
 @media screen and (max-width: 670px) {
   .product-cursoul {
@@ -1981,7 +1996,7 @@ footer {
     background-position: right 20% top;
   }
   .product-content .openlist {
-    padding: 4px 0;
+    padding: 8px 0;
   }
   .product-content .openlist .content-area {
     padding: 0;
@@ -2014,20 +2029,19 @@ footer {
   box-shadow: 0px 0px 6px 1px rgba(22, 22, 22, 0.4);
 }
 .product-detailed .add-cart-area .add-content {
-  padding: 0 32px;
-  max-width: 1440px;
   /* 限制容器最大寬度 */
-  margin: 0 auto;
   height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 16px;
 }
-.product-detailed .add-cart-area .add-content .nav-right {
+.product-detailed .add-cart-area .add-content .nav-left {
+  width: 100%;
   display: flex;
-  gap: 36px;
+  justify-content: space-between;
 }
-.product-detailed .add-cart-area .add-content .nav-right .price {
+.product-detailed .add-cart-area .add-content .nav-left .price {
   font-size: 28px;
   font-weight: 900;
   letter-spacing: 1px;
@@ -2037,7 +2051,7 @@ footer {
   flex-direction: row-reverse;
   gap: 8px;
 }
-.product-detailed .add-cart-area .add-content .nav-right .strike {
+.product-detailed .add-cart-area .add-content .nav-left .strike {
   text-decoration: line-through;
   color: #999;
   opacity: 0.8;
@@ -2060,31 +2074,31 @@ footer {
   background-color: #f0f0f0;
 }
 .product-detailed .detailed-row1 {
-  padding: 32px 32px;
+  padding-top: 32px;
+  padding-bottom: 64px;
   display: flex;
   justify-content: flex-start;
   flex-direction: row-reverse;
   align-items: center;
   gap: 32px;
-  height: calc(100vh - 140px);
+  height: calc(100vh - 70px);
 }
 .product-detailed .detailed-row1 .information {
   height: 100%;
   width: 40%;
   min-width: 300px;
-  padding: 32px 16px 32px;
+  padding: 32px 0px 32px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 32px;
+  gap: 16px;
   overflow-x: hidden;
   scrollbar-width: none;
   color: #2c2c2c;
 }
 .product-detailed .detailed-row1 .information h4 {
   font-weight: 900;
-  font-size: 20px;
 }
 .product-detailed .detailed-row1 .information p {
   margin: 0;
@@ -2095,32 +2109,52 @@ footer {
 .product-detailed .detailed-row1 .information ul {
   margin: 0;
 }
+.product-detailed .detailed-row1 .information .detail-section {
+  background-color: #e0e0e0;
+  color: #2c2c2c;
+  border-radius: 4px;
+  padding: 4px 4px;
+  margin: 8px 0;
+}
 .product-detailed .detailed-row1 .information .detail-section .detailed-title {
+  display: flex;
+  align-items: center;
+  padding: 4px 0;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
 }
 .product-detailed .detailed-row1 .information .detail-section .detailed-title:hover {
   color: #a02fec;
 }
-.product-detailed .detailed-row1 .information .detail-section .detailed-title:hover + .detailed-content {
-  border-color: #a02fec;
+.product-detailed .detailed-row1 .information .detail-section .detailed-title svg {
+  position: absolute;
+  right: 0;
 }
 .product-detailed .detailed-row1 .information .detail-section .detailed-content {
-  max-height: 1000px;
+  max-height: 0px;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
-  border-bottom: 1px dashed #5f5f5f;
+  transition: all 0.4s ease;
+  border-radius: 8px;
 }
-.product-detailed .detailed-row1 .information .detail-section .detailed-content .block {
-  background-color: #fff;
+.product-detailed .detailed-row1 .information .detail-section .detailed-content .block .block-title {
+  font-weight: bolder;
+  padding: 4px 4px;
+  cursor: default;
+}
+.product-detailed .detailed-row1 .information .detail-section .detailed-content .block .block-list {
+  padding: 0px 4px 8px;
+  font-weight: normal;
+}
+.product-detailed .detailed-row1 .information .detail-section .detailed-content .block .block-list li:hover {
+  color: #a02fec;
+  cursor: default;
 }
 .product-detailed .detailed-row1 .information .detail-section .detailed-content.content-open {
-  max-height: 700px;
+  max-height: 1400px;
 }
 .product-detailed .detailed-row1 .product-area {
-  height: calc(100vh - 140px);
   width: 70%;
-  padding: 32px 32px;
+  padding: 32px 16px 64px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2231,6 +2265,80 @@ footer {
   margin: 0;
 }
 
+@media screen and (max-width: 920px) {
+  .product-detailed .add-cart-area .add-content .nav-left h3 {
+    font-size: 24px;
+  }
+  .product-detailed .add-cart-area .add-content .nav-left .price {
+    font-size: 20px;
+    gap: 4px;
+  }
+  .product-detailed .add-cart-area .add-content .nav-right .strike {
+    font-size: 16px;
+  }
+  .product-detailed .add-cart-area .add-content .nav-right .btn-cart {
+    width: 160px;
+    font-size: 16px;
+  }
+  .product-detailed .detailed-row1 .information {
+    min-width: 240px;
+  }
+  .product-detailed .detailed-row1 .information h3 {
+    font-size: 24px;
+  }
+  .product-detailed .detailed-row1 .product-area {
+    padding: 32px 16px 32px;
+    gap: 16px;
+  }
+  .product-detailed .detailed-row1 .product-area .thumbnails button {
+    max-height: 80px;
+  }
+}
+@media screen and (max-width: 670px) {
+  .product-detailed .add-cart-area .add-content {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 140px;
+    gap: 16px;
+    padding: 16px 0;
+  }
+  .product-detailed .add-cart-area .add-content .nav-left h3 {
+    font-size: 20px;
+  }
+  .product-detailed .add-cart-area .add-content .nav-left .price {
+    font-size: 20px;
+  }
+  .product-detailed .add-cart-area .add-content .nav-left .strike {
+    font-size: 16px;
+  }
+  .product-detailed .add-cart-area .add-content .nav-right {
+    width: 100%;
+  }
+  .product-detailed .add-cart-area .add-content .nav-right .btn-cart {
+    width: 100%;
+    font-size: 16px;
+  }
+  .product-detailed .detailed-row1 {
+    flex-direction: column-reverse;
+    height: 100%;
+  }
+  .product-detailed .detailed-row1 .information {
+    width: 100%;
+    padding: 0;
+    min-width: 240px;
+  }
+  .product-detailed .detailed-row1 .information h3 {
+    font-size: 24px;
+  }
+  .product-detailed .detailed-row1 .product-area {
+    width: 100%;
+    padding: 32px 0px 32px;
+  }
+  .product-detailed .detailed-row1 .product-area .thumbnails button {
+    max-height: 80px;
+    max-width: 100px;
+  }
+}
 .product-cart .cart-row1 {
   padding: 64px 0px 64px;
   background-color: #f0f0f0;
@@ -2677,11 +2785,12 @@ footer {
   width: 100%;
 }
 .login .login-area .enter .btn:hover {
-  color: #2c2c2c;
+  color: #690fa6;
 }
 .login .othermethods {
   text-align: center;
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
   gap: 32px;
@@ -2703,13 +2812,27 @@ footer {
 .login .othermethods .logonicon {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 8px;
 }
-.login .othermethods .logonicon img {
+.login .othermethods .logonicon div {
+  max-width: 60px;
+  padding: 4px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  border: 2px solid transparent;
+  display: flex;
+  justify-content: center;
+}
+.login .othermethods .logonicon div:hover {
+  background-color: #fff;
+}
+.login .othermethods .logonicon div img {
   cursor: pointer;
   transition: all 0.4s ease;
   filter: grayscale(20%) saturate(90%);
 }
-.login .othermethods .logonicon img:hover {
+.login .othermethods .logonicon div img:hover {
   filter: grayscale(0%) saturate(120%);
 }
 .login .othermethods .register {
@@ -2718,7 +2841,15 @@ footer {
   text-underline-offset: 4px;
   cursor: pointer;
 }
+.login .othermethods .register a:hover {
+  color: #690fa6;
+}
 
+@media screen and (max-width: 670px) {
+  .login .othermethods .logonicon {
+    width: 280px;
+  }
+}
 .addmember {
   background-color: #f0f0f0;
   color: #2c2c2c;
@@ -2797,11 +2928,12 @@ footer {
   width: 100%;
 }
 .addmember .login-area .enter .btn:hover {
-  color: #2c2c2c;
+  color: #690fa6;
 }
 .addmember .othermethods {
   text-align: center;
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
   gap: 32px;
@@ -2823,13 +2955,27 @@ footer {
 .addmember .othermethods .logonicon {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 8px;
 }
-.addmember .othermethods .logonicon img {
+.addmember .othermethods .logonicon div {
+  max-width: 60px;
+  padding: 4px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  border: 2px solid transparent;
+  display: flex;
+  justify-content: center;
+}
+.addmember .othermethods .logonicon div:hover {
+  background-color: #fff;
+}
+.addmember .othermethods .logonicon div img {
   cursor: pointer;
   transition: all 0.4s ease;
   filter: grayscale(20%) saturate(90%);
 }
-.addmember .othermethods .logonicon img:hover {
+.addmember .othermethods .logonicon div img:hover {
   filter: grayscale(0%) saturate(120%);
 }
 .addmember .othermethods .register {
@@ -2837,4 +2983,10 @@ footer {
   text-decoration: underline;
   text-underline-offset: 4px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 670px) {
+  .addmember .othermethods .logonicon {
+    width: 280px;
+  }
 }/*# sourceMappingURL=webindex.css.map */

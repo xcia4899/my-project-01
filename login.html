@@ -268,38 +268,7 @@
               </svg>
             </a>
           </div>
-          <div class="cart-show" id="vur-minincart">
-            <div class="cart-area">
-              <div
-                v-for="item in cartItems"
-                :key="item.id"
-                class="cartproductshow"
-              >
-                <div><img :src="item.images.main" :alt="item.name" /></div>
-                <div class="itemname">{{ item.name }}</div>
-                <!-- <div>單價：{{ item.price }}</div> -->
-                <div>數量：{{ item.quantity }}</div>
-                <div class="itemprice">
-                  小計：${{ item.subtotal.toLocaleString() }}
-                </div>
-                <div class="delete" @click="removeFromCart(item.id)">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <!-- 加號（+） -->
-                    <path
-                      d="M12 5v14M5 12h14"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="bottom-area">
-              <h4>總金額：{{ this.total.toLocaleString() }}元</h4>
-              <a src="./cart.html"><button class="btn">結帳</button></a>
-            </div>
-          </div>
+       
         </aside>
       </div>
     </header>
@@ -326,13 +295,13 @@
           <hr>
         </div>
         <div class="logonicon">
-          <img src="./images/loginicon/10001.svg" alt="">
-          <img src="./images/loginicon/10002.svg" alt="">
-          <img src="./images/loginicon/10003.svg" alt="">
-          <img src="./images/loginicon/10004.svg" alt="">
-          <img src="./images/loginicon/10005.svg" alt="">
-          <img src="./images/loginicon/10006.svg" alt="">
-          <img src="./images/loginicon/10007.svg" alt="">
+          <div><img src="./images/loginicon/10001.svg" alt=""></div>
+          <div><img src="./images/loginicon/10002.svg" alt=""></div>
+          <div><img src="./images/loginicon/10003.svg" alt=""></div>
+          <div><img src="./images/loginicon/10004.svg" alt=""></div>
+          <div><img src="./images/loginicon/10005.svg" alt=""></div>
+          <div><img src="./images/loginicon/10006.svg" alt=""></div>
+          <div><img src="./images/loginicon/10007.svg" alt=""></div>
         </div>
         <div class="register"><a href="./addmember.html">註冊會員</a></div>
 
@@ -391,9 +360,19 @@
   </footer>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="./main-js/header-js.js"></script>
-  <script src="./main-js/content-js.js"></script>
+   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./main-js/header-js.js"></script>
+    <script src="./main-js/content-js.js"></script>
+    <script type="module">
+      import { MiniCart } from "./main-js/MiniCart.js";
+
+      const app1 = Vue.createApp(MiniCart);
+      app1.mount("#vur-minincart");
+
+     
+    </script>
 </body>
 
 </html>

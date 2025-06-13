@@ -16,7 +16,8 @@ export const ProductDetail = {
         subtitle: ''
         // 其他你有用到的欄位預設空值也補上
       },
-       currentImage: '',
+      currentImage: '',
+      openStates: [], // 用於控制每個區塊是否開啟
     }
   }
   ,
@@ -34,10 +35,12 @@ export const ProductDetail = {
         this.product = data.find(p => p.id == id);
         console.log("找到的商品：", this.product);
         this.currentImage = this.product.images.main; // ✅ 預設主圖
+        this.openStates = this.product.details.map(() => false);
       })
       .catch(err => {
         console.error("讀取商品資料錯誤:", err);
       });
+
   },
   methods: {
     addToCart(product) {
@@ -48,6 +51,10 @@ export const ProductDetail = {
       } else {
         alert(`加入購物車: ${product.name}`);
       }
+    },
+    //detailed-content開關
+    toggleSection(index) {
+      this.openStates[index] = !this.openStates[index];
     }
   },
 

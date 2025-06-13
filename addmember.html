@@ -216,13 +216,13 @@
           <hr>
         </div>
         <div class="logonicon">
-          <img src="./images/loginicon/10001.svg" alt="">
-          <img src="./images/loginicon/10002.svg" alt="">
-          <img src="./images/loginicon/10003.svg" alt="">
-          <img src="./images/loginicon/10004.svg" alt="">
-          <img src="./images/loginicon/10005.svg" alt="">
-          <img src="./images/loginicon/10006.svg" alt="">
-          <img src="./images/loginicon/10007.svg" alt="">
+          <div><img src="./images/loginicon/10001.svg" alt=""></div>
+          <div><img src="./images/loginicon/10002.svg" alt=""></div>
+          <div><img src="./images/loginicon/10003.svg" alt=""></div>
+          <div><img src="./images/loginicon/10004.svg" alt=""></div>
+          <div><img src="./images/loginicon/10005.svg" alt=""></div>
+          <div><img src="./images/loginicon/10006.svg" alt=""></div>
+          <div><img src="./images/loginicon/10007.svg" alt=""></div>
         </div>
         <div class="register"><a href="./login.html">以擁有帳戶?登入</a></div>
 
@@ -281,9 +281,20 @@
   </footer>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="./main-js/header-js.js"></script>
-  <script src="./main-js/content-js.js"></script>
+ 
+   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./main-js/header-js.js"></script>
+    <script src="./main-js/content-js.js"></script>
+    <script type="module">
+      import { MiniCart } from "./main-js/MiniCart.js";
+
+      const app1 = Vue.createApp(MiniCart);
+      app1.mount("#vur-minincart");
+
+     
+    </script>
 </body>
 
 </html>
