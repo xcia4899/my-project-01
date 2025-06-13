@@ -313,8 +313,8 @@
 
     <main id="main " class="product-detailed">
       <section id="vue-detailed" v-if="product">
-        <section class="add-cart-area content-area">
-          <div class="add-content">
+        <section class="add-cart-area ">
+          <div class="add-content content-area">
             <div class="nav-left">
               <h3>{{ product.brand }} 系列</h3>
               <div class="price">
@@ -329,7 +329,7 @@
               </div>
             </div>
             <div class="nav-right">
-              <button class="btn btn-cart"></button>
+              <button class="btn btn-cart" @click="addToCart(product)"></button>
             </div>
           </div>
         </section>

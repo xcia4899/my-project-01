@@ -2711,8 +2711,9 @@ footer {
             .block-list {
               padding: 0px 4px 8px;
               font-weight: normal;
-
+              margin-top: 1px;
               li:hover {
+                
                 color: $color-purple;
                 cursor: default;
               }

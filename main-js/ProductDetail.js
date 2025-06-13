@@ -44,7 +44,6 @@ export const ProductDetail = {
   },
   methods: {
     addToCart(product) {
-      // 使用 cartLogic 加入購物車，並根據回傳結果提示訊息
       const result = cartLogic.addToCart(product);
       if (result === "existing") {
         alert(`商品已在購物車中，數量 +1: ${product.name}`);
@@ -52,6 +51,7 @@ export const ProductDetail = {
         alert(`加入購物車: ${product.name}`);
       }
     },
+
     //detailed-content開關
     toggleSection(index) {
       this.openStates[index] = !this.openStates[index];

@@ -2144,6 +2144,7 @@ footer {
 .product-detailed .detailed-row1 .information .detail-section .detailed-content .block .block-list {
   padding: 0px 4px 8px;
   font-weight: normal;
+  margin-top: 1px;
 }
 .product-detailed .detailed-row1 .information .detail-section .detailed-content .block .block-list li:hover {
   color: #a02fec;

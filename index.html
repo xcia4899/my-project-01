@@ -636,13 +636,21 @@
       </div>
     </section>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./main-js/header-js.js"></script>
+    <script src="./main-js/content-js.js"></script>
+    <script type="module">
+      import { MiniCart } from "./main-js/MiniCart.js";
+      import { ProductDetail } from "./main-js/ProductDetail.js";
 
-  </script>
-  <script src="./main-js/header-js.js"> </script>
-  <script src="./main-js/content-js.js"></script>
+      const app1 = Vue.createApp(MiniCart);
+      app1.mount("#vur-minincart");
+
+      const app2 = Vue.createApp(ProductDetail);
+      app2.mount("#vue-detailed");
+    </script>
 </body>
 
 </html>
