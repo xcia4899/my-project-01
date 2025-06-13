@@ -285,9 +285,11 @@
                 <div><img :src="item.images.main" :alt="item.name" /></div>
                 <div class="itemname">{{ item.name }}</div>
                 <!-- <div>單價：{{ item.price }}</div> -->
-                <div>數量：{{ item.quantity }}</div>
-                <div class="itemprice">
-                  小計：${{ item.subtotal.toLocaleString() }}
+                <div>
+                  <div>數量：{{ item.quantity }}</div>
+                  <div class="itemprice">
+                    小計：${{ item.subtotal.toLocaleString() }}
+                  </div>
                 </div>
                 <div class="delete" @click="removeFromCart(item.id)">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none">

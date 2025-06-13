@@ -319,8 +319,8 @@ header {
     max-width: 350px;
     width: 40%;
     margin: auto auto;
-    font-size: 16px;
-    font-weight: bolder;
+    font-size: 18px;
+    font-weight: bold;
 
     ul {
       display: flex;
@@ -408,8 +408,8 @@ header {
       position: absolute;
       top: 70px;
       right: 0px;
-      max-height: 0px;
-      width: 420px;
+      max-height: 00px;
+      width:400px;
 
       border-radius: 0 0 4px 4px;
       background-color: $color-white;
@@ -426,7 +426,7 @@ header {
       gap: 8px;
       box-shadow: 0px 2px 2px 0px rgba(22, 22, 22, 0.4);
 
-
+    
       .cart-area {
         padding: 16px;
         overflow-y: auto;
@@ -438,8 +438,8 @@ header {
         min-height: 90px;
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        padding: 16px 8px;
+        align-items:center;
+        padding: 8px 8px;
         border-bottom: 1px solid darken($color-middlekgery, 20%);
 
         img {
@@ -457,15 +457,41 @@ header {
 
         .delete {
           cursor: pointer;
-
+          border: 2px solid $color-middlekgery;
+          border-radius: 50%;
+          padding: 4px;
+          &:hover{
+             background-color: $color-purple;
+             border: 2px solid transparent
+          }
           svg {
             transform: scale(1.2) rotate(45deg);
             border-radius: 50%;
           }
 
           &:hover svg {
-            background-color: $color-purple;
+           
             color: $color-white;
+          }
+          &::after{
+            opacity: 0;
+            visibility: hidden;
+            content: "刪除";
+            top: -28px;
+            left: -6px;
+            font-size: 12px;
+            position: absolute;
+            display: block;
+            text-align: center;
+            width: 36px;
+            // width: 100%;
+            border: 1px solid $color-darkgery;
+            border-radius: 4px;
+            padding: 2px;
+          }
+          &:hover::after{
+            opacity: 0.6;
+            visibility: visible;
           }
         }
       }
@@ -495,7 +521,7 @@ header {
 
         .btn {
           height: 30px;
-
+         
           &:hover {
             color: darken($color: $color-purple, $amount: 20%);
           }
@@ -522,19 +548,19 @@ header {
 
   .hcontent-area {
     max-width: 1440px;
-    padding: 60px 32px 32px;
+    padding: 48px 16px 16px;
     margin: auto auto;
   }
 
   .hcol {
     width: 100%;
     display: flex;
-    justify-content: space-around;
-    gap: 12px;
-    transition: all 0.3s ease;
+    justify-content: center;
+    gap: 36px;
+    transition: all 0.6s ease;
 
     .card {
-      width: 220px;
+      width: 140px;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -551,7 +577,7 @@ header {
         width: 100%;
         height: 60%;
         background: $color-white;
-        transition: all 0.3s ease-out;
+        transition: all 0.3s ease;
       }
 
       &:hover::after {
@@ -567,7 +593,7 @@ header {
       .item-pic {
         height: auto;
         width: 100%;
-        padding: 16px;
+        padding: 8px;
         aspect-ratio: 1/1;
         background: $color-white;
         border-radius: 6px;
@@ -590,7 +616,7 @@ header {
         color: $color-darkgery;
 
         h3 {
-          font-size: 24px;
+          font-size: 20px;
         }
       }
     }
@@ -599,8 +625,8 @@ header {
 
 .dropdown-close {
   position: absolute;
-  right: 8px;
-  top: 12px;
+  right: 32px;
+  top: 8px;
   z-index: 222;
   margin: 0;
   padding: 0;
@@ -627,11 +653,11 @@ header {
 }
 
 .header-content {
-  opacity: 0;
+  // opacity: 0;
   visibility: hidden;
   max-height: 0px;
   overflow: hidden;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 
 .dropdrop-open {
@@ -791,12 +817,12 @@ header {
       .hcol {
         width: auto;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: center;
         // align-content: center;
         gap: 16px;
 
         .card {
-          width: 150px;
+          width: 120px;
 
           // background:transparent;
           &::after {
@@ -2870,7 +2896,9 @@ footer {
 @media screen and (max-width: 920px) {
   .product-detailed {
     .add-cart-area {
+      
       .add-content {
+     
         .nav-left {
           h3 {
             font-size: 24px;
@@ -2924,14 +2952,15 @@ footer {
   .product-detailed {
 
     .add-cart-area {
-
+    
       .add-content {
         // flex-wrap: wrap;
         flex-direction: column;
         justify-content: flex-start;
-        height: 140px;
+        height: 100%;
+        
         gap: 16px;
-        padding: 16px 0;
+        padding: 16px 16px 48px;
 
         .nav-left {
           h3 {
@@ -3393,7 +3422,7 @@ footer {
         width: 100%;
 
         &:hover {
-          color: $color-darkgery;
+          color: darken($color: $color-purple, $amount: 20%);
         }
       }
 

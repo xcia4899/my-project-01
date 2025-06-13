@@ -278,8 +278,8 @@ header {
   max-width: 350px;
   width: 40%;
   margin: auto auto;
-  font-size: 16px;
-  font-weight: bolder;
+  font-size: 18px;
+  font-weight: bold;
 }
 #header-inner .navbar ul {
   display: flex;
@@ -350,7 +350,7 @@ header {
   top: 70px;
   right: 0px;
   max-height: 0px;
-  width: 420px;
+  width: 400px;
   border-radius: 0 0 4px 4px;
   background-color: #fafafa;
   font-size: 14px;
@@ -373,7 +373,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 8px;
+  padding: 8px 8px;
   border-bottom: 1px solid #adadad;
 }
 #header-inner .nav-right .cart-show .cartproductshow img {
@@ -387,14 +387,39 @@ header {
 }
 #header-inner .nav-right .cart-show .cartproductshow .delete {
   cursor: pointer;
+  border: 2px solid #e0e0e0;
+  border-radius: 50%;
+  padding: 4px;
+}
+#header-inner .nav-right .cart-show .cartproductshow .delete:hover {
+  background-color: #a02fec;
+  border: 2px solid transparent;
 }
 #header-inner .nav-right .cart-show .cartproductshow .delete svg {
   transform: scale(1.2) rotate(45deg);
   border-radius: 50%;
 }
 #header-inner .nav-right .cart-show .cartproductshow .delete:hover svg {
-  background-color: #a02fec;
   color: #fafafa;
+}
+#header-inner .nav-right .cart-show .cartproductshow .delete::after {
+  opacity: 0;
+  visibility: hidden;
+  content: "刪除";
+  top: -28px;
+  left: -6px;
+  font-size: 12px;
+  position: absolute;
+  display: block;
+  text-align: center;
+  width: 36px;
+  border: 1px solid #2c2c2c;
+  border-radius: 4px;
+  padding: 2px;
+}
+#header-inner .nav-right .cart-show .cartproductshow .delete:hover::after {
+  opacity: 0.6;
+  visibility: visible;
 }
 #header-inner .nav-right .cart-show:hover {
   max-height: 600px;
@@ -433,18 +458,18 @@ header {
 }
 .header-content .hcontent-area {
   max-width: 1440px;
-  padding: 60px 32px 32px;
+  padding: 48px 16px 16px;
   margin: auto auto;
 }
 .header-content .hcol {
   width: 100%;
   display: flex;
-  justify-content: space-around;
-  gap: 12px;
-  transition: all 0.3s ease;
+  justify-content: center;
+  gap: 36px;
+  transition: all 0.6s ease;
 }
 .header-content .hcol .card {
-  width: 220px;
+  width: 140px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -461,7 +486,7 @@ header {
   width: 100%;
   height: 60%;
   background: #fafafa;
-  transition: all 0.3s ease-out;
+  transition: all 0.3s ease;
 }
 .header-content .hcol .card:hover::after {
   height: 100%;
@@ -474,7 +499,7 @@ header {
 .header-content .hcol .card .item-pic {
   height: auto;
   width: 100%;
-  padding: 16px;
+  padding: 8px;
   aspect-ratio: 1/1;
   background: #fafafa;
   border-radius: 6px;
@@ -495,13 +520,13 @@ header {
   color: #2c2c2c;
 }
 .header-content .hcol .card .item-text h3 {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .dropdown-close {
   position: absolute;
-  right: 8px;
-  top: 12px;
+  right: 32px;
+  top: 8px;
   z-index: 222;
   margin: 0;
   padding: 0;
@@ -524,11 +549,10 @@ header {
 }
 
 .header-content {
-  opacity: 0;
   visibility: hidden;
   max-height: 0px;
   overflow: hidden;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 
 .dropdrop-open {
@@ -653,11 +677,11 @@ header {
   #header-inner .header-content .hcol {
     width: auto;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 16px;
   }
   #header-inner .header-content .hcol .card {
-    width: 150px;
+    width: 120px;
   }
   #header-inner .header-content .hcol .card::after {
     height: 100%;
@@ -2299,9 +2323,9 @@ footer {
   .product-detailed .add-cart-area .add-content {
     flex-direction: column;
     justify-content: flex-start;
-    height: 140px;
+    height: 100%;
     gap: 16px;
-    padding: 16px 0;
+    padding: 16px 16px 48px;
   }
   .product-detailed .add-cart-area .add-content .nav-left h3 {
     font-size: 20px;
@@ -2640,7 +2664,7 @@ footer {
   width: 100%;
 }
 .product-cart .cart-summary .btn-area .btn:hover {
-  color: #2c2c2c;
+  color: #690fa6;
 }
 .product-cart .cart-summary .btn-area .btn-keep {
   margin-top: 8px;

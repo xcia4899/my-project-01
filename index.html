@@ -278,9 +278,11 @@
                 <div><img :src="item.images.main" :alt="item.name" /></div>
                 <div class="itemname">{{ item.name }}</div>
                 <!-- <div>單價：{{ item.price }}</div> -->
-                <div>數量：{{ item.quantity }}</div>
-                <div class="itemprice">
-                  小計：${{ item.subtotal.toLocaleString() }}
+                <div>
+                  <div>數量：{{ item.quantity }}</div>
+                  <div class="itemprice">
+                    小計：${{ item.subtotal.toLocaleString() }}
+                  </div>
                 </div>
                 <div class="delete" @click="removeFromCart(item.id)">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -320,8 +322,8 @@
           <div class="swiper-slide first-row">
             <img src="./images/bg/index-first-bg-03.jpg" alt="" />
             <div class="content-area frow-col frow-col-0">
-              <h3>始終電力十足。隨時待命。</h3>
-              <p>認識 POWERPLAY 2。無限力量，化繁為簡。</p>
+              <h3>智慧供電，簡單就是力量。</h3>
+              <p>POWERPLAY 2，打造真正無感充電體驗。</p>
               <button class="btn first-btn-style">立即購買</button>
             </div>
           </div>
@@ -329,8 +331,8 @@
           <div class="swiper-slide first-row">
             <img src="./images/bg/index-first-bg-04.jpg" alt="" />
             <div class="content-area frow-col frow-col-04">
-              <h3>始終電力十足。隨時待命。</h3>
-              <p>認識 POWERPLAY 2。無限力量，化繁為簡。</p>
+              <h3> 穩定供電，從不間斷。</h3>
+              <p>POWERPLAY 2，專為專注與持久打造。</p>
               <button class="btn first-btn-style">立即購買</button>
             </div>
           </div>
