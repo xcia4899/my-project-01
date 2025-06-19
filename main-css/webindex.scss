@@ -400,6 +400,23 @@ header {
         color: #a02fec;
         // height: 100%;
       }
+
+      .cart-quantity {
+        height: 24px;
+        width: 24px;
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 50%;
+        color: $color-white;
+        background-color: $color-purple;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: -24px;
+        right: 0px;
+       
+      }
     }
 
     .cart-show {
@@ -409,7 +426,7 @@ header {
       top: 70px;
       right: 0px;
       max-height: 00px;
-      width:400px;
+      width: 400px;
 
       border-radius: 0 0 4px 4px;
       background-color: $color-white;
@@ -426,7 +443,7 @@ header {
       gap: 8px;
       box-shadow: 0px 2px 2px 0px rgba(22, 22, 22, 0.4);
 
-    
+
       .cart-area {
         padding: 16px;
         overflow-y: auto;
@@ -438,7 +455,7 @@ header {
         min-height: 90px;
         display: flex;
         justify-content: space-between;
-        align-items:center;
+        align-items: center;
         padding: 8px 8px;
         border-bottom: 1px solid darken($color-middlekgery, 20%);
 
@@ -460,20 +477,23 @@ header {
           border: 2px solid $color-middlekgery;
           border-radius: 50%;
           padding: 4px;
-          &:hover{
-             background-color: $color-purple;
-             border: 2px solid transparent
+
+          &:hover {
+            background-color: $color-purple;
+            border: 2px solid transparent
           }
+
           svg {
             transform: scale(1.2) rotate(45deg);
             border-radius: 50%;
           }
 
           &:hover svg {
-           
+
             color: $color-white;
           }
-          &::after{
+
+          &::after {
             opacity: 0;
             visibility: hidden;
             content: "刪除";
@@ -489,7 +509,8 @@ header {
             border-radius: 4px;
             padding: 2px;
           }
-          &:hover::after{
+
+          &:hover::after {
             opacity: 0.6;
             visibility: visible;
           }
@@ -521,7 +542,7 @@ header {
 
         .btn {
           height: 30px;
-         
+
           &:hover {
             color: darken($color: $color-purple, $amount: 20%);
           }
@@ -666,6 +687,11 @@ header {
   visibility: visible;
   box-shadow: 0px 50vh 0px 50vh rgb(0, 0, 0, 0.3);
 }
+
+
+
+
+
 
 //-----
 
@@ -2738,8 +2764,9 @@ footer {
               padding: 0px 4px 8px;
               font-weight: normal;
               margin-top: 1px;
+
               li:hover {
-                
+
                 color: $color-purple;
                 cursor: default;
               }
@@ -2896,9 +2923,9 @@ footer {
 @media screen and (max-width: 920px) {
   .product-detailed {
     .add-cart-area {
-      
+
       .add-content {
-     
+
         .nav-left {
           h3 {
             font-size: 24px;
@@ -2952,13 +2979,13 @@ footer {
   .product-detailed {
 
     .add-cart-area {
-    
+
       .add-content {
         // flex-wrap: wrap;
         flex-direction: column;
         justify-content: flex-start;
         height: 100%;
-        
+
         gap: 16px;
         padding: 16px 16px 48px;
 
@@ -3642,7 +3669,7 @@ footer {
   .othermethods {
     text-align: center;
     display: flex;
-     align-items: center;
+    align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
     gap: 32px;
@@ -3710,6 +3737,7 @@ footer {
     }
   }
 }
+
 @media screen and (max-width: 670px) {
   .login .othermethods {
     .logonicon {
@@ -3717,6 +3745,7 @@ footer {
     }
   }
 }
+
 //addmember-------------------------------------
 //addmember-------------------------------------
 //addmember-------------------------------------
@@ -3818,7 +3847,7 @@ footer {
   .othermethods {
     text-align: center;
     display: flex;
-     align-items: center;
+    align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
     gap: 32px;
@@ -3884,7 +3913,7 @@ footer {
 
 @media screen and (max-width: 670px) {
   .addmember .othermethods {
-   
+
     .logonicon {
       width: 280px;
     }

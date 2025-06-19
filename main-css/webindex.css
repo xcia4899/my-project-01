@@ -344,6 +344,21 @@ header {
 #header-inner .nav-right .btnitem:hover svg {
   color: #a02fec;
 }
+#header-inner .nav-right .btnitem .cart-quantity {
+  height: 24px;
+  width: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 50%;
+  color: #fafafa;
+  background-color: #a02fec;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -24px;
+  right: 0px;
+}
 #header-inner .nav-right .cart-show {
   color: #2c2c2c;
   position: absolute;
