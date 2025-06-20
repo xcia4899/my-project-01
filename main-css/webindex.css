@@ -279,7 +279,7 @@ header {
   width: 40%;
   margin: auto auto;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 500;
 }
 #header-inner .navbar ul {
   display: flex;
@@ -788,8 +788,8 @@ header.header-detailed .nav-right div svg {
   height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  -o-object-position: bottom;
+     object-position: bottom;
 }
 .row-first .swiper-btn {
   margin: 0 32px;
@@ -1225,10 +1225,10 @@ header.header-detailed .nav-right div svg {
     margin-top: 32px;
   }
   .row-first .swiper-slide img {
-    -o-object-fit: none;
-       object-fit: none;
-    -o-object-position: 60% 100%;
-       object-position: 60% 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
   }
   .row-first .swiper-pagination-bullet {
     width: 100px;
@@ -1318,8 +1318,6 @@ header.header-detailed .nav-right div svg {
     display: none;
   }
   .row-first .swiper-slide img {
-    height: 70vh;
-    margin-top: 30vh;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: 80% 100%;
@@ -3029,4 +3027,21 @@ footer {
   .addmember .othermethods .logonicon {
     width: 280px;
   }
+}
+.aboutwe .row-1 {
+  height: 200px;
+}
+.aboutwe .aboutwe-area {
+  height: 1000px;
+  width: 100%;
+  background-color: #5f5f5f;
+}
+
+.activity .row-1 {
+  height: 200px;
+}
+.activity .activity-list {
+  height: 1000px;
+  width: 100%;
+  background-color: #5f5f5f;
 }/*# sourceMappingURL=webindex.css.map */

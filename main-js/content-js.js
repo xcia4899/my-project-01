@@ -29,8 +29,8 @@ var swiper = new Swiper(".littl-swip", {
     prevEl: ".swiper-button-prev",
   },
   breakpoints: {
-    300: {
-      slidesPerView: 2,
+    400: {
+      slidesPerView: 1,
       spaceBetween: 16,
     },
     640: {

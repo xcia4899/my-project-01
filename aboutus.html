@@ -73,7 +73,10 @@
                   <div class="card">
                     <a href="./productlist.html?title=耳機">
                       <div class="item-pic">
-                        <img src="./images/pic-detal/PRO-1007/10007.png" alt="" />
+                        <img
+                          src="./images/pic-detal/PRO-1007/10007.png"
+                          alt=""
+                        />
                       </div>
                       <div class="item-text">
                         <h3>耳機</h3>
@@ -83,7 +86,10 @@
                   <div class="card">
                     <a href="./productlist.html?title=麥克風">
                       <div class="item-pic">
-                        <img src="./images/pic-detal/ROG-1005/10003.png" alt="" />
+                        <img
+                          src="./images/pic-detal/ROG-1005/10003.png"
+                          alt=""
+                        />
                       </div>
                       <div class="item-text">
                         <h3>麥克風</h3>
@@ -172,8 +178,8 @@
                 </div>
               </div>
             </div>
-            <li><a href="./Activity.html">活動</a></li>
-            <li><a href="./aboutus.html">關於我們</a></li>
+            <li><a href="">活動</a></li>
+            <li><a href="">關於我們</a></li>
           </ul>
         </nav>
         <aside class="nav-right">
@@ -274,7 +280,7 @@
                 />
               </svg>
             </a>
-             <div id="vue-cart-quantity">
+            <div id="vue-cart-quantity">
               <div class="cart-quantity" v-if="cartItems.length > 0">
                 {{ cartItems.length }}
               </div>
@@ -318,194 +324,51 @@
       </div>
     </header>
 
-    <main id="main " class="">
-      <section class="product-cursoul">
-        <div class="content-area">
-          <div class="search"></div>
-        </div>
-      </section>
+    <main id="main " class="aboutwe">
+      <section class="row-1"></section>
 
-      <section class="product-content" id="vue-productlist">
-        <div class="openlist">
-          <div class="content-area">
-            <button @click="toggleSidebar">
-              {{ sidebar ? '關閉篩選條件' : '開啟篩選條件' }}
-              <svg
-                :class="{rotate:sidebar}"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M3 5h18v2H3zM7 11h10v2H7zM10 17h4v2h-4z" />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="product-content-area content-area">
-          <section v-show="sidebar" class="col-sidebar">
-            <h4 class="toggletitle togglemini">篩選</h4>
-            <ul>
-              <li v-for="(section, index) in filterSections" :key="index">
-                <div class="side-title" @click="toggleSection(index)">
-                  <h4>{{ section.title }}</h4>
-                  <span>
-                    <svg
-                      v-if="openSections.includes(index)"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
-                      <!-- 減號（-） -->
-                      <path
-                        d="M5 12h14"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-                    <svg
-                      v-else
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
-                      <!-- 加號（+） -->
-                      <path
-                        d="M12 5v14M5 12h14"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-                  </span>
-                </div>
+      <section class="aboutwe-area content-area">
+        <section class="about-us">
+          <h3>關於我們｜Horizon</h3>
+          <p>
+            我們是
+            Horizon，一個由設計師、開發者與玩家共同組成的創意團隊。從一開始，我們就不只是想做產品，而是打造一種嶄新的使用體驗。
+          </p>
 
-                <ul
-                  class="side-content"
-                  :class="{ 'side-content-open': openSections.includes(index) }"
-                >
-                  <li v-for="item in section.options" :key="item">
-                    <label>
-                      <input
-                        type="checkbox"
-                        :value="item"
-                        v-model="selectedproducts"
-                      />
-                      {{ item }}
-                    </label>
-                  </li>
-                </ul>
-              </li>
-              <div class="togglemini toggleminibtn">
-                <div class="reset" @click="clearFilters">
-                  <h4>重置</h4>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                    <!-- 加號（+） -->
-                    <path
-                      d="M12 5v14M5 12h14"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </div>
-                <button class="btn" @click="toggleSidebar">確定</button>
-              </div>
-            </ul>
-          </section>
-          <section class="col-product-list">
-            <div v-show="showClearBtn" class="btn-openlist">
-              <button @click="clearFilters" class="clear-btn">
-                清除篩選條件
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                  <!-- 加號（+） -->
-                  <path
-                    d="M12 5v14M5 12h14"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                  />
-                </svg>
-              </button>
-              <button
-                v-for="(item,index) in this.selectedproducts"
-                :key="index"
-                @click="removeTag(item)"
-              >
-                {{item}}
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                  <!-- 加號（+） -->
-                  <path
-                    d="M12 5v14M5 12h14"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div class="listrow">
-              <div
-                class="card"
-                v-for="product in paginatedProducts"
-                :key="product.id"
-                @click="goDetail(product.id)"
-              >
-                <div class="item-pic">
-                  <div class="pic">
-                    <img :src="product.images.main" :alt="product.name" />
-                  </div>
-                  <div class="card-title">{{ product.brand }}</div>
-                </div>
-                <div class="item-text">
-                  <h4>{{ product.name }}</h4>
-                  <h5>{{ product.description }}</h5>
+          <p>
+            品牌名稱「Horizon」象徵著平衡展開的力量——不追求喧鬧，不迷信極端，而是在實用與美感之間、效能與穩定之間，找到一條真正為人所設計的道路。
+          </p>
 
-                  <div class="productprice">
-                    <p
-                      v-show="product.onsale"
-                      :class="{ redcharacter : product.onsale }"
-                    >
-                      特價${{ product.price.toLocaleString() }}
-                    </p>
-                    <p :class="{ strike : product.onsale }">
-                      NT${{ product.originalPrice.toLocaleString() }}
-                    </p>
-                  </div>
-                  <button class="btn" @click.stop="addToCart(product)">
-                    加入購物車
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div v-show="true" class="pagination">
-              <button @click="prevPage()" :disabled="currentPage === 1">
-                上一頁
-              </button>
-              <button
-                v-for="page in totalPages"
-                :key="page"
-                @click="goToPage(page)"
-                :class="{ active: page === currentPage }"
-              >
-                {{ page }}
-              </button>
-              <button
-                @click="nextPage()"
-                :disabled="currentPage === totalPages"
-              >
-                下一頁
-              </button>
-            </div>
-          </section>
-        </div>
+          <p>
+            這個想法，源自我們創業的第一晚。那天夜裡，我們在一間狹小的出租套房裡，圍坐在一張舊木桌前。沒有人有資金，只有一台筆電和一堆測試中的零件。我們邊吃泡麵，邊拆解鍵盤、螢幕、開發板，只為了做出第一個「我們自己也願意天天使用」的產品。
+          </p>
+
+          <p>
+            我們來自不同領域：有人擅長介面與視覺，有人精通底層邏輯，也有人是沉迷於手感與結構的裝置控。但我們有共同的信念：不願向妥協低頭。
+          </p>
+
+          <p>
+            我們相信：「好的工具，不只是輔助，而是解放創造力的延伸。」「好的產品，不是堆疊規格，而是平衡細節與體驗的藝術。」
+          </p>
+
+          <p>
+            不論你是追求極致效能的玩家，還是講究節奏與穩定性的創作者，Horizon
+            都致力於提供順手、順眼、順心的解決方案，從功能、設計到質感都經得起挑剔。
+          </p>
+
+          <p>
+            我們的用戶，是對效能敏感的玩家，是對流程極致要求的設計師、音樂人與影像創作者。我們的夥伴，是一群願意打磨每一個細節、也樂於與世界對話的你。
+          </p>
+
+          <p>
+            現在，我們仍是一支精實靈活的團隊，保持熱情、快速迭代、不斷挑戰自我。未來，我們將持續探索創新，用穩定的品質與靈感推進的設計，為你帶來更多可能。
+          </p>
+
+          <p>因為 Horizon，不只是邊界的盡頭，而是視野不斷展開的開始。</p>
+        </section>
       </section>
     </main>
-    <style scoped></style>
+
     <footer id="footer" class="">
       <section class="footer-top margin-topbottom">
         <div class="content-area toprow-01">
@@ -571,22 +434,15 @@
       </section>
     </footer>
 
-    
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./main-js/header-js.js"></script>
-    <script src="./main-js/content-js.js"></script>
-    <script type="module">
-      import { productlist } from "./main-js/productlist.js";
-      import { MiniCart } from "./main-js/MiniCart.js";
 
-      const app = Vue.createApp(productlist);
-      app.mount("#vue-productlist");
+    <script type="module">
+      import { MiniCart } from "./main-js/MiniCart.js";
 
       const app1 = Vue.createApp(MiniCart);
       app1.mount("#vur-minincart");
-
       const app2 = Vue.createApp(MiniCart);
       app2.mount("#vue-cart-quantity");
     </script>
