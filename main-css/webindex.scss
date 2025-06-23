@@ -3928,14 +3928,99 @@ footer {
 //aboutwe-------------------------------------------------------
 
 .aboutwe {
-  .row-1 {
-    height: 200px;
+  background-color: $color-white;
+
+
+
+  .aboutwe-title {
+    margin: 160px 0 8px;
+    color: $color-darkgery;
+    text-align: center;
   }
 
-  .aboutwe-area {
-    height: 1000px;
+  .about-us {
+    // height: 1000px;
+    padding-top: 32px;
+    padding-bottom: 64px;
     width: 100%;
-    background-color: $color-lightgrey;
+    background-color: $color-white;
+
+    display: flex;
+    flex-direction: column;
+    // gap: 200px;
+
+    .about-area {
+      width: 100%;
+      padding: 32px 0;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      text-align: center;
+      gap: 16px;
+
+      div {
+        width: 100%;
+        height: 100%;
+        padding: 32px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 32px;
+
+        img {
+          width: 60%;
+          // left: 0;
+        }
+      }
+    }
+
+    .row-1 {
+      background-color: $color-white;
+      color: #2c2c2c;
+    }
+
+    .row-2 {
+      // margin-top: 700px;
+      padding: 160px auto;
+ 
+ 
+    
+    }
+    
+
+    .row-3 {
+      // margin-top: 700px;
+      padding: 160px auto;
+   
+    }
+
+    .row-4 {
+      // margin-top: 700px;
+      padding: 160px auto;
+
+      background-color: $color-white;
+      color: $color-darkgery;
+    }
+
+    .row-5 {
+      // margin-top: 700px;
+      padding: 160px auto;
+
+    }
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease-in, transform 0.8s ease-out;
+    will-change: opacity, transform;
+  }
+
+  .fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

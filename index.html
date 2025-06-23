@@ -38,7 +38,7 @@
                   <div class="card">
                     <a href="./productlist.html">
                       <div class="item-pic">
-                        <img src="./images/pictrue/three-row3-02.jpg" alt="" />
+                        <img src="" alt="" />
                       </div>
                       <div class="item-text">
                         <h3>全部商品</h3>
@@ -48,7 +48,7 @@
                   <div class="card">
                     <a href="./productlist.html?title=滑鼠">
                       <div class="item-pic">
-                        <img src="./images/pictrue/fourth-row2-02.png" alt="" />
+                        <img src="./images/pictrue/fourth-row2-01.png" alt="" />
                       </div>
                       <div class="item-text">
                         <h3>滑鼠</h3>
@@ -58,7 +58,7 @@
                   <div class="card">
                     <a href="./productlist.html?title=鍵盤">
                       <div class="item-pic">
-                        <img src="./images/pictrue/fourth-row2-02.png" alt="" />
+                        <img src="./images/pictrue/fourth-row2-06.png" alt="" />
                       </div>
                       <div class="item-text">
                         <h3>鍵盤</h3>
@@ -68,7 +68,7 @@
                   <div class="card">
                     <a href="./productlist.html?title=耳機">
                       <div class="item-pic">
-                        <img src="./images/pictrue/fourth-row2-02.png" alt="" />
+                        <img src="./images/pic-detal/PRO-1007/10007.png" alt="" />
                       </div>
                       <div class="item-text">
                         <h3>耳機</h3>
@@ -78,7 +78,7 @@
                   <div class="card">
                     <a href="./productlist.html?title=麥克風">
                       <div class="item-pic">
-                        <img src="./images/pictrue/fourth-row2-02.png" alt="" />
+                        <img src="./images/pic-detal/ROG-1005/10003.png" alt="" />
                       </div>
                       <div class="item-text">
                         <h3>麥克風</h3>
@@ -109,41 +109,43 @@
               <div class="hcontent-area">
                 <div class="hcol hcol-left">
                   <div class="card">
-                   <a href="./productlist.html?title=品牌&brand=MSI">
+                    <a href="./productlist.html?title=品牌&brand=MSI">
                       <div class="item-pic">
                         <img src="./images/logo/MSI.png" alt="MSI" />
                       </div>
                       <div class="item-text">
                         <h3>MSI</h3>
                       </div>
-                   </a>
+                    </a>
                   </div>
                   <div class="card">
                     <a href="./productlist.html?title=品牌&brand=Logitech">
-                    <div class="item-pic">
-                      <img src="./images/logo/LOGI.png" alt="Logitech" />
-                    </div>
-                    <div class="item-text">
-                      <h3>Logitech</h3>
-                    </div></a>
+                      <div class="item-pic">
+                        <img src="./images/logo/LOGI.png" alt="Logitech" />
+                      </div>
+                      <div class="item-text">
+                        <h3>Logitech</h3>
+                      </div></a
+                    >
                   </div>
                   <div class="card">
                     <a href="./productlist.html?title=品牌&brand=Razer">
-                    <div class="item-pic">
-                      <img src="./images/logo/RAZER.png" alt="Razer" />
-                    </div>
-                    <div class="item-text">
-                      <h3>Razer</h3>
-                    </div></a>
+                      <div class="item-pic">
+                        <img src="./images/logo/RAZER.png" alt="Razer" />
+                      </div>
+                      <div class="item-text">
+                        <h3>Razer</h3>
+                      </div></a
+                    >
                   </div>
                   <div class="card">
                     <a href="./productlist.html?title=品牌&brand=ROG">
-                    <div class="item-pic">
-                      <img src="./images/logo/ROG.png" alt="ROG" />
-                    </div>
-                    <div class="item-text">
-                      <h3>ROG</h3>
-                    </div>
+                      <div class="item-pic">
+                        <img src="./images/logo/ROG.png" alt="ROG" />
+                      </div>
+                      <div class="item-text">
+                        <h3>ROG</h3>
+                      </div>
                     </a>
                   </div>
                 </div>
@@ -165,8 +167,8 @@
                 </div>
               </div>
             </div>
-            <li><a href="">活動</a></li>
-            <li><a href="">關於我們</a></li>
+            <li><a href="./Activity.html">活動</a></li>
+            <li><a href="./aboutus.html">關於我們</a></li>
           </ul>
         </nav>
         <aside class="nav-right">
@@ -267,6 +269,11 @@
                 />
               </svg>
             </a>
+             <div id="vue-cart-quantity">
+              <div class="cart-quantity" v-if="cartItems.length > 0">
+                {{ cartItems.length }}
+              </div>
+            </div>
           </div>
           <div class="cart-show" id="vur-minincart">
             <div class="cart-area">
@@ -299,7 +306,7 @@
             </div>
             <div class="bottom-area">
               <h4>總金額：{{ this.total.toLocaleString() }}元</h4>
-              <a src="./cart.html"><button class="btn">結帳</button></a>
+              <a href="./cart.html"><button class="btn">結帳</button></a>
             </div>
           </div>
         </aside>
@@ -638,20 +645,22 @@
       </div>
     </section>
   </footer>
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+   <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./main-js/header-js.js"></script>
     <script src="./main-js/content-js.js"></script>
     <script type="module">
+     
       import { MiniCart } from "./main-js/MiniCart.js";
-      import { ProductDetail } from "./main-js/ProductDetail.js";
+
+      
 
       const app1 = Vue.createApp(MiniCart);
       app1.mount("#vur-minincart");
 
-      const app2 = Vue.createApp(ProductDetail);
-      app2.mount("#vue-detailed");
+      const app2 = Vue.createApp(MiniCart);
+      app2.mount("#vue-cart-quantity");
     </script>
 </body>
 

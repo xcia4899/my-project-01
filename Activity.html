@@ -178,8 +178,8 @@
                 </div>
               </div>
             </div>
-            <li><a href="">活動</a></li>
-            <li><a href="">關於我們</a></li>
+            <li><a href="./Activity.html">活動</a></li>
+            <li><a href="./aboutus.html">關於我們</a></li>
           </ul>
         </nav>
         <aside class="nav-right">
@@ -335,7 +335,7 @@
           <div v-for="(item,index) in events" :key="index" class="event-item">
             <div>
               <img :src="item.image" alt="限時特惠活動圖" />
-              <h4 class="title">{{item.title}}</h4>
+              <h4 cla>{{item.title}}</h4>
               <h5>{{ item.description }}</h5>
               <h4>活動期間：{{item.dateRange}}</h4>
             </div>
@@ -409,10 +409,11 @@
       </section>
     </footer>
 
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script type="module"></script>
+   <script src="./main-js/header-js.js"></script>
+  
     <script type="module">
       import { MiniCart } from "./main-js/MiniCart.js";
 
