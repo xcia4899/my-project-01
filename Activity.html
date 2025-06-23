@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <header class="debug-none">
+    <header class="debug-none header-detailed">
       <div id="header-inner">
         <div class="menu-toggle">
           <svg
@@ -325,48 +325,20 @@
     </header>
 
     <main id="main " class="activity">
-      <section class="row-1"></section>
+      <section class="row-1">
+           <h3>Horizon 活動一覽</h3>
+      </section>
 
       <section id="Vue-active" class="activity-list content-area">
+     
         <section class="event-list">
-          <div class="event-item">
-            <img src="" alt="限時特惠活動圖" />
-            <h4>限時開搶｜效能，不再妥協</h4>
-            <p>指定滑鼠與鍵盤系列最高現折 20%。</p>
-            <p>玩家專屬流暢體驗，就趁現在。</p>
-            <p><strong>活動期間：</strong>2025/06/20 - 2025/06/26</p>
-          </div>
-
-          <div class="event-item">
-            <img src="" alt="新品預購活動圖" />
-            <h4>新品首發・預購開跑</h4>
-            <p>首批預購享獨家折扣與加碼贈品。</p>
-            <p>為你的創作，解鎖更多可能。</p>
-            <p><strong>活動期間：</strong>2025/06/22 - 2025/07/05</p>
-          </div>
-
-          <div class="event-item">
-            <img src="" alt="現場快閃活動圖" />
-            <h4>Horizon 創作現場 · 快閃體驗會</h4>
-            <p>搶先試玩新產品、與開發團隊面對面交流、限定現場折扣。</p>
-            <p>本週六日｜台北 ○○○ 空間｜名額有限，快來報名！</p>
-            <p><strong>活動期間：</strong>2025/06/29 - 2025/06/30</p>
-          </div>
-
-          <div class="event-item">
-            <img src="" alt="問卷抽獎活動圖" />
-            <h4>填問卷，抽滑鼠！</h4>
-            <p>為我們提供寶貴建議，就有機會獲得限量產品。</p>
-            <p>參加者皆可獲得 100 元折價券。</p>
-            <p><strong>活動期間：</strong>2025/06/15 - 2025/07/01</p>
-          </div>
-
-          <div class="event-item">
-            <img src="" alt="創作者沙龍活動圖" />
-            <h4>創作 ✕ 科技｜靈感的現場實驗室</h4>
-            <p>邀請設計師、音樂人、影像創作者分享他們的工作流程。</p>
-            <p>免費入場，報名即送限量周邊。</p>
-            <p><strong>活動期間：</strong>2025/07/06 - 2025/07/07</p>
+          <div v-for="(item,index) in events" :key="index" class="event-item">
+            <div>
+              <img :src="item.image" alt="限時特惠活動圖" />
+              <h4 class="title">{{item.title}}</h4>
+              <h5>{{ item.description }}</h5>
+              <h4>活動期間：{{item.dateRange}}</h4>
+            </div>
           </div>
         </section>
       </section>
@@ -440,10 +412,7 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script type="module">
-
-      
-    </script>
+    <script type="module"></script>
     <script type="module">
       import { MiniCart } from "./main-js/MiniCart.js";
 

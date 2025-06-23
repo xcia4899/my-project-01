@@ -415,7 +415,7 @@ header {
         align-items: center;
         top: -24px;
         right: 0px;
-       
+
       }
     }
 
@@ -1037,7 +1037,7 @@ header.header-detailed {
   .swiper-pagination-bullet-active {
     opacity: 1;
   }
- 
+
 }
 
 .first-row {
@@ -1508,7 +1508,7 @@ header.header-detailed {
 
     .swiper-slide img {
       object-fit: cover;
-       object-position: center;
+      object-position: center;
     }
 
     .swiper-pagination-bullet {
@@ -3927,16 +3927,18 @@ footer {
 //aboutwe-------------------------------------------------------
 //aboutwe-------------------------------------------------------
 
-.aboutwe{
-  .row-1{
+.aboutwe {
+  .row-1 {
     height: 200px;
   }
-  .aboutwe-area{
+
+  .aboutwe-area {
     height: 1000px;
     width: 100%;
     background-color: $color-lightgrey;
   }
 }
+
 //activity--------------------------------------------------------
 //activity--------------------------------------------------------
 //activity--------------------------------------------------------
@@ -3944,13 +3946,167 @@ footer {
 //activity--------------------------------------------------------
 //activity--------------------------------------------------------
 
-.activity{
-  .row-1{
-    height: 200px;
+.activity {
+  background-color: $color-lightgrey;
+
+  .row-1 {
+    margin: 160px 0 8px;
+    color: $color-darkgery;
+    text-align: center;
+
   }
-  .activity-list{
-    height: 1000px;
+
+  .activity-list {
     width: 100%;
     background-color: $color-lightgrey;
+    // padding: 32px auto 64px;
+    padding-top: 32px;
+    padding-bottom: 64px;
+
+    .event-list {
+      display: flex;
+      // flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      flex-wrap: wrap;
+
+      .event-item {
+        width: 50%;
+        padding: 16px;
+
+        div {
+          margin: auto;
+          text-align: center;
+          transition: all 0.4s ease;
+          padding: 8px;
+          border-radius: 40px;
+          overflow: hidden;
+          color: $color-darkgery;
+          cursor: pointer;
+
+          img {
+            width: 100%;
+            transition: all 0.2s ease-in;
+            border-radius: 20px;
+            margin-bottom: 8px;
+          }
+
+          .title {
+            color: darken($color-purple, 20%);
+          }
+
+          h5 {
+            margin-top: 8px;
+
+            &:hover {
+              color: darken($color-purple, 20%);
+            }
+          }
+
+          h4 {
+            margin-top: 8px;
+            font-weight: 600;
+
+            &:hover {
+              color: darken($color-purple, 20%);
+            }
+          }
+
+          &:hover {
+            transform: scale(1.06);
+            box-shadow: 0px 2px 6px 2px rgba(22, 22, 22, 0.4);
+            border-radius: 4px;
+
+            img {
+              border-radius: 0px;
+            }
+          }
+        }
+
+      }
+
+      .event-item:first-child {
+        width: 100%;
+        padding: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .activity {
+    .activity-list {
+
+
+      .event-list {
+        .event-item {
+          padding: 16px;
+
+          div {
+            h5 {
+              font-weight: 500;
+            }
+
+            h4 {
+              font-size: 16px;
+              font-weight: 600;
+            }
+
+            &:hover {
+              transform: scale(1.06);
+            }
+          }
+
+        }
+
+        .event-item:first-child {
+          width: 100%;
+          padding: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .activity {
+    .activity-list {
+
+
+
+      .event-list {
+        gap: 32px;
+
+        .event-item {
+          width: 100%;
+          padding: 16px 0;
+
+          div {
+            padding: 0 0 8px;
+            border-radius: 20px;
+
+
+            h5 {
+              font-weight: 500;
+            }
+
+            h4 {
+              font-size: 16px;
+              font-weight: 600;
+            }
+
+            &:hover {
+              transform: scale(1.00);
+            }
+          }
+
+        }
+
+        .event-item:first-child {
+          width: 100%;
+          padding: 16px 0;
+        }
+      }
+    }
   }
 }
