@@ -21,4 +21,7 @@ export function fetchFilters() {
   return fetch("./json/filters.json")
     .then(res => res.json());
 }
-
+export function fetchActive() {
+  return fetch("./json/events.json")
+    .then((res) => res.json());
+}

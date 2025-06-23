@@ -1,5 +1,5 @@
 // productlist.js
-import { fetchProducts, fetchFilters } from "./productService.js"; // 載入抓商品跟篩選器資料的函式
+import { fetchProducts, fetchFilters } from "./productService.js"; // 載入資料的函式
 import cartLogic from './cartLogic.js'; // 載入購物車操作邏輯
 import { handleResponsiveResize } from "./responsiveHelper.js"; // 響應式尺寸處理函式
 

@@ -327,10 +327,10 @@
     <main id="main " class="activity">
       <section class="row-1"></section>
 
-      <section class="activity-list content-area">
+      <section id="Vue-active" class="activity-list content-area">
         <section class="event-list">
           <div class="event-item">
-            <img src="images/event-sale.jpg" alt="限時特惠活動圖" />
+            <img src="" alt="限時特惠活動圖" />
             <h4>限時開搶｜效能，不再妥協</h4>
             <p>指定滑鼠與鍵盤系列最高現折 20%。</p>
             <p>玩家專屬流暢體驗，就趁現在。</p>
@@ -338,7 +338,7 @@
           </div>
 
           <div class="event-item">
-            <img src="images/event-preorder.jpg" alt="新品預購活動圖" />
+            <img src="" alt="新品預購活動圖" />
             <h4>新品首發・預購開跑</h4>
             <p>首批預購享獨家折扣與加碼贈品。</p>
             <p>為你的創作，解鎖更多可能。</p>
@@ -346,7 +346,7 @@
           </div>
 
           <div class="event-item">
-            <img src="images/event-popup.jpg" alt="現場快閃活動圖" />
+            <img src="" alt="現場快閃活動圖" />
             <h4>Horizon 創作現場 · 快閃體驗會</h4>
             <p>搶先試玩新產品、與開發團隊面對面交流、限定現場折扣。</p>
             <p>本週六日｜台北 ○○○ 空間｜名額有限，快來報名！</p>
@@ -354,7 +354,7 @@
           </div>
 
           <div class="event-item">
-            <img src="images/event-survey.jpg" alt="問卷抽獎活動圖" />
+            <img src="" alt="問卷抽獎活動圖" />
             <h4>填問卷，抽滑鼠！</h4>
             <p>為我們提供寶貴建議，就有機會獲得限量產品。</p>
             <p>參加者皆可獲得 100 元折價券。</p>
@@ -362,7 +362,7 @@
           </div>
 
           <div class="event-item">
-            <img src="images/event-creator.jpg" alt="創作者沙龍活動圖" />
+            <img src="" alt="創作者沙龍活動圖" />
             <h4>創作 ✕ 科技｜靈感的現場實驗室</h4>
             <p>邀請設計師、音樂人、影像創作者分享他們的工作流程。</p>
             <p>免費入場，報名即送限量周邊。</p>
@@ -440,23 +440,9 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      export default {
-        name: "EventList",
-        data() {
-          return {
-            events: [],
-          };
-        },
-        mounted() {
-          fetch("/data/events.json")
-            .then((res) => res.json())
-            .then((data) => {
-              this.events = data;
-            })
-            .catch((err) => console.error("讀取活動資料失敗：", err));
-        },
-      };
+    <script type="module">
+
+      
     </script>
     <script type="module">
       import { MiniCart } from "./main-js/MiniCart.js";
@@ -465,6 +451,10 @@
       app1.mount("#vur-minincart");
       const app2 = Vue.createApp(MiniCart);
       app2.mount("#vue-cart-quantity");
+
+      import { active } from "./main-js/active.js";
+      const app3 = Vue.createApp(active);
+      app3.mount("#Vue-active");
     </script>
   </body>
 </html>
