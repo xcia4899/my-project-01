@@ -326,31 +326,31 @@
 
     <main id="main " class="aboutwe">
       <section class="aboutwe-title">
-        <h2>關於我們</h2>
+        <!-- <h2>關於我們</h2> -->
       </section>
       <section class="about-us" id="appabout">
         <section class="about-area row-1">
           <div>
-            <h3 class="fade-in">「Horizon」</h3>
+            <h2 >「Horizon」</h2>
             <h4 class="fade-in">這個名字，象徵著展開、延伸與平衡的力量</h4>
             <h4 class="fade-in">
               不追求喧鬧、不迷信極端，而是在實用與美感、效能與穩定之間，找到真正為人所設計的理想平衡。
             </h4>
-          </div>
-          <div class="content-area">
-            <img src="images/pictrue/row-second-item-03.jpg" alt="" />
             <h4 class="fade-in">
               我們是 Horizon，一個由設計師、開發者與玩家組成的創意團隊。
             </h4>
+            <img src="./images/pic-about/10001.jpg" alt="">
             <h4 class="fade-in">
               我們不只是打造產品，而是致力於創造一種全新的使用體驗。
             </h4>
           </div>
+          
         </section>
 
         <section class="about-area row-2">
           <div class="content-area">
             <h4 class="fade-in">這個想法，源自我們創業的第一晚。</h4>
+            
             <h4 class="fade-in">
               那天夜裡，我們在一間狹小的出租套房裡，圍坐在一張舊木桌前。
             </h4>
@@ -401,11 +401,11 @@
         </section>
 
         <section class="about-area row-5">
-          <h3 class="fade-in">
-            Horizon <br />
-            不是終點 <br />而是創造的起點
-          </h3>
-          <div></div>
+          <h2 class="fade-in">Horizon</h2>
+          <h3 class="fade-in">不是終點，而是創造的起點</h3>
+         
+
+          <img class="full-pic" src="images/pic-about/10003.webp" alt="" />
         </section>
       </section>
     </main>
@@ -475,54 +475,22 @@
       </section>
     </footer>
 
-    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./main-js/header-js.js"></script>
-    
-    <script>
-      const appabout = Vue.createApp({
-        data() {
-          return {};
-        },
-        mounted() {
-          this.$nextTick(() => {
-            const observer = new IntersectionObserver(
-              (entries) => {
-                entries.forEach((entry) => {
-                  if (entry.isIntersecting) {
-                    entry.target.classList.add("active");
-                  }
-                });
-              },
-              {
-                // 上方縮 50% 視窗高度，讓觸發點落在畫面中間
-                rootMargin: "-30% 0px -25% 0px",
-                threshold: 1,
-              }
-            );
 
-            document
-              .querySelectorAll(".fade-in")
-              .forEach((el) => observer.observe(el));
-          });
-        },
-      });
-
-      appabout.mount("#appabout");
-    </script>
     <script type="module">
       import { MiniCart } from "./main-js/MiniCart.js";
+      import { appabout } from "./main-js/aboutus.js";
 
       const app1 = Vue.createApp(MiniCart);
       app1.mount("#vur-minincart");
+
       const app2 = Vue.createApp(MiniCart);
       app2.mount("#vue-cart-quantity");
-      
-      if (document.querySelector("#Vue-active")) {
-        const app3 = Vue.createApp(active);
-        app3.mount("#Vue-active");
-      }
+
+      const app4 = Vue.createApp(appabout);
+      app4.mount("#appabout");
     </script>
   </body>
 </html>

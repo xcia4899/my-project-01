@@ -345,8 +345,11 @@ header {
       cursor: pointer;
 
       a {
+        height: 100%;
         text-decoration: none;
         transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
       }
 
       &:hover {
@@ -1318,19 +1321,28 @@ header.header-detailed {
       aspect-ratio: 1 / 1;
       /* 1:1 比例 */
       // background-color: $color-white;
-      border: 2px dashed $color-darkgery;
-      border-radius: 4px;
+      border: 2px solid lighten($color-darkgery, 30%);
+      border-radius: 8px;
       transition: color 4s ease 0.1s;
       overflow: hidden;
       cursor: pointer;
 
+      a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
       h4,
       img {
         transition: all 0.3s ease;
-        position: absolute;
+        // position: absolute;
       }
 
       h4 {
+        position: absolute;
         bottom: 0px;
         font-weight: 500;
         transform: translateY(40px);
@@ -1343,23 +1355,28 @@ header.header-detailed {
 
       &:hover {
         background-color: $color-white;
+        border-color: $color-purple;
         border-style: solid;
       }
 
       &:hover img {
-        transform: translateY(-20px) scale(1.1);
+        transform: translateY(-24px) scale(1.1);
       }
 
       &:hover h4 {
-        transform: translateY(-10px);
+        transform: translateY(-12px);
+        color: darken($color-purple, 20%);
       }
     }
 
     .swiper-slide img {
+
       display: block;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      max-width: 250px;
+      object-fit: contain;
+      // transform: scale(0.8);
     }
   }
 
@@ -3933,7 +3950,7 @@ footer {
 
 
   .aboutwe-title {
-    margin: 160px 0 8px;
+    margin: 100px 0 8px;
     color: $color-darkgery;
     text-align: center;
   }
@@ -3941,10 +3958,10 @@ footer {
   .about-us {
     // height: 1000px;
     padding-top: 32px;
-    padding-bottom: 64px;
+    // padding-bottom: 64px;
     width: 100%;
     background-color: $color-white;
-
+    color: $color-darkgery;
     display: flex;
     flex-direction: column;
     // gap: 200px;
@@ -3968,47 +3985,94 @@ footer {
         align-items: center;
         justify-content: space-around;
         gap: 32px;
-
-        img {
-          width: 60%;
-          // left: 0;
-        }
       }
     }
 
     .row-1 {
       background-color: $color-white;
-      color: #2c2c2c;
+      // color: #2c2c2c;
+      // top: 0;
+      position: fixed;
+
+      img {
+        width: 40%;
+
+        object-fit: cover;
+        object-position: bottom;
+      }
+
     }
 
     .row-2 {
-      // margin-top: 700px;
-      padding: 160px auto;
- 
- 
-    
+      margin-top: 700px;
+      padding: 120px 0;
+      height: 110vh;
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+        url("../images/pic-about/10002.webp");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: $color-white;
+
+
+      .full-pic {
+        width: 100vw;
+      }
     }
-    
+
+
 
     .row-3 {
-      // margin-top: 700px;
+ 
       padding: 160px auto;
-   
+      background-color: $color-lightgrey;
+      font-weight: 600;
     }
 
     .row-4 {
-      // margin-top: 700px;
-      padding: 160px auto;
-
-      background-color: $color-white;
-      color: $color-darkgery;
+  
+      padding: 60px 0 160px;
+      height: 90vh;
+      // background: radial-gradient($color-darkgery, $color-black);
+      //  background-color: $color-middlekgery;
+      background-color: $color-darkgery;
+      color: $color-white;
+      font-weight: 500;
     }
 
     .row-5 {
-      // margin-top: 700px;
-      padding: 160px auto;
 
+      padding: 0;
+      padding-bottom: 0;
+      display: flex;
+      align-items: center;
+      min-height: 100%;
+      background-color: $color-white;
+      h2,
+      h3 {
+        position: absolute;
+        z-index: 2;
+      }
+      h2 {
+        top: 60px;
+      }
+      h3 {
+        top: 160px;
+      }
+
+      .full-pic {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-height: 280px;
+        object-fit: cover;
+        object-position: 40% 24%;
+        z-index: 1;
+      }
     }
+
   }
 
   .fade-in {

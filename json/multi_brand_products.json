@@ -1176,7 +1176,7 @@
   {
     "id": "MSI-1013",
     "brand": "MSI",
-    "name": "PRO X 直播用麥克風",
+    "name": "MSI X 直播用麥克風",
     "subtitle": "高清收音，助力你的聲音表現",
     "color": "粉紅",
     "price": 3179,
@@ -1184,7 +1184,7 @@
     "onsale": false,
     "description": "多種自定義功能，滿足不同遊戲需求，提供廣播級錄音品質與即時監聽功能，專為串流與錄音打造。",
     "images": {
-      "main": "",
+      "main": "./images/pic-detal/MSI-1013/10001.png",
       "thumbnails": [
         "./images/pic-detal/MSI-1013/10001.png",
         "./images/pic-detal/MSI-1013/10002.png",

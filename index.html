@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horizon</title>
+    <link rel="stylesheet" href="./main-css/webindex.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Horizon</title>
-  <link rel="stylesheet" href="./main-css/webindex.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-</head>
-
-<body>
-  <header class="debug-none">
+  <body>
+    <header class="debug-none">
       <div id="header-inner">
         <div class="menu-toggle">
           <svg
@@ -68,7 +73,10 @@
                   <div class="card">
                     <a href="./productlist.html?title=耳機">
                       <div class="item-pic">
-                        <img src="./images/pic-detal/PRO-1007/10007.png" alt="" />
+                        <img
+                          src="./images/pic-detal/PRO-1007/10007.png"
+                          alt=""
+                        />
                       </div>
                       <div class="item-text">
                         <h3>耳機</h3>
@@ -78,7 +86,10 @@
                   <div class="card">
                     <a href="./productlist.html?title=麥克風">
                       <div class="item-pic">
-                        <img src="./images/pic-detal/ROG-1005/10003.png" alt="" />
+                        <img
+                          src="./images/pic-detal/ROG-1005/10003.png"
+                          alt=""
+                        />
                       </div>
                       <div class="item-text">
                         <h3>麥克風</h3>
@@ -269,7 +280,7 @@
                 />
               </svg>
             </a>
-             <div id="vue-cart-quantity">
+            <div id="vue-cart-quantity">
               <div class="cart-quantity" v-if="cartItems.length > 0">
                 {{ cartItems.length }}
               </div>
@@ -313,348 +324,376 @@
       </div>
     </header>
 
-  <main id="main " class="index">
-    <section class="row-first debug-none">
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide first-row">
-            <img src="./images/bg/index-first-bg-01.jpg" alt="" />
-            <div class="content-area frow-col frow-col-01">
-              <h3>始終電力十足。隨時待命。</h3>
-              <p>認識 POWERPLAY 2。無限力量，化繁為簡。</p>
-              <button class="btn first-btn-style">立即購買</button>
-            </div>
-          </div>
-
-          <div class="swiper-slide first-row">
-            <img src="./images/bg/index-first-bg-03.jpg" alt="" />
-            <div class="content-area frow-col frow-col-0">
-              <h3>智慧供電，簡單就是力量。</h3>
-              <p>POWERPLAY 2，打造真正無感充電體驗。</p>
-              <button class="btn first-btn-style">立即購買</button>
-            </div>
-          </div>
-
-          <div class="swiper-slide first-row">
-            <img src="./images/bg/index-first-bg-04.jpg" alt="" />
-            <div class="content-area frow-col frow-col-04">
-              <h3> 穩定供電，從不間斷。</h3>
-              <p>POWERPLAY 2，專為專注與持久打造。</p>
-              <button class="btn first-btn-style">立即購買</button>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-btn content-area swiper-button-next"></div>
-        <div class="swiper-btn content-area swiper-button-prev"></div>
-        <div class="swiper-pagination frow-pagination"></div>
-      </div>
-    </section>
-
-    <section class="row-second margin-topbottom debug-none">
-      <div class="content-area secnod-row">
-        <div class="secnod-row-01">
-          <h2>打造你的理想戰場</h2>
-          <p>
-            探索專屬於你的桌面配置，從精準操作到沉浸體驗，找到最適合你的裝備組合。無論是激戰時刻或日常創作，Horizon
-            都為你準備好進化所需。
-          </p>
-        </div>
-        <div class="secnod-row-02">
-          <div class="item secnod-item-01">
-            專業級操作
-          </div>
-          <div class="item secnod-item-02">
-            電競制霸
-          </div>
-          <div class="item secnod-item-03">
-            提高您的生產力
-          </div>
-          <div class="item secnod-item-04">
-            自在生活靈感
-          </div>
-        </div>
-        <div class="secnod-row-03">
-          <div class="sec-row-area">
-            <div class="r3-col r3-col-01">
-              <div>
-                <img src="./images/pictrue/row-second-item-01.jpg" alt="" />
+    <main id="main " class="index">
+      <section class="row-first debug-none">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide first-row">
+              <img src="./images/bg/index-first-bg-01.jpg" alt="" />
+              <div class="content-area frow-col frow-col-01">
+                <h3>始終電力十足。隨時待命。</h3>
+                <p>認識 POWERPLAY 2。無限力量，化繁為簡。</p>
+                <button class="btn first-btn-style">立即購買</button>
               </div>
+            </div>
+
+            <div class="swiper-slide first-row">
+              <img src="./images/bg/index-first-bg-03.jpg" alt="" />
+              <div class="content-area frow-col frow-col-0">
+                <h3>智慧供電，簡單就是力量。</h3>
+                <p>POWERPLAY 2，打造真正無感充電體驗。</p>
+                <button class="btn first-btn-style">立即購買</button>
+              </div>
+            </div>
+
+            <div class="swiper-slide first-row">
+              <img src="./images/bg/index-first-bg-04.jpg" alt="" />
+              <div class="content-area frow-col frow-col-04">
+                <h3>穩定供電，從不間斷。</h3>
+                <p>POWERPLAY 2，專為專注與持久打造。</p>
+                <button class="btn first-btn-style">立即購買</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-btn content-area swiper-button-next"></div>
+          <div class="swiper-btn content-area swiper-button-prev"></div>
+          <div class="swiper-pagination frow-pagination"></div>
+        </div>
+      </section>
+
+      <section class="row-second margin-topbottom debug-none">
+        <div class="content-area secnod-row">
+          <div class="secnod-row-01">
+            <h2>打造你的理想戰場</h2>
+            <p>
+              探索專屬於你的桌面配置，從精準操作到沉浸體驗，找到最適合你的裝備組合。無論是激戰時刻或日常創作，Horizon
+              都為你準備好進化所需。
+            </p>
+          </div>
+          <div class="secnod-row-02">
+            <div class="item secnod-item-01">專業級操作</div>
+            <div class="item secnod-item-02">電競制霸</div>
+            <div class="item secnod-item-03">提高您的生產力</div>
+            <div class="item secnod-item-04">自在生活靈感</div>
+          </div>
+          <div class="secnod-row-03">
+            <div class="sec-row-area">
+              <div class="r3-col r3-col-01">
+                <div>
+                  <img src="./images/pictrue/row-second-item-01.jpg" alt="" />
+                </div>
+                <div>
+                  <h3>專為專業人士而設計。專為勝利而生。</h3>
+                  <p>
+                    要發揮最佳狀態，您需要最好的裝備。這些產品與世界上最好的職業玩家合作設計，提供性能和功能，讓您專注於重要的事情：勝利。
+                  </p>
+                </div>
+              </div>
+              <div class="r3-col r3-col-02">
+                <div>
+                  <img src="./images/pictrue/row-second-item-02.jpg" alt="" />
+                </div>
+                <div>
+                  <h3>專業競技，無懈可擊。</h3>
+                  <p>
+                    想要主宰戰場，就需要頂尖的裝備。這些產品與菁英職業選手共同開發，融合極致效能與精準操控，讓你全神貫注，只為贏得勝利。
+                  </p>
+                </div>
+              </div>
+              <div class="r3-col r3-col-03">
+                <div>
+                  <img src="./images/pictrue/row-second-item-04.jpg" alt="" />
+                </div>
+                <div>
+                  <h3>提高您的生產力。</h3>
+                  <p>
+                    用專為人體工學穩定性和支撐力所設計的工具，在長時間編寫程式碼的過程中保持舒適和專注。
+                  </p>
+                </div>
+              </div>
+              <div class="r3-col r3-col-04">
+                <div>
+                  <img src="./images/pictrue/row-second-item-03.webp" alt="" />
+                </div>
+                <div>
+                  <h3>生活，不必複雜。</h3>
+                  <p>
+                    將設計融入日常，讓你在平凡中找到從容與靈感。自在，不是選擇，而是一種生活方式。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="row-fourth margin-topbottom debug-none">
+        <div class="content-area fourth-row">
+          <div class="fourth-row-01">
+            <h2>熱門推薦</h2>
+          </div>
+          <div class="fourth-row-02">
+            <div class="swiper littl-swip">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="./productdetailed.html?id=PRO-1001">
+                    <img src="./images/pic-detal/PRO-1001/10003.png" alt="" />
+                    <h4>PRO 精密調整電競滑鼠</h4>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="./productdetailed.html?id=PRO-1002">
+                    <img src="./images/pic-detal/PRO-1002/10003.png" alt="" />
+                    <h4>PRO X TKL RAPID</h4>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="./productdetailed.html?id=Razer-1011">
+                    <img src="./images/pic-detal/Razer-1011/10002.png" alt="" />
+                    <h4>Razer Seiren V3 Mini</h4>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="./productdetailed.html?id=MSI-1008">
+                    <img src="./images/pic-detal/MSI-1008/10003.png" alt="" />
+                    <h4>GM08 電競滑鼠</h4>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="./productdetailed.html?id=PRO-1007">
+                    <img src="./images/pic-detal/PRO-1007/10001.png" alt="" />
+                    <h4>G522 LIGHT 無線耳機</h4>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="./productdetailed.html?id=MSI-1003">
+                    <img src="./images/pic-detal/MSI-1003/10002.png" alt="" />
+                    <h4>GH50 電競耳機</h4>
+                  </a>
+                </div>
+              </div>
+              <div class="content-area swiper-btn swiper-button-prev"></div>
+              <div class="content-area swiper-btn swiper-button-next"></div>
+            </div>
+          </div>
+          <div class="fourth-row-03 littl-swiper-pagination"></div>
+        </div>
+      </section>
+
+      <section class="row-thirdth margin-topbottom debug-none">
+        <div class="content-area thirdth-row">
+          <div class="thirdth-row-01">
+            <h2>進入 Horizon 啟動新視野</h2>
+            <p>查看最新消息，並了解如何使用</p>
+          </div>
+          <div class="thirdth-row-02">
+            <div class="r2-col-01">
+              <img src="./images/pictrue/row-thirdth-col2-01.webp" alt="" />
+            </div>
+            <div class="r2-col-02">
+              <h3>藍色的聲音-大聲清晰地播放... 或者作為外星人</h3>
+              <p>
+                藍色的 VO！CE
+                是一組先進的廣播風格濾鏡和效果，可確保您得到大聲清晰的聲音。在
+                Discord
+                或角色扮演角色扮演您最喜歡的惡魔或外星人，全部都遠離兼容設備的麥克風路徑。
+              </p>
+              <h4>更多資訊</h4>
+            </div>
+          </div>
+          <div class="thirdth-row-03">
+            <div class="r3-col r3-col-01">
+              <div class="r3-col-pic">
+                <a
+                  href="https://www.nvidia.com/zh-tw/geforce/news/rtx-5090-5080-out-now/"
+                  ><img src="images/pictrue/three-row3-01.jpg" alt=""
+                /></a>
+              </div>
+              <h4>NVIDIA RTX 5090</h4>
+              <h3>新任顯示卡王者</h3>
+              <p>
+                全新的 GeForce RTX 5080 和 GeForce RTX 5090 現已上市！
+                來自頂尖顯示卡供應商 如 ASUS...
+              </p>
               <div>
-                <h3>專為專業人士而設計。專為勝利而生。</h3>
-                <p>
-                  要發揮最佳狀態，您需要最好的裝備。這些產品與世界上最好的職業玩家合作設計，提供性能和功能，讓您專注於重要的事情：勝利。
-                </p>
+                <a
+                  href="https://www.nvidia.com/zh-tw/geforce/news/rtx-5090-5080-out-now/"
+                  >更多資訊</a
+                >
               </div>
             </div>
             <div class="r3-col r3-col-02">
-              <div>
-                <img src="./images/pictrue/row-second-item-02.jpg" alt="" />
+              <div class="r3-col-pic">
+                <a
+                  href="https://www.4gamers.com.tw/news/detail/68287/amd-ryzen-7-9800x3d-review"
+                  ><img src="images/pictrue/three-row3-02.jpg" alt=""
+                /></a>
               </div>
+              <h4>Ryzen7 9800X3D</h4>
+              <h3>最強的遊戲處理器</h3>
+              <p>
+                Ryzen 7 9800X3D 正式登場，究竟遊戲表現能與自家 Ryzen 9000
+                系列處理器以及對手旗艦拉開多少差距？
+              </p>
               <div>
-                <h3>專為專業人士而設計。專為勝利而生。</h3>
-                <p>
-                  要發揮最佳狀態，您需要最好的裝備。這些產品與世界上最好的職業玩家合作設計，提供性能和功能，讓您專注於重要的事情：勝利。
-                </p>
+                <a
+                  href="https://www.4gamers.com.tw/news/detail/68287/amd-ryzen-7-9800x3d-review"
+                  >更多資訊</a
+                >
               </div>
             </div>
             <div class="r3-col r3-col-03">
-              <div>
-                <img src="./images/pictrue/row-second-item-03.jpg" alt="" />
+              <div class="r3-col-pic">
+                <a
+                  href="https://www.nintendo.com/tw/index.html?srsltid=AfmBOooYIinP5RcLgK1U2_khNlRXDpwLON6F1z4qiLP9mLGxmAQZgmi7"
+                  ><img src="images/pictrue/three-row3-03.jpg" alt=""
+                /></a>
               </div>
+              <h4>Nintendo Switch 2</h4>
+              <h3>任天堂全新主機</h3>
+              <p>
+                Switch 2 採用7.9 吋LCD 螢幕，解析度提升到1080p，並支援HDR10
+                與最高120Hz 的可變更新...
+              </p>
               <div>
-                <h3>提高您的生產力。</h3>
-                <p>
-                  用專為人體工學穩定性和支撐力所設計的工具，在長時間編寫程式碼的過程中保持舒適和專注。
-                </p>
+                <a
+                  href="https://www.nintendo.com/tw/index.html?srsltid=AfmBOooYIinP5RcLgK1U2_khNlRXDpwLON6F1z4qiLP9mLGxmAQZgmi7"
+                  >更多資訊</a
+                >
               </div>
             </div>
             <div class="r3-col r3-col-04">
-              <div>
-                <img src="./images/pictrue/row-second-item-04.jpg" alt="" />
+              <div class="r3-col-pic">
+                <a href="https://3c.ltn.com.tw/news/61567"
+                  ><img src="images/pictrue/three-row3-04.jpg" alt=""
+                /></a>
               </div>
-              <div>
-                <h3>專為專業人士而設計。專為勝利而生。</h3>
+              <h4>MacBook Air</h4>
+              <h3>全新蘋果商品</h3>
+              <p>
+                蘋果今日（14）中午正式開賣新一代 MacBook Air，搭載 M4
+                晶片帶來更強的 AI 效能還有嶄新的天藍色...
+              </p>
+              <div><a href="https://3c.ltn.com.tw/news/61567">更多資訊</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="row-fiveth">
+        <div class="fiveth-row">
+          <div class="fiveth-row-01">
+            <div class="r5-col-01 r5-pic-01"></div>
+            <div class="r5-col-02">
+              <div class="text-area-01">
+                <h3>簡約優雅 輕鬆制敵</h3>
                 <p>
-                  要發揮最佳狀態，您需要最好的裝備。這些產品與世界上最好的職業玩家合作設計，提供性能和功能，讓您專注於重要的事情：勝利。
+                  ROG Falchion RX Low Profile 是一款精巧設計的 65%
+                  電競鍵盤，結合優雅風格與強大效能。搭載全新的 ROG RX
+                  矮軸與雙層消音泡棉，為您帶來無與倫比的打字與遊戲體驗。
                 </p>
+                <a
+                  href="./productdetailed.html?id=ROG-1006"
+                  target="_blank"
+                  ><button class="btn">了解更多</button></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="fiveth-row-02">
+            <div class="r5-col-01 r5-pic-02"></div>
+            <div class="r5-col-02">
+              <div class="text-area-02">
+                <h3>舒適自然的進化</h3>
+                <p>
+                  PRO 級無線傳輸器讓你體驗前所未見的高速無線效能。我們最先進的滑鼠經過終極升級，解鎖全新反應標準，讓你在頂級競技遊戲中獲得所需速度。
+                </p>
+                <a
+                  href="./productdetailed.html?id=PRO-1015"
+                  target="_blank"
+                  ><button class="btn">了解更多</button></a
+                >
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class=" row-thirdth margin-topbottom debug-none">
-      <div class="content-area thirdth-row">
-        <div class="thirdth-row-01">
-          <h2>進入 Horizon 啟動新視野</h2>
-          <p>查看最新消息，並了解如何使用</p>
-        </div>
-        <div class="thirdth-row-02">
-          <div class="r2-col-01">
-            <img src="./images/pictrue/row-thirdth-col2-01.webp" alt="">
-          </div>
-          <div class="r2-col-02">
-            <h3>藍色的聲音-大聲清晰地播放... 或者作為外星人</h3>
-            <p>
-              藍色的 VO！CE
-              是一組先進的廣播風格濾鏡和效果，可確保您得到大聲清晰的聲音。在
-              Discord
-              或角色扮演角色扮演您最喜歡的惡魔或外星人，全部都遠離兼容設備的麥克風路徑。
-            </p>
-            <h4>更多資訊</h4>
-          </div>
-        </div>
-        <div class="thirdth-row-03">
-          <div class="r3-col r3-col-01">
-            <div class="r3-col-pic">
-              <a href="https://www.nvidia.com/zh-tw/geforce/news/rtx-5090-5080-out-now/"><img
-                  src="images/pictrue/three-row3-01.jpg" alt="" /></a>
-            </div>
-            <h4>NVIDIA RTX 5090</h4>
-            <h3>新任顯示卡王者</h3>
-            <p>配備強大的 AI 算力，RTX 50 系列帶來全新體驗，並實現...</p>
-            <div><a href="https://www.nvidia.com/zh-tw/geforce/news/rtx-5090-5080-out-now/">更多資訊</a></div>
-          </div>
-          <div class="r3-col r3-col-02">
-            <div class="r3-col-pic">
-              <a href="https://www.4gamers.com.tw/news/detail/68287/amd-ryzen-7-9800x3d-review"><img
-                  src="images/pictrue/three-row3-02.jpg" alt="" /></a>
-            </div>
-            <h4>Ryzen7 9800X3D</h4>
-            <h3>最強的遊戲處理器</h3>
-            <p>
-              Ryzen 7 9800X3D 正式登場，究竟遊戲表現能與自家 Ryzen 9000
-              系列處理器以及對手旗艦拉開多少差距？
-            </p>
-            <div> <a href="https://www.4gamers.com.tw/news/detail/68287/amd-ryzen-7-9800x3d-review">更多資訊</a></div>
-          </div>
-          <div class="r3-col r3-col-03">
-            <div class="r3-col-pic">
-              <a
-                href="https://www.nintendo.com/tw/index.html?srsltid=AfmBOooYIinP5RcLgK1U2_khNlRXDpwLON6F1z4qiLP9mLGxmAQZgmi7"><img
-                  src="images/pictrue/three-row3-03.jpg" alt="" /></a>
-            </div>
-            <h4>Nintendo Switch 2</h4>
-            <h3>任天堂全新主機</h3>
-            <p>
-              Switch 2 採用7.9 吋LCD 螢幕，解析度提升到1080p，並支援HDR10
-              與最高120Hz 的可變更新...
-            </p>
-            <div>
-              <a
-                href="https://www.nintendo.com/tw/index.html?srsltid=AfmBOooYIinP5RcLgK1U2_khNlRXDpwLON6F1z4qiLP9mLGxmAQZgmi7">更多資訊</a>
-            </div>
-          </div>
-          <div class="r3-col r3-col-04">
-            <div class="r3-col-pic">
-              <a href="https://3c.ltn.com.tw/news/61567"><img src="images/pictrue/three-row3-04.jpg" alt="" /></a>
-            </div>
-            <h4>MacBook Air</h4>
-            <h3>全新蘋果商品</h3>
-            <p>
-              蘋果今日（14）中午正式開賣新一代 MacBook Air，搭載 M4
-              晶片帶來更強的 AI 效能還有嶄新的天藍色...
-            </p>
-            <div><a href="https://3c.ltn.com.tw/news/61567">更多資訊</a></div>
-          </div>
-        </div>
-      </div>
-    </section>
+      <section class="row-seventh margin-topbottom">
+        <div class="content-area seventh-row"></div>
+      </section>
+    </main>
 
-    <section class=" row-fourth margin-topbottom debug-none">
-      <div class="content-area fourth-row">
-        <div class="fourth-row-01">
-          <h2>熱門推薦</h2>
-        </div>
-        <div class="fourth-row-02">
-          <div class="swiper littl-swip">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="./images/pictrue/fourth-row2-01.png" alt="" />
-                <h4>G703 無線電競滑鼠</h4>
-              </div>
-              <div class="swiper-slide">
-                <img src="./images/pictrue/fourth-row2-02.png" alt="" />
-
-                <h4>G POWERPLAY</h4>
-              </div>
-              <div class="swiper-slide">
-                <img src="./images/pictrue/fourth-row2-03.png" alt="" />
-                <h4>DualSense™ 無線控制器</h4>
-              </div>
-              <div class="swiper-slide">
-                <img src="./images/pictrue/fourth-row2-04.png" alt="" />
-                <h4>A30 電競耳機麥克風</h4>
-              </div>
-              <div class="swiper-slide">
-                <img src="./images/pictrue/fourth-row2-05.png" alt="" />
-                <h4>4K Ultra HD 網路攝影機</h4>
-              </div>
-              <div class="swiper-slide">
-                <img src="./images/pictrue/fourth-row2-06.png" alt="" />
-                <h4>PRO X TKL RAPID</h4>
-              </div>
-            </div>
-            <div class="content-area swiper-btn swiper-button-prev"></div>
-            <div class="content-area swiper-btn swiper-button-next"></div>
+    <footer id="footer" class="">
+      <section class="footer-top margin-topbottom">
+        <div class="content-area toprow-01">
+          <h4>訂閱最新消息</h4>
+          <div>
+            <input type="text" placeholder="請輸入Email" /><button
+              class="btn btn-go"
+            >
+              GO!
+            </button>
           </div>
+          <p>
+            點擊“<span>Go!</span>”即表示您同意接收 Horizon
+            的最新產品消息、優惠活動與專屬折扣。隨時取消訂閱，詳情請見使用條款。
+          </p>
         </div>
-        <div class="fourth-row-03 littl-swiper-pagination"></div>
-      </div>
-    </section>
-
-    <section class="row-fiveth ">
-      <div class="fiveth-row">
-        <div class="fiveth-row-01">
-          <div class="r5-col-01 r5-pic-01"></div>
-          <div class="r5-col-02">
-            <div class="text-area-01">
-              <h3>簡約優雅 輕鬆制敵</h3>
-              <p>
-                ROG Falchion RX Low Profile 是一款精巧設計的 65%
-                電競鍵盤，結合優雅風格與強大效能。搭載全新的 ROG RX
-                矮軸與雙層消音泡棉，為您帶來無與倫比的打字與遊戲體驗。
-              </p>
-              <a href="https://rog.asus.com/tw/keyboards/keyboards/aura-rgb/rog-falchion-rx-low-profile/"
-                target="_blank"><button class="btn">了解更多</button></a>
+      </section>
+      <section class="footer-bottom margin-topbottom">
+        <div class="content-area bottom-row">
+          <section class="bottom-frow-01">
+            <div class="fcol-left">
+              <div class="left-col left-col-01">
+                <ul>
+                  <li>關於我們</li>
+                  <li>服務據點</li>
+                  <li>環境永續</li>
+                  <li>材料科技</li>
+                  <li>人才招募</li>
+                  <li>部落格</li>
+                </ul>
+              </div>
+              <div class="left-col left-col-02">
+                <ul>
+                  <li>支援服務</li>
+                  <li>常見問題</li>
+                  <li>產品支援</li>
+                  <li>退換貨須知</li>
+                  <li>聯絡我們</li>
+                  <li>追蹤我的訂單</li>
+                </ul>
+              </div>
+              <div class="left-col left-col-03">
+                <ul>
+                  <li>法律聲明</li>
+                  <li>網站使用條款</li>
+                  <li>隱私與個人資料保護政策</li>
+                  <li>智慧財產權</li>
+                </ul>
+              </div>
             </div>
-          </div>
+            <div class="fcol-right">
+              <h4>支援付款方式</h4>
+              <h4>追蹤我們的社群</h4>
+              <p>客服上班時間 09:30～18:30（週一至週五，假日及國定假日除外</p>
+            </div>
+          </section>
+          <hr />
+          <section class="bottom-frow-02">
+            <p>支援 ID：77183a7ea63dc837</p>
+            <p>English 中文 (繁體)</p>
+          </section>
         </div>
-        <div class="fiveth-row-02">
-          <div class="r5-col-01 r5-pic-02"></div>
-          <div class="r5-col-02">
-            <div class="text-area-02">
-              <h3>舒適自然的進化</h3>
-              <p>
-                Razer HyperPolling
-                無線傳輸器讓你體驗前所未見的高速無線效能。我們最先進的滑鼠經過終極升級，解鎖全新反應標準，讓你在頂級競技遊戲中獲得所需速度。
-              </p>
-              <a href="https://rog.asus.com/tw/keyboards/keyboards/aura-rgb/rog-falchion-rx-low-profile/"
-                target="_blank"><button class="btn">了解更多</button></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="row-seventh margin-topbottom">
-      <div class="content-area seventh-row"></div>
-    </section>
-  </main>
-
-  <footer id="footer" class="">
-    <section class=" footer-top margin-topbottom">
-      <div class="content-area toprow-01">
-        <h4>訂閱最新消息</h4>
-        <div>
-          <input type="text" placeholder="請輸入Email" /><button class="btn btn-go">
-            GO!
-          </button>
-        </div>
-        <p>
-          點擊“<span>Go!</span>”即表示您同意接收 Horizon
-          的最新產品消息、優惠活動與專屬折扣。隨時取消訂閱，詳情請見使用條款。
-        </p>
-      </div>
-    </section>
-    <section class="footer-bottom margin-topbottom">
-      <div class="content-area bottom-row">
-        <section class="bottom-frow-01">
-          <div class="fcol-left">
-            <div class="left-col left-col-01">
-              <ul>
-                <li>關於我們</li>
-                <li>服務據點</li>
-                <li>環境永續</li>
-                <li>材料科技</li>
-                <li>人才招募</li>
-                <li>部落格</li>
-              </ul>
-            </div>
-            <div class="left-col left-col-02">
-              <ul>
-                <li>支援服務</li>
-                <li>常見問題</li>
-                <li>產品支援</li>
-                <li>退換貨須知</li>
-                <li>聯絡我們</li>
-                <li>追蹤我的訂單</li>
-              </ul>
-            </div>
-            <div class="left-col left-col-03">
-              <ul>
-                <li>法律聲明</li>
-                <li>網站使用條款</li>
-                <li>隱私與個人資料保護政策</li>
-                <li>智慧財產權</li>
-              </ul>
-            </div>
-          </div>
-          <div class="fcol-right">
-            <h4>支援付款方式</h4>
-            <h4>追蹤我們的社群</h4>
-            <p>客服上班時間 09:30～18:30（週一至週五，假日及國定假日除外</p>
-          </div>
-        </section>
-        <hr />
-        <section class="bottom-frow-02">
-          <p>支援 ID：77183a7ea63dc837</p>
-          <p>English 中文 (繁體)</p>
-        </section>
-      </div>
-    </section>
-  </footer>
-   <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+      </section>
+    </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./main-js/header-js.js"></script>
     <script src="./main-js/content-js.js"></script>
     <script type="module">
-     
       import { MiniCart } from "./main-js/MiniCart.js";
-
-      
 
       const app1 = Vue.createApp(MiniCart);
       app1.mount("#vur-minincart");
@@ -662,6 +701,5 @@
       const app2 = Vue.createApp(MiniCart);
       app2.mount("#vue-cart-quantity");
     </script>
-</body>
-
+  </body>
 </html>
