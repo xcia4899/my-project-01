@@ -1,4 +1,4 @@
-# 🛒 Horizon Shop
+# [🛒 Horizon Shop](https://xcia4899.github.io/my-project-01/)
 
 一個以 **Vue.js** 製作的電商平台，專門販售 3C 配件商品。整合動畫與購物車功能，提供流暢的使用者體驗。
 
